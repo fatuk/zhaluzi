@@ -9,6 +9,7 @@ var bowerFiles = mainBowerFiles();
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
+var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 
 var buildPath = 'build';
