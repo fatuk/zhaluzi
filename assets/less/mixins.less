@@ -1,2 +1,11 @@
 // Random
 @rnd: `Math.random()`;
+
+// Clearfix
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

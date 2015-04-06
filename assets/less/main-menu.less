@@ -1,11 +1,29 @@
-@grey: #555;
+@bg: #F4E57A;
 .main-menu {
-	position: fixed;
-	right: 25%;
-	top: @base*3;
-	z-index: 30;
-	&__btn {
-		color: @grey;
-		font-size: 30px;
+	height: @base*14;
+	background: @bg;
+	box-shadow: inset 0 -5px 10px rgba(0,0,0,0.1);
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		.clearfix();
+	}
+	&__item {
+		float: left;
+		width: @base*17;
+		margin-right: @base;
+		text-align: center;
+	}
+	&__link {
+		text-decoration: none;
+	}
+	&__img {
+		width: @base*10;
+		height: @base*10;
+		display: inline-block;
+	}
+	&__text {
+		font-size: 14px;
 	}
 }
