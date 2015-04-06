@@ -1,0 +1,12 @@
+.house {
+	@img: '../img/house.png';
+	background: url(@img) center no-repeat;
+	background-size: cover;
+	width: image-width(@img);
+	height: image-height(@img);
+	margin-top: @base*40;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+}

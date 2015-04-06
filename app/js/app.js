@@ -1,2 +1,8 @@
-$(function(){skrollr.init({smoothScrolling:!0,mobileDeceleration:.004})});
-//# sourceMappingURL=../js/app.js.map
+$(function () {
+	var s = skrollr.init({
+		smoothScrolling: true,
+		mobileDeceleration: 0.004
+	});
+
+	$("#wrapper").smoothWheel();
+});
