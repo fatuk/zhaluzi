@@ -26,9 +26,13 @@
 		}
 	},
 	"dependencies": {
-		"jquery": "~2.1.1",
+		"jquery": "2.1.1",
 		"normalize-less": "*",
-		"skrollr": "~0.6.29",
-		"jquery.smoothwheel": "git@github.com:fatlinesofcode/jquery.smoothwheel.git"
+		"skrollr": "0.6.29",
+		"jquery.smoothwheel": "git@github.com:fatlinesofcode/jquery.smoothwheel.git",
+		"angular": "1.2.x",
+		"angular-route": "1.2.x",
+		"angular-loader": "1.2.x",
+		"angular-mocks": "1.2.x"
 	}
 }
