@@ -225,6 +225,22 @@ body {
 	 */
   position: static;
 }
+.icon {
+  display: inline-block;
+}
+.icon-phone {
+  background-image: url(../img/icon_phone.png);
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 24px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-phone {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/icon_phone@2x.png);
+    background-size: 21px 24px;
+  }
+}
 body {
   height: inherit !important;
   background: #73B6E7;
@@ -246,9 +262,9 @@ body {
   width: 100%;
   background: #ffffff;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  -webkit-transform: translateY(-140px);
-  -ms-transform: translateY(-140px);
-  transform: translateY(-140px);
+  -webkit-transform: translateY(-147px);
+  -ms-transform: translateY(-147px);
+  transform: translateY(-147px);
   -webkit-transition: -webkit-transform .5s;
   transition: transform .5s;
   -webkit-backface-visibility: hidden;
@@ -260,18 +276,16 @@ body {
   -ms-transform: translateY(0);
   transform: translateY(0);
 }
+.site-header__container {
+  height: 65px;
+}
 .logo {
   display: inline-block;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: #fff;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  border: solid 1px #ccc;
 }
 .main-menu {
   background: #f4e57a;

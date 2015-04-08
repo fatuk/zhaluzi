@@ -15,6 +15,8 @@ var gulp = require('gulp'),
 	templateData = require('./app/data/data.json');
 
 
+// TODO: Add sprites http://habrahabr.ru/post/227945/
+
 /******************************
  * Default task
  ******************************/
