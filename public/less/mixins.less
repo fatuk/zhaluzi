@@ -11,11 +11,15 @@
 }
 
 // Retina img
-.image-2x(@image, @width, @height, @repeat: no-repeat) {
+.image-2x(@image, @repeat: no-repeat) {
+	@width: image-width(@image);
+	@height: image-height(@image);
 	@filename  : ~`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[1]`;
 	@extension : ~`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[2]`;
 	background-image: ~`"url(@{filename}.@{extension})"`;
 	background-repeat: @repeat;
+	width: @width;
+	height: @height;
 
 	@media
 	only screen and (-webkit-min-device-pixel-ratio: 2),

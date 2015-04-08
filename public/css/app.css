@@ -241,6 +241,32 @@ body {
     background-size: 21px 24px;
   }
 }
+.icon-menu {
+  background-image: url(../img/icon_menu_open.png);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 16px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-menu {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/icon_menu_open@2x.png);
+    background-size: 24px 16px;
+  }
+}
+.icon-coupon {
+  background-image: url(../img/icon_coupon.png);
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 18px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-coupon {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/icon_coupon@2x.png);
+    background-size: 19px 18px;
+  }
+}
 body {
   height: inherit !important;
   background: #73B6E7;
