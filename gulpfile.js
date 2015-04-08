@@ -9,7 +9,6 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	concat = require('gulp-concat'),
 	autoprefixer = require('gulp-autoprefixer'),
-	handlebars = require('gulp-compile-handlebars'),
 	rename = require('gulp-rename'),
 	imagemin = require('gulp-imagemin'),
 	buildPath = 'public',
@@ -21,7 +20,6 @@ var gulp = require('gulp'),
  ******************************/
 gulp.task('default', [
 	'copyAssets',
-	'handlebars',
 	'pluginsConcat',
 	'jsConcat',
 	'less',
@@ -35,7 +33,8 @@ gulp.task('default', [
 gulp.task('copyAssets', function () {
 	'use strict';
 	gulp.src([
-		'assets/**/*.*'
+		'assets/**/*.*',
+		'app/**/*.html'
 	])
 		.pipe(gulp.dest('public'));
 });
@@ -52,29 +51,6 @@ gulp.task('image-min', function () {
 			}]
 		}))
 		.pipe(gulp.dest('app/img.min/'));
-});
-
-/******************************
- * Handlebars
- ******************************/
-gulp.task('handlebars', function () {
-	gulp.src('app/templates/*.handlebars')
-		.pipe(handlebars(templateData, {
-			ignorePartials: true, //ignores the unknown partials
-			partials: {
-				footer: '<footer>the end</footer>'
-			},
-			batch: ['./app/templates/partials'],
-			helpers: {
-				capitals: function (str) {
-					return str.fn(this).toUpperCase();
-				}
-			}
-		}))
-		.pipe(rename({
-			extname: '.html'
-		}))
-		.pipe(gulp.dest('./public'));
 });
 
 /******************************
@@ -122,9 +98,8 @@ gulp.task('browser-sync', function () {
  ******************************/
 gulp.task('watch', function () {
 	gulp.watch('assets/less/*.less', ['less']);
-	gulp.watch('app/js/src/**/*.js', ['jsConcat']);
-	gulp.watch('app/templates/**/*.handlebars', ['handlebars']);
-	gulp.watch(['assets/**/*', '!assets/**/*.less'], ['copyAssets']);
+	gulp.watch('app/js/**/*.js', ['jsConcat']);
+	gulp.watch(['assets/**/*', '!assets/**/*.less', 'app/**/*.html'], ['copyAssets']);
 });
 
 /******************************
