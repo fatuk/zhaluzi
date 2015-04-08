@@ -303,7 +303,11 @@ body {
   transform: translateY(0);
 }
 .site-header__container {
-  height: 65px;
+  border-left: solid 1px #cccccc;
+  border-right: solid 1px #cccccc;
+}
+.site-header__container .btn {
+  margin-top: -2.5px;
 }
 .logo {
   display: inline-block;
@@ -395,11 +399,13 @@ body {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 0 20px;
   cursor: pointer;
 }
 .btn__text {
-  line-height: 26px;
+  line-height: 32px;
+  font-weight: 700;
+  font-size: 13px;
 }
 .btn_blue {
   background: #82c6df;
@@ -422,6 +428,26 @@ body {
 }
 .coupons-info {
   float: left;
+  padding: 18px;
+  border-right: solid 1px #cccccc;
+}
+.coupons-info .btn {
+  float: left;
+  margin-top: 2.5px;
+}
+.coupons-info__container {
+  float: left;
+}
+.coupons-info__count {
+  font-weight: 700;
+  font-size: 30px;
+  margin-left: 5px;
+}
+.coupons-info__text {
+  display: inline-block;
+  width: 100px;
+  font-size: 12px;
+  margin-right: 10px;
 }
 .call-me {
   float: right;

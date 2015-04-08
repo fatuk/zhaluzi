@@ -1,4 +1,5 @@
 @header-color: #fff;
+@header-border-color: darken(#E5E5E5, 10%);
 .site-header {
 	position: fixed;
 	width: 100%;
@@ -12,6 +13,11 @@
 		transform: translateY(0);
 	}
 	&__container {
-		height: @base*6.5;
+		// height: @base*6.5;
+		border-left: solid 1px @header-border-color;
+		border-right: solid 1px @header-border-color;
+		.btn {
+			margin-top: -@base/4;
+		}
 	}
 }
