@@ -386,11 +386,19 @@ body {
 .cloud {
   background: url('../img/cloud-1.png') center no-repeat;
   background-size: cover;
-  width: 713px;
-  height: 318px;
   position: absolute;
+}
+.cloud_1 {
   top: -300px;
   right: 0;
+  width: 713px;
+  height: 318px;
+}
+.cloud_2 {
+  top: -200px;
+  left: 50px;
+  width: 475.33333333px;
+  height: 212px;
 }
 .btn {
   border: none;
@@ -409,7 +417,7 @@ body {
 }
 .btn_blue {
   background: #82c6df;
-  border: solid 1px #d3ebf4;
+  border: solid 1px #33a0c8;
 }
 .btn_green {
   background: #aec431;

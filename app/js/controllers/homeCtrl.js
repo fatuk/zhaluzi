@@ -4,6 +4,12 @@ angular.module('homeCtrl', [])
 		function ($scope) {
 			'use strict';
 
+			// Scrollr init
+			var s = skrollr.init({
+				smoothScrolling: true,
+				mobileDeceleration: 0.004
+			});
+
 			$scope.menuToggle = function () {
 				this.menuState = !this.menuState;
 			};
