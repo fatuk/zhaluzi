@@ -23,6 +23,9 @@
 		},
 		"jquery.smoothwheel": {
 			"main": "src/jquery.smoothwheel.js"
+		},
+		"animate.less": {
+			"ignore": "animate.less"
 		}
 	},
 	"dependencies": {
@@ -33,6 +36,8 @@
 		"angular": "1.2.x",
 		"angular-route": "1.2.x",
 		"angular-loader": "1.2.x",
-		"angular-mocks": "1.2.x"
+		"angular-mocks": "1.2.x",
+		"WOW": "~1.1.2",
+		"animate.less": "*"
 	}
 }
