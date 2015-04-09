@@ -3,14 +3,18 @@
 .site-header {
 	position: fixed;
 	width: 100%;
-	background: @header-color;
-	box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+	height: @base*25;
+	background: url('../img/menu_bg.png') 0 142px repeat-x;
+	// box-shadow: 0 10px 10px rgba(0,0,0,0.1);
 	transform: translateY(-147px);
 	transition: transform .5s;
 	backface-visibility: hidden;
 	z-index: 10;
 	&.expanded {
 		transform: translateY(0);
+	}
+	&__container-wrapper {
+		background: @header-color;
 	}
 	&__container {
 		// height: @base*6.5;

@@ -1,3 +1,40 @@
+@time-bg-color: #F3E575;
+@time-color: darken(#89804F, 10%);
+@phone-color: #222;
 .call-me {
 	float: right;
+	position: relative;
+	padding-left: @base*2;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 1px;
+		height: 64px;
+		background: @header-border-color;
+	}
+	.icon-phone {
+		float: left;
+		margin-right: @base*1.5;
+		margin-left: @base;
+	}
+	&__number {
+		float: left;
+		font-weight: @bold;
+		font-size: 17px;
+		color: @phone-color;
+		vertical-align: middle;
+		margin-top: @base*2;
+		margin-right: @base*2;
+	}
+	&__time {
+		float: left;
+		padding: @base/4 @base;
+		border-radius: 3px;
+		font-size: 12px;
+		background: @time-bg-color;
+		margin-top: @base*2;
+		margin-right: @base*2.5;
+	}
 }

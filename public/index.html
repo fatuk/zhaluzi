@@ -63,40 +63,44 @@
 				</ul>
 			</div>
 		</div>
-		<div class="site-header__container container">
-			<!-- Coupons info -->
-			<div class="coupons-info">
-				<!-- Info -->
-				<div class="coupons-info__container">
-					<i class="icon icon-coupon"></i>
-					<span class="coupons-info__count">
-						<span class="coupons-info__current">1</span>/<span class="coupons-info__max">5</span>
-					</span>
-					<div class="coupons-info__text">
-						найдено купонов на скидку <strong>2 %</strong>
+		<div class="site-header__container-wrapper">
+			<div class="site-header__container container">
+				<!-- Coupons info -->
+				<div class="coupons-info">
+					<!-- Info -->
+					<div class="coupons-info__container">
+						<i class="icon icon-coupon"></i>
+						<span class="coupons-info__count">
+							<span class="coupons-info__current">1</span>/<span class="coupons-info__max">5</span>
+						</span>
+						<div class="coupons-info__text">
+							найдено купонов на скидку <strong>2 %</strong>
+						</div>
 					</div>
+					<!-- Get discount btn -->
+					<button class="btn btn_blue">
+						<span class="btn__text">получить скидку</span>
+					</button>
 				</div>
-				<!-- Get discount btn -->
-				<button class="btn btn_blue">
-					<span class="btn__text">получить скидку</span>
-				</button>
-			</div>
-			<!-- Logo -->
-			<div class="logo">
-				<a href="#" class="logo__link">
-					<img src="img/logo.png" alt="" class="logo__img">
-				</a>
-			</div>
-			<!-- Menu button -->
-			<div class="btn btn_menu" ng-click="menuToggle()">
-				{{mainMenuExpanded}}
-				<i class="icon icon-menu"></i>
-			</div>
-			<!-- Call me -->
-			<div class="call-me">
-				<i class="icon icon-phone"></i>
-				<span class="call-me__number">+7(495)542-64-84</span>
-				<span class="call-me__time">9-21ч</span>
+				<!-- Logo -->
+				<div class="logo">
+					<a href="#" class="logo__link">
+						<img src="img/logo.png" alt="" class="logo__img">
+					</a>
+				</div>
+				<!-- Menu button -->
+				<div class="btn btn_menu" ng-click="menuToggle()">
+					{{mainMenuExpanded}}
+					<i class="icon icon-menu"></i>
+				</div>
+				<!-- Call me -->
+				<div class="call-me">
+					<a href="tel:+7(495)542-64-84" class="call-me__number">
+						<i class="icon icon-phone"></i>
+						+7 (495) 542-64-84
+					</a>
+					<span class="call-me__time">9-21ч</span>
+				</div>
 			</div>
 		</div>
 	</header>

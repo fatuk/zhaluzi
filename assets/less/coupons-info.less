@@ -1,7 +1,17 @@
 .coupons-info {
 	float: left;
-	padding: @base*1.8;
-	border-right: solid 1px @header-border-color;
+	padding: @base @base*1.8;
+	padding-right: @base*3;
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 1px;
+		height: 63px;
+		background: @header-border-color;
+	}
 	.btn {
 		float: left;
 		margin-top: @base/4;
@@ -24,6 +34,6 @@
 		display: inline-block;
 		width: @base*10;
 		font-size: 12px;
-		margin-right: @base;
+		margin-right: @base*2;
 	}
 }

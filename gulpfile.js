@@ -36,6 +36,7 @@ gulp.task('copyAssets', function () {
 	'use strict';
 	gulp.src([
 		'assets/**/*.*',
+		'!assets/**/*.less',
 		'app/**/*.html'
 	])
 		.pipe(gulp.dest('public'));

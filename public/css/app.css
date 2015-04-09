@@ -180,6 +180,9 @@ th {
 body {
   font-family: 'PT Sans', sans-serif;
 }
+a {
+  text-decoration: none;
+}
 .clearfix:after {
   content: "";
   display: table;
@@ -275,7 +278,7 @@ body {
   box-sizing: border-box;
 }
 .container {
-  width: 1180px;
+  width: 1160px;
   margin: 0 auto;
 }
 .container:after {
@@ -286,8 +289,8 @@ body {
 .site-header {
   position: fixed;
   width: 100%;
-  background: #ffffff;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  background: url('../img/menu_bg.png') 0 142px repeat-x;
   -webkit-transform: translateY(-147px);
   -ms-transform: translateY(-147px);
   transform: translateY(-147px);
@@ -301,6 +304,9 @@ body {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
+}
+.site-header__container-wrapper {
+  background: #ffffff;
 }
 .site-header__container {
   border-left: solid 1px #cccccc;
@@ -407,7 +413,7 @@ body {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  padding: 0 20px;
+  padding: 0 10px;
   cursor: pointer;
 }
 .btn__text {
@@ -429,15 +435,24 @@ body {
 }
 .btn_menu {
   padding: 20px;
-  border-right: solid 1px #ccc;
-  border-left: solid 1px #ccc;
   float: right;
   color: #000;
+  padding-top: 25px;
 }
 .coupons-info {
   float: left;
-  padding: 18px;
-  border-right: solid 1px #cccccc;
+  padding: 10px 18px;
+  padding-right: 30px;
+  position: relative;
+}
+.coupons-info:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 63px;
+  background: #cccccc;
 }
 .coupons-info .btn {
   float: left;
@@ -455,10 +470,44 @@ body {
   display: inline-block;
   width: 100px;
   font-size: 12px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .call-me {
   float: right;
+  position: relative;
+  padding-left: 20px;
+}
+.call-me:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 64px;
+  background: #cccccc;
+}
+.call-me .icon-phone {
+  float: left;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+.call-me__number {
+  float: left;
+  font-weight: 700;
+  font-size: 17px;
+  color: #222222;
+  vertical-align: middle;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.call-me__time {
+  float: left;
+  padding: 2.5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  background: #f3e575;
+  margin-top: 20px;
+  margin-right: 25px;
 }
 
 /*# sourceMappingURL=../css/app.css.map */
