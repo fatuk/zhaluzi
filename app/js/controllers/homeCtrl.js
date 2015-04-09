@@ -10,9 +10,6 @@ angular.module('homeCtrl', [])
 				mobileDeceleration: 0.004
 			});
 
-			// WOW init
-			new WOW().init();
-
 			$scope.menuToggle = function () {
 				this.menuState = !this.menuState;
 			};
