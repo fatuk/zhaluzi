@@ -6,7 +6,7 @@
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Lobster&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/app.css">
 </head>
-<body ng-controller="HomeCtrl">
+<body ng-controller="HomeCtrl" ng-mouseover="callMeHover=false; couponInfoHover=false">
 	<header class="site-header" ng-class="{expanded: menuState}">
 		<!-- Main menu -->
 		<div class="main-menu">
@@ -66,7 +66,9 @@
 		<div class="site-header__container-wrapper">
 			<div class="site-header__container container">
 				<!-- Coupons info -->
-				<div class="coupons-info">
+				<div
+					class="coupons-info"
+					ng-mouseover="couponInfoHover=true; $event.stopPropagation()">
 					<!-- Info -->
 					<div class="coupons-info__container">
 						<i class="icon icon-coupon"></i>
@@ -90,11 +92,12 @@
 				</div>
 				<!-- Menu button -->
 				<div class="btn btn_menu" ng-click="menuToggle()">
-					{{mainMenuExpanded}}
 					<i class="icon icon-menu"></i>
 				</div>
 				<!-- Call me -->
-				<div class="call-me">
+				<div
+					class="call-me"
+					ng-mouseover="callMeHover=true; $event.stopPropagation()">
 					<a href="tel:+7(495)542-64-84" class="call-me__number">
 						<i class="icon icon-phone"></i>
 						+7 (495) 542-64-84
@@ -104,6 +107,45 @@
 			</div>
 		</div>
 	</header>
+	<div class="container container_dropdown">
+		<!-- Dropdown coupon info -->
+		<div
+			class="dropdown dropdown_coupon-info"
+			ng-class="{expanded: couponInfoHover, 'menu-expanded': menuState}"
+			ng-mouseover="couponInfoHover=true; $event.stopPropagation()">
+			<p class="dropdown__text">
+				На каждом этаже мы спрятали купоны на скидку!<br>
+				Ищите их в необычных местах! Каждый купон <br>
+				дает скидку 2% на заказ жалюзи!<br>
+				<strong>Всего спрятано 5 купонов</strong>
+			</p>
+		</div>
+		<!-- Dropdown call me -->
+		<div
+			class="dropdown dropdown_call-me"
+			ng-class="{expanded: callMeHover, 'menu-expanded': menuState}"
+			ng-mouseover="callMeHover=true; $event.stopPropagation()">
+			<!-- Info -->
+			<div class="dropdown__container">
+				<i class="icon icon-operator"></i>
+				<p class="dropdown__text">
+					Мы можем сами перезвонить вам! <br>
+					Оставьте свой номер телефона:
+				</p>
+			</div>
+			<!-- Form -->
+			<div class="dropdown__form">
+				<form action="#">
+					<input type="phone" class="input" value="+7">
+					<button class="btn btn_green">
+						<span class="btn__text">
+							Жду звонка!
+						</span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
 	<div id="skrollr-body">
 
 
@@ -114,12 +156,17 @@
 			<div
 				class="cloud cloud_1"
 				data-0="transform:translateY(0px);"
-				data-800="transform:translateY(-1000px);">
+				data-800="transform:translateY(-1200px);">
 			</div>
 			<div
 				class="cloud cloud_2"
 				data-0="transform:translateY(0px);"
-				data-2000="transform:translateY(-1000px);">
+				data-1500="transform:translateY(-1100px);">
+			</div>
+			<div
+				class="cloud cloud_3"
+				data-0="transform:translateY(0px);"
+				data-2500="transform:translateY(-700px);">
 			</div>
 		</div>
 	</div>

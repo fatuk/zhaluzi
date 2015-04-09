@@ -1,0 +1,77 @@
+.dropdown {
+	position: fixed;
+	margin-left: -@base;
+	top: 0;
+	transform: translateY(-200px);
+	transition: transform .5s;
+	transition-delay: .1s;
+	z-index: 10;
+	&.expanded {
+		transform: translateY(0);
+	}
+	&.menu-expanded.expanded {
+		transform: translateY(150px);
+	}
+	&__text {
+		margin: 0;
+		padding: @base*2;
+		padding-right: @base*3;
+	}
+	&__container {
+		.clearfix();
+		padding: @base*2;
+		padding-bottom: @base;
+	}
+	&__form {
+		.clearfix();
+		float: left;
+		margin-left: @base*2.5;
+		.input {
+			float: left;
+			width: @base*17;
+			margin-right: @base;
+		}
+		.btn {
+			float: left;
+		}
+	}
+	&_coupon-info {
+		@img: '../img/coupon_info_popup.png';
+		background: url(@img) 100% bottom no-repeat;
+		width: image-width(@img);
+		height: image-height(@img);
+		color: #fff;
+		text-align: center;
+		height: @base*17;
+		left: 0;
+		.dropdown__text {
+			font-size: 13px;
+			position: relative;
+			padding-top: @base*3;
+			bottom: 0;
+			display: inline-block;
+			line-height: 20px;
+		}
+	}
+	&_call-me {
+		@img: '../img/phone_info_popup.png';
+		background: url(@img) 100% bottom no-repeat;
+		width: image-width(@img);
+		height: image-height(@img);
+		color: #fff;
+		text-align: center;
+		height: @base*17;
+		right: @base*4.5;
+		.icon-operator {
+			float: left;
+			margin-right: @base;
+		}
+		.dropdown__text {
+			font-size: 14px;
+			text-align: left;
+			float: left;
+			padding: @base;
+		}
+
+	}
+}

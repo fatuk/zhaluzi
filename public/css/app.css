@@ -208,7 +208,7 @@ body {
   /*
 	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
 	 */
-  z-index: 100;
+  z-index: 5;
 }
 .skrollr-mobile .skrollable {
   /*
@@ -270,6 +270,11 @@ body {
     background-size: 19px 18px;
   }
 }
+.icon-operator {
+  background: url('../img/manager.svg');
+  width: 43px;
+  height: 50px;
+}
 body {
   height: inherit !important;
   background: #73B6E7;
@@ -286,10 +291,20 @@ body {
   display: table;
   clear: both;
 }
+.container_dropdown {
+  background: #FFA500;
+  z-index: 10;
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
 .site-header {
   position: fixed;
   width: 100%;
-  height: 250px;
+  height: 215px;
   background: url('../img/menu_bg.png') 0 142px repeat-x;
   -webkit-transform: translateY(-147px);
   -ms-transform: translateY(-147px);
@@ -298,7 +313,7 @@ body {
   transition: transform .5s;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  z-index: 10;
+  z-index: 20;
 }
 .site-header.expanded {
   -webkit-transform: translateY(0);
@@ -358,7 +373,7 @@ body {
   margin-left: 10px;
 }
 .main-menu__text {
-  font-size: 14px;
+  font-size: 13px;
   width: 100%;
   display: inline-block;
   color: #42423f;
@@ -390,21 +405,27 @@ body {
   border-radius: 50%;
 }
 .cloud {
-  background: url('../img/cloud-1.png') center no-repeat;
+  background: url('../img/cloud.png') center no-repeat;
   background-size: cover;
   position: absolute;
 }
 .cloud_1 {
-  top: -300px;
+  top: -250px;
   right: 0;
-  width: 713px;
-  height: 318px;
+  width: 584px;
+  height: 192px;
 }
 .cloud_2 {
   top: -200px;
-  left: 50px;
-  width: 475.33333333px;
-  height: 212px;
+  left: 150px;
+  width: 530.90909091px;
+  height: 174.54545455px;
+}
+.cloud_3 {
+  top: 200px;
+  left: -50px;
+  width: 324.44444444px;
+  height: 106.66666667px;
 }
 .btn {
   border: none;
@@ -476,11 +497,21 @@ body {
   float: right;
   position: relative;
   padding-left: 20px;
+  padding-bottom: 19px;
 }
 .call-me:before {
   content: '';
   position: absolute;
   left: 0;
+  top: 0;
+  width: 1px;
+  height: 64px;
+  background: #cccccc;
+}
+.call-me:after {
+  content: '';
+  position: absolute;
+  right: 0;
   top: 0;
   width: 1px;
   height: 64px;
@@ -508,6 +539,103 @@ body {
   background: #f3e575;
   margin-top: 20px;
   margin-right: 25px;
+}
+.dropdown {
+  position: fixed;
+  margin-left: -10px;
+  top: 0;
+  -webkit-transform: translateY(-200px);
+  -ms-transform: translateY(-200px);
+  transform: translateY(-200px);
+  -webkit-transition: -webkit-transform .5s;
+  transition: transform .5s;
+  -webkit-transition-delay: .1s;
+  transition-delay: .1s;
+  z-index: 10;
+}
+.dropdown.expanded {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.dropdown.menu-expanded.expanded {
+  -webkit-transform: translateY(150px);
+  -ms-transform: translateY(150px);
+  transform: translateY(150px);
+}
+.dropdown__text {
+  margin: 0;
+  padding: 20px;
+  padding-right: 30px;
+}
+.dropdown__container {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.dropdown__container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.dropdown__form {
+  float: left;
+  margin-left: 25px;
+}
+.dropdown__form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.dropdown__form .input {
+  float: left;
+  width: 170px;
+  margin-right: 10px;
+}
+.dropdown__form .btn {
+  float: left;
+}
+.dropdown_coupon-info {
+  background: url('../img/coupon_info_popup.png') 100% bottom no-repeat;
+  width: 407px;
+  height: 264px;
+  color: #fff;
+  text-align: center;
+  height: 170px;
+  left: 0;
+}
+.dropdown_coupon-info .dropdown__text {
+  font-size: 13px;
+  position: relative;
+  padding-top: 30px;
+  bottom: 0;
+  display: inline-block;
+  line-height: 20px;
+}
+.dropdown_call-me {
+  background: url('../img/phone_info_popup.png') 100% bottom no-repeat;
+  width: 339px;
+  height: 194px;
+  color: #fff;
+  text-align: center;
+  height: 170px;
+  right: 45px;
+}
+.dropdown_call-me .icon-operator {
+  float: left;
+  margin-right: 10px;
+}
+.dropdown_call-me .dropdown__text {
+  font-size: 14px;
+  text-align: left;
+  float: left;
+  padding: 10px;
+}
+.input {
+  color: #2c2b29;
+  border-radius: 3px;
+  border: none;
+  height: 33px;
+  padding: 5px 12px;
 }
 
 /*# sourceMappingURL=../css/app.css.map */

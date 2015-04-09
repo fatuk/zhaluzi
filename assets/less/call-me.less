@@ -5,10 +5,20 @@
 	float: right;
 	position: relative;
 	padding-left: @base*2;
+	padding-bottom: 19px;
 	&:before {
 		content: '';
 		position: absolute;
 		left: 0;
+		top: 0;
+		width: 1px;
+		height: 64px;
+		background: @header-border-color;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
 		top: 0;
 		width: 1px;
 		height: 64px;
