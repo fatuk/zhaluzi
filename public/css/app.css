@@ -2272,11 +2272,19 @@ body {
   height: inherit !important;
   background: #73B6E7;
 }
+.wrapper {
+  overflow: hidden;
+  width: 1954px;
+  height: 3810px;
+  width: 100%;
+  position: absolute;
+}
 * {
   box-sizing: border-box;
 }
 .container {
-  width: 1160px;
+  width: 100%;
+  max-width: 1160px;
   margin: 0 auto;
 }
 .container:after {
@@ -2296,7 +2304,6 @@ body {
 }
 .site-header {
   position: fixed;
-  width: 100%;
   height: 215px;
   background: url('../img/menu_bg.png') 0 142px repeat-x;
   -webkit-transform: translateY(-147px);
@@ -2306,6 +2313,7 @@ body {
   transition: transform .5s;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  width: 100%;
   z-index: 20;
 }
 .site-header.expanded {
@@ -2377,7 +2385,7 @@ body {
 }
 .house {
   background: url('../img/house.png') center no-repeat;
-  background-size: cover;
+  background-size: 1954px 100%;
   width: 1954px;
   height: 3810px;
   margin-top: 400px;
@@ -2404,19 +2412,19 @@ body {
 }
 .cloud_1 {
   top: -250px;
-  right: 0;
+  right: 5%;
   width: 584px;
   height: 192px;
 }
 .cloud_2 {
   top: -200px;
-  left: 150px;
+  left: 10%;
   width: 530.90909091px;
   height: 174.54545455px;
 }
 .cloud_3 {
   top: 200px;
-  left: -50px;
+  left: -5%;
   width: 324.44444444px;
   height: 106.66666667px;
 }
@@ -2769,6 +2777,21 @@ body {
   border: none;
   height: 33px;
   padding: 5px 12px;
+}
+@media (max-width: 1024px) {
+  .house {
+    background: url('../img/house.png') center no-repeat;
+    background-size: 1454px 3010px;
+    height: 3010px;
+  }
+  .tooltip_gorizontal {
+    top: 200px;
+    left: 60%;
+  }
+  .tooltip_wood {
+    top: 530px;
+    left: 33%;
+  }
 }
 
 /*# sourceMappingURL=../css/app.css.map */

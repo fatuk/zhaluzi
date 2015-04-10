@@ -9,7 +9,6 @@ angular.module('homeCtrl', [])
 				smoothScrolling: true,
 				mobileDeceleration: 0.004
 			});
-
 			$scope.menuToggle = function () {
 				this.menuState = !this.menuState;
 			};

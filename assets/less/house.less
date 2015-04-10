@@ -1,7 +1,7 @@
 .house {
 	@img: '../img/house.png';
 	background: url(@img) center no-repeat;
-	background-size: cover;
+	background-size: image-width(@img) 100%;
 	width: image-width(@img);
 	height: image-height(@img);
 	margin-top: @base*40;

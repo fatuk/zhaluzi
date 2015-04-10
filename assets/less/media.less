@@ -1,0 +1,20 @@
+@media (max-width: 1024px) {
+	.house {
+		@img: '../img/house.png';
+		background: url(@img) center no-repeat;
+		background-size: image-width(@img)-500px image-height(@img)-800px;
+		height: image-height(@img)-800px;
+	}
+	.tooltip {
+		&_gorizontal {
+			top: 200px;
+			left: 60%;
+		}
+		&_wood {
+			top: 530px;
+			left: 33%;
+		}
+	}
+
+
+}

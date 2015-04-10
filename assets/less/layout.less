@@ -3,12 +3,22 @@ body {
 	background: #73B6E7;
 }
 
+.wrapper {
+	overflow: hidden;
+	@img: '../img/house.png';
+	width: image-width(@img);
+	height: image-height(@img);
+	width: 100%;
+	position: absolute;
+}
+
 * {
 	box-sizing: border-box;
 }
 
 .container {
-	width: 1160px;
+	width: 100%;
+	max-width: 1160px;
 	margin: 0 auto;
 	.clearfix();
 	&_dropdown {
