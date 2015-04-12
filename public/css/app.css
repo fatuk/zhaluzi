@@ -2567,6 +2567,8 @@ body {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
 }
 .dropdown.menu-expanded.expanded {
   -webkit-transform: translateY(150px);
