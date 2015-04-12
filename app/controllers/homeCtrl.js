@@ -5,13 +5,25 @@ angular.module('homeCtrl', [])
 			'use strict';
 
 			// Scrollr init
-			var s = skrollr.init({
+			/*var s = skrollr.init({
 				smoothScrolling: true,
 				mobileDeceleration: 0.004
-			});
+			});*/
 			$scope.menuToggle = function () {
 				this.menuState = !this.menuState;
 			};
 			console.log('home ctrl');
+
+			$scope.collected = [];
+			$scope.collect = function (id, e) {
+				var $target = $(e.currentTarget);
+				$scope.collected.push({
+					id: id
+				});
+
+				$target.find('.js-coupon').addClass('collected');
+
+				console.log($target);
+			};
 		}
 	]);

@@ -11,8 +11,7 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	rename = require('gulp-rename'),
 	imagemin = require('gulp-imagemin'),
-	buildPath = 'public',
-	templateData = require('./app/data/data.json');
+	buildPath = 'public';
 
 
 // TODO: Add sprites http://habrahabr.ru/post/227945/
@@ -70,7 +69,7 @@ gulp.task('pluginsConcat', function () {
  * JS concat
  ******************************/
 gulp.task('jsConcat', function () {
-	gulp.src(['app/js/**/*.js'])
+	gulp.src(['app/**/*.js'])
 		.pipe(sourcemaps.init())
 		.pipe(concat('app.js'))
 		.pipe(uglify())
@@ -83,7 +82,7 @@ gulp.task('jsConcat', function () {
  ******************************/
 gulp.task('browser-sync', function () {
 	var files = [
-		'public/**/*.html',
+		'public/*.html',
 		'public/js/**/*.js',
 		'public/css/**/*.css'
 	];
@@ -101,7 +100,7 @@ gulp.task('browser-sync', function () {
  ******************************/
 gulp.task('watch', function () {
 	gulp.watch('assets/less/*.less', ['less']);
-	gulp.watch('app/js/**/*.js', ['jsConcat']);
+	gulp.watch('app/**/*.js', ['jsConcat']);
 	gulp.watch(['assets/**/*', '!assets/**/*.less', 'app/**/*.html'], ['copyAssets']);
 });
 

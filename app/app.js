@@ -5,7 +5,8 @@
  */
 var app = angular.module('myApp', [
 	'ngRoute',
-	'homeCtrl'
+	'homeCtrl',
+	'couponDirective'
 ])
 	.config(['$routeProvider',
 		function ($routeProvider) {
