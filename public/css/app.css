@@ -424,16 +424,17 @@ body {
   background: url('../img/cloud.png') center no-repeat;
   background-size: cover;
   position: absolute;
-  display: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 .cloud_1 {
-  top: -250px;
+  top: 190px;
   right: 5%;
   width: 584px;
   height: 192px;
 }
 .cloud_2 {
-  top: -200px;
+  top: 280px;
   left: 10%;
   width: 530.90909091px;
   height: 174.54545455px;

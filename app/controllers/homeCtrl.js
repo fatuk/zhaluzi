@@ -13,6 +13,7 @@ angular.module('homeCtrl', ['ngDialog'])
 			$scope.init = function () {
 				$scope.getCouponMessages();
 				$scope.getCoupons();
+				$scope.skrollr();
 			};
 
 			$scope.getCouponMessages = function () {
@@ -59,7 +60,7 @@ angular.module('homeCtrl', ['ngDialog'])
 
 			$scope.skrollr = function () {
 				var s = skrollr.init({
-					smoothScrolling: true,
+					smoothScrolling: false,
 					mobileDeceleration: 0.004
 				});
 			};
