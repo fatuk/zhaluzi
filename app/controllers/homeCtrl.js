@@ -3,6 +3,9 @@ angular.module('homeCtrl', ['ngDialog'])
 		function ($scope, ngDialog) {
 			'use strict';
 
+			$scope.collected = [];
+			$scope.currentCoupon = {};
+
 			$scope.init = function () {
 
 			};
@@ -23,12 +26,14 @@ angular.module('homeCtrl', ['ngDialog'])
 				});
 			};
 
+			$scope.discount = function () {
+				return $scope.collected.length * 2;
+			};
+
 			$scope.menuToggle = function () {
 				this.menuState = !this.menuState;
 			};
 
-			$scope.collected = [];
-			$scope.currentCoupon = {};
 			$scope.collect = function (id, e) {
 				$scope.currentCoupon = $(e.currentTarget);
 				$scope.collected.push({

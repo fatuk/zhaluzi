@@ -85,7 +85,7 @@
 								<span class="coupons-info__current">{{collected.length}}</span>/<span class="coupons-info__max">5</span>
 							</span>
 							<div class="coupons-info__text">
-								найдено купонов на скидку <strong>2 %</strong>
+								найдено купонов на скидку <strong>{{discount()}} %</strong>
 							</div>
 						</div>
 						<!-- Get discount btn -->
@@ -156,22 +156,20 @@
 			</div>
 		</div>
 		<div id="skrollr-body">
-
-	<div ng-controller="couponCtrl">
-		<coupon
-			location="30%, 300px"
-			ng-click="collect(1, $event)"
-			id="1">
-		</coupon>
-		<coupon
-			location="20%, 400px"
-			ng-click="collect(2, $event)"
-			id="2">
-		</coupon>
-	</div>
-
-
-
+			<!-- Coupons -->
+			<div ng-controller="couponCtrl">
+				<coupon
+					location="30%, 300px"
+					ng-click="collect(1, $event)"
+					id="1">
+				</coupon>
+				<coupon
+					location="20%, 400px"
+					ng-click="collect(2, $event)"
+					id="2">
+				</coupon>
+			</div>
+			<!-- House -->
 			<div class="house">
 				<!-- <img src="img/house.png" alt="" class="house__img"> -->
 				<!-- Tooltip gorizontal zhaluzi -->
