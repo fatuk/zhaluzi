@@ -1,18 +1,29 @@
-angular.module('homeCtrl', [])
-	.controller('HomeCtrl', ['$scope',
-
-		function ($scope) {
+angular.module('homeCtrl', ['ngDialog'])
+	.controller('HomeCtrl', ['$scope', 'ngDialog',
+		function ($scope, ngDialog) {
 			'use strict';
 
-			// Scrollr init
-			/*var s = skrollr.init({
-				smoothScrolling: true,
-				mobileDeceleration: 0.004
-			});*/
+			$scope.init = function () {
+
+			};
+
+			$scope.skrollr = function () {
+				var s = skrollr.init({
+					smoothScrolling: true,
+					mobileDeceleration: 0.004
+				});
+			};
+
+			$scope.openCollectModal = function () {
+				console.log('open');
+				ngDialog.open({
+					template: 'views/modals/coupon-1.html'
+				});
+			};
+
 			$scope.menuToggle = function () {
 				this.menuState = !this.menuState;
 			};
-			console.log('home ctrl');
 
 			$scope.collected = [];
 			$scope.collect = function (id, e) {
@@ -23,7 +34,7 @@ angular.module('homeCtrl', [])
 
 				$target.find('.js-coupon').addClass('collected');
 
-				console.log($target);
+				$scope.openCollectModal();
 			};
 		}
 	]);
