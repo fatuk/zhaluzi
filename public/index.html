@@ -156,21 +156,17 @@
 			</div>
 		</div>
 		<div id="skrollr-body">
-			<!-- Coupons -->
-			<div ng-controller="couponCtrl">
-				<coupon
-					location="30%, 300px"
-					ng-click="collect(1, $event)"
-					id="1">
-				</coupon>
-				<coupon
-					location="20%, 400px"
-					ng-click="collect(2, $event)"
-					id="2">
-				</coupon>
-			</div>
 			<!-- House -->
 			<div class="house">
+				<!-- Coupons -->
+				<div ng-controller="couponCtrl">
+					<coupon
+						ng-repeat="(i, coupon) in couponsOnStage"
+						location="{{coupon.location}}"
+						ng-click="collect(i, $event)"
+						id="{{coupon.id}}">
+					</coupon>
+				</div>
 				<!-- <img src="img/house.png" alt="" class="house__img"> -->
 				<!-- Tooltip gorizontal zhaluzi -->
 				<div class="tooltip tooltip_gorizontal tooltip-west">

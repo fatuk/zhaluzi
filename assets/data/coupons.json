@@ -1,31 +1,73 @@
 [{
 	"floor": 1,
 	"coupons": [{
-		"location": "30%, 300px",
+		"id": 1,
+		"location": "30%, 550px",
 		"img": "http://lorempixel.com/30/30/people"
 	}, {
-		"location": "20%, 200px",
+		"id": 2,
+		"location": "35%, 600px",
 		"img": "http://lorempixel.com/30/30/people"
 	}, {
-		"location": "50%, 400px",
+		"id": 3,
+		"location": "50%, 500px",
 		"img": "http://lorempixel.com/30/30/people"
 	}, {
-		"location": "10%, 350px",
+		"id": 4,
+		"location": "40%, 650px",
 		"img": "http://lorempixel.com/30/30/people"
 	}]
 }, {
 	"floor": 2,
 	"coupons": [{
-		"location": "10%, 600px",
+		"id": 1,
+		"location": "39%, 1100px",
 		"img": "http://lorempixel.com/30/30/people"
 	}, {
-		"location": "25%, 450px",
+		"id": 2,
+		"location": "45%, 1200px",
 		"img": "http://lorempixel.com/30/30/people"
 	}, {
-		"location": "35%, 1200px",
-		"img": "http://lorempixel.com/30/30/people"
-	}, {
-		"location": "15%, 1000px",
+		"id": 3,
+		"location": "33%, 1200px",
 		"img": "http://lorempixel.com/30/30/people"
 	}]
+}, {
+	"floor": 3,
+	"coupons": [{
+		"id": 1,
+		"location": "39%, 1700px",
+		"img": "http://lorempixel.com/30/30/people"
+	}, {
+		"id": 2,
+		"location": "45%, 1900px",
+		"img": "http://lorempixel.com/30/30/people"
+	}]
+}, {
+	"floor": 4,
+	"coupons": [{
+		"id": 1,
+		"location": "70%, 2300px",
+		"img": "http://lorempixel.com/30/30/people"
+	}, {
+		"id": 2,
+		"location": "45%, 2500px",
+		"img": "http://lorempixel.com/30/30/people"
+	}]
+}, {
+	"floor": 5,
+	"coupons": [{
+		"id": 1,
+		"location": "39%, 3000px",
+		"img": "http://lorempixel.com/30/30/people"
+	}, {
+		"id": 2,
+		"location": "50%, 3200px",
+		"img": "http://lorempixel.com/30/30/people"
+	}, {
+		"id": 3,
+		"location": "63%, 3500px",
+		"img": "http://lorempixel.com/30/30/people"
+	}]
+
 }]
