@@ -2,11 +2,10 @@
 	<div class="modal__container">
 		<i class="icon icon-coupon-big"></i>
 		<h2 class="modal__title">
-			Ты просто Шерлок! Ты прошел первый купон!
+			{{couponMessages[collected.length-1].title}}
 		</h2>
 		<p class="modal__description">
-			Можешь оформить скидку <b>2%</b> на жалюзи прямо сейчас.
-			Для этого оставь свой email и мы отправим на него промо-код с инструкцией.
+			{{couponMessages[collected.length-1].description}}
 		</p>
 		<div class="modal__form">
 			<form action="#">
