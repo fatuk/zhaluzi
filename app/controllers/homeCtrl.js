@@ -7,10 +7,11 @@ angular.module('homeCtrl', ['ngDialog'])
 			$scope.currentCouponEl = {};
 			$scope.currentCouponId = '';
 			$scope.couponMessages = [];
+			$scope.coupons = [];
 
 			$scope.init = function () {
 				$scope.getCouponMessages();
-				$log.log(this);
+				$scope.getCoupons();
 			};
 
 			$scope.getCouponMessages = function () {
@@ -20,8 +21,24 @@ angular.module('homeCtrl', ['ngDialog'])
 						$scope.couponMessages = res;
 					}, function (err) {
 						// Error
-						console.log(err);
+						$log.error(err);
 					});
+			};
+
+			$scope.getCoupons = function () {
+				couponsService.getAllCoupons()
+					.then(function (res) {
+						// Success
+						$scope.coupons = res;
+						$log.log(res);
+					}, function (err) {
+						// Error
+						$log.error(err);
+					});
+			};
+
+			$scope.random = function (min, max) {
+				return Math.random() * (max - min) + min;
 			};
 
 			$scope.skrollr = function () {
@@ -33,7 +50,7 @@ angular.module('homeCtrl', ['ngDialog'])
 
 			$scope.openCollectModal = function () {
 				ngDialog.open({
-					template: 'views/modals/coupon-1.html',
+					template: 'views/modals/coupon.html',
 					preCloseCallback: function () {
 						$scope.currentCouponEl.fadeOut('slow');
 					},

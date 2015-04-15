@@ -1,0 +1,51 @@
+<div class="modal modal_coupon">
+	<div class="modal__container">
+		<i class="icon icon-coupon-big"></i>
+		<h2 class="modal__title">
+			{{couponMessages[collected.length-1].title}}
+		</h2>
+		<p class="modal__description">
+			{{couponMessages[collected.length-1].description}}
+		</p>
+		<div class="modal__form">
+			<form action="#">
+				<input type="email" name="email" class="input" placeholder="Введи свой e-mail">
+				<button class="btn btn_green">
+					Отправить купон
+				</button>
+			</form>
+		</div>
+	</div>
+	<!-- Continue block -->
+	<div class="modal__continue">
+		<button class="btn btn_violet btn_upper">
+			Продолжить поиски
+		</button>
+	</div>
+	<!-- Footer -->
+	<footer class="modal__footer">
+		<p class="modal__footer-text">
+			Расскажи друзьям о своих поисковых способностях и получи <br>
+			подсказку где искать следующий купон!
+		</p>
+		<div class="social">
+			<ul class="social__list">
+				<li class="social__item">
+					<i class="icon icon-vk"></i>
+				</li>
+				<li class="social__item">
+					<i class="icon icon-facebook"></i>
+				</li>
+				<li class="social__item">
+					<i class="icon icon-twitter"></i>
+				</li>
+			</ul>
+		</div>
+	</footer>
+</div>
+
+
+
+<h1>
+	Hello, this is your coupon #{{count}}
+</h1>
