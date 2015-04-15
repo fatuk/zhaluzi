@@ -15,9 +15,11 @@ angular.module('homeCtrl', ['ngDialog'])
 			};
 
 			$scope.openCollectModal = function () {
-				console.log('open');
 				ngDialog.open({
-					template: 'views/modals/coupon-1.html'
+					template: 'views/modals/coupon-1.html',
+					preCloseCallback: function () {
+						$scope.currentCoupon.fadeOut('slow');
+					}
 				});
 			};
 
@@ -26,13 +28,14 @@ angular.module('homeCtrl', ['ngDialog'])
 			};
 
 			$scope.collected = [];
+			$scope.currentCoupon = {};
 			$scope.collect = function (id, e) {
-				var $target = $(e.currentTarget);
+				$scope.currentCoupon = $(e.currentTarget);
 				$scope.collected.push({
 					id: id
 				});
 
-				$target.find('.js-coupon').addClass('collected');
+				$scope.currentCoupon.find('.js-coupon').addClass('collected');
 
 				$scope.openCollectModal();
 			};
