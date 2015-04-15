@@ -1,27 +1,26 @@
-angular.module('app', [])
-	.service('couponsService', ['$http', '$q',
-		function ($http, $q) {
-			var coupons = this;
-			coupons.couponsList = {};
+app.service('couponsService', ['$http', '$q',
 
-			coupons.init = function () {
+	function ($http, $q) {
+		var coupon = this;
+		coupon.couponMessages = {};
 
-			};
+		coupon.getMessages = function () {
+			var defer = $q.defer();
 
-			coupons.getCoupons = function () {
-				var defer = $q.defer();
+			$http.get('data/coupon-messages.json')
+				.success(function (res) {
+					coupon.couponMessages = res;
+					defer.resolve(res);
+				})
+				.error(function (err, status) {
+					defer.reject(err);
+				});
 
-				$http.get('data/coupons.json')
-					.success(function (res) {
-						coupons.couponsList = res;
-						defer.resolve(res);
-					})
-					.error(function (err, status) {
-						defer.reject(err);
-					});
+			return defer.promise;
+		};
 
-				return defer.promise;
-			};
 
-		}
-	]);
+
+		return coupon;
+	}
+]);
