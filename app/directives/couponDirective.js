@@ -18,6 +18,7 @@ angular.module('couponDirective', [])
 						top = $.trim(locationArray[1]);
 
 					scope.id = attr.id;
+					scope.floor = attr.floor;
 
 					el.find('.js-coupon').css({
 						left: left,

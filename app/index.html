@@ -164,7 +164,8 @@
 						ng-repeat="(i, coupon) in couponsOnStage"
 						location="{{coupon.location}}"
 						ng-click="collect(i, $event)"
-						id="{{coupon.id}}">
+						id="{{coupon.id}}"
+						floor="{{coupon.floor}}">
 					</coupon>
 				</div>
 				<!-- <img src="img/house.png" alt="" class="house__img"> -->

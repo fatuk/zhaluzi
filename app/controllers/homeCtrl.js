@@ -50,9 +50,11 @@ angular.module('homeCtrl', ['ngDialog'])
 						rnd = $scope.random(0, max),
 						randomCoupon = $scope.coupons[i].coupons[rnd];
 
+					randomCoupon.floor = i + 1;
+
 					$scope.couponsOnStage.push(randomCoupon);
 					console.log(randomCoupon);
-				};
+				}
 			};
 
 			$scope.skrollr = function () {
