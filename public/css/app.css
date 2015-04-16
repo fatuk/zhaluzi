@@ -327,14 +327,10 @@ body {
     background-size: 55px 53px;
   }
 }
-body {
-  height: inherit !important;
-  background: #73B6E7;
-}
 .wrapper {
   overflow: hidden;
-  width: 1954px;
-  height: 3810px;
+  width: 2000px;
+  height: 4126px;
   width: 100%;
   position: absolute;
 }
@@ -456,8 +452,8 @@ body {
 .house {
   background-image: url(../img/house.jpg);
   background-repeat: no-repeat;
-  width: 1998px;
-  height: 1811px;
+  width: 2000px;
+  height: 4126px;
   position: absolute;
   left: 50%;
   top: 0;
@@ -469,7 +465,7 @@ body {
   .house {
     /* on retina, use image that's scaled by 2 */
     background-image: url(../img/house@2x.jpg);
-    background-size: 1998px 1811px;
+    background-size: 2000px 4126px;
   }
 }
 .dot {

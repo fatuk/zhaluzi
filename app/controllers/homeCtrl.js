@@ -1,6 +1,6 @@
 angular.module('homeCtrl', ['ngDialog'])
-	.controller('HomeCtrl', ['$scope', 'ngDialog', 'couponsService', '$log',
-		function ($scope, ngDialog, couponsService, $log) {
+	.controller('HomeCtrl', ['$scope', 'ngDialog', 'couponsService', '$log', '$timeout',
+		function ($scope, ngDialog, couponsService, $log, $timeout) {
 			'use strict';
 
 			$scope.collected = [];
@@ -14,6 +14,24 @@ angular.module('homeCtrl', ['ngDialog'])
 				$scope.getCouponMessages();
 				$scope.getCoupons();
 				$scope.skrollr();
+			};
+
+			$scope.callMeShow = function () {
+				$timeout(function () {
+					$scope.callMeHover = true;
+				}, 0);
+			};
+
+			$scope.callMeHide = function () {
+				$timeout(function () {
+					$scope.callMeHover = false;
+				}, 500);
+			};
+
+			$scope.hideIt = function () {
+				$timeout(function () {
+					$scope.hovering = false;
+				}, 500); // 500ms delay
 			};
 
 			$scope.getCouponMessages = function () {
