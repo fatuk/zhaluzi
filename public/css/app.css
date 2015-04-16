@@ -275,6 +275,58 @@ body {
   width: 43px;
   height: 50px;
 }
+.icon-vk {
+  background-image: url(../img/vk.png);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-vk {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/vk@2x.png);
+    background-size: 40px 40px;
+  }
+}
+.icon-twitter {
+  background-image: url(../img/tw.png);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-twitter {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/tw@2x.png);
+    background-size: 40px 40px;
+  }
+}
+.icon-facebook {
+  background-image: url(../img/fb.png);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-facebook {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/fb@2x.png);
+    background-size: 40px 40px;
+  }
+}
+.icon-coupon-big {
+  background-image: url(../img/coupon_for_popup.png);
+  background-repeat: no-repeat;
+  width: 55px;
+  height: 53px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-coupon-big {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/coupon_for_popup@2x.png);
+    background-size: 55px 53px;
+  }
+}
 body {
   height: inherit !important;
   background: #73B6E7;
@@ -288,6 +340,15 @@ body {
 }
 * {
   box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+*:after {
+  outline: none;
+}
+*:before {
+  outline: none;
 }
 .container {
   width: 100%;
@@ -452,8 +513,9 @@ body {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  padding: 0 10px;
+  padding: 0 20px;
   cursor: pointer;
+  width: 170px;
 }
 .btn__text {
   line-height: 32px;
@@ -466,17 +528,23 @@ body {
 }
 .btn_green {
   background: #aec431;
-  border: solid 1px #d0de7d;
+  border: solid 1px #95a72a;
 }
 .btn_violet {
   background: #c27b95;
-  border: solid 1px #e2c1cd;
+  border: solid 1px #b76381;
 }
 .btn_menu {
   padding: 20px;
   float: right;
   color: #000;
   padding-top: 25px;
+}
+.btn_upper {
+  text-transform: uppercase;
+}
+.btn_upper .btn__text {
+  font-size: 11px;
 }
 .coupons-info {
   float: left;
@@ -803,9 +871,31 @@ body {
 .input {
   color: #2c2b29;
   border-radius: 3px;
-  border: none;
+  border: solid 1px #b6b6b6;
   height: 33px;
   padding: 5px 12px;
+}
+::-webkit-input-placeholder {
+  color: #2b2928;
+  line-height: 20px;
+  font-size: 13px;
+}
+::-moz-placeholder {
+  color: #2b2928;
+  line-height: 20px;
+  font-size: 13px;
+}
+/* Firefox 19+ */
+:-moz-placeholder {
+  color: #2b2928;
+  line-height: 20px;
+  font-size: 13px;
+}
+/* Firefox 18- */
+:-ms-input-placeholder {
+  color: #2b2928;
+  line-height: 20px;
+  font-size: 13px;
 }
 .coupon {
   position: absolute;
@@ -1073,6 +1163,88 @@ body.ngdialog-open {
 .ngdialog.ngdialog-theme-default .ngdialog-button.ngdialog-button-secondary {
   background: #e0e0e0;
   color: #777;
+}
+.ngdialog.ngdialog-theme-default.ngdialog_coupon .ngdialog-content {
+  padding: 0;
+  background: none;
+  width: 550px;
+}
+.ngdialog.ngdialog-theme-default.ngdialog_coupon .ngdialog-close:before {
+  content: '';
+  background-image: url(../img/close.png);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 16px;
+  margin: 21px 26px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .ngdialog.ngdialog-theme-default.ngdialog_coupon .ngdialog-close:before {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/close@2x.png);
+    background-size: 15px 16px;
+  }
+}
+.modal {
+  background: url('../img/popup_for_coupon.svg') no-repeat;
+  width: 550px;
+  height: 640px;
+  text-align: center;
+}
+.modal__container {
+  background-position: top top;
+  height: auto;
+  padding: 20px;
+}
+.modal__container .icon {
+  margin-left: 30px;
+}
+.modal__title {
+  font-family: 'Lobster', cursive;
+  font-size: 22px;
+  font-weight: 400;
+}
+.modal__description {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+.modal__form {
+  padding: 20px;
+  width: 455px;
+  margin: 0 auto;
+}
+.modal__form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.modal__form .input {
+  float: left;
+  margin-right: 20px;
+}
+.modal__form .btn {
+  float: left;
+}
+.modal__continue {
+  padding-top: 50px;
+}
+.modal__footer .social {
+  margin-left: 10px;
+}
+.modal__footer-text {
+  padding-top: 50px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+}
+.social__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.social__item {
+  display: inline-block;
+  margin-right: 20px;
 }
 @media (max-width: 1024px) {
   .tooltip_gorizontal {

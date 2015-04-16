@@ -7,23 +7,24 @@
 		<p class="modal__description">
 			{{couponMessages[collected.length-1].description}}
 		</p>
+		<!-- Form -->
 		<div class="modal__form">
 			<form action="#">
 				<input type="email" name="email" class="input" placeholder="Введи свой e-mail">
-				<button class="btn btn_green">
-					Отправить купон
+				<button class="btn btn_green btn_upper">
+					<span class="btn__text">Отправить купон</span>
 				</button>
 			</form>
 		</div>
 	</div>
-	<!-- Continue block -->
-	<div class="modal__continue">
-		<button class="btn btn_violet btn_upper">
-			Продолжить поиски
-		</button>
-	</div>
 	<!-- Footer -->
 	<footer class="modal__footer">
+		<!-- Continue block -->
+		<div class="modal__continue">
+			<button class="btn btn_violet btn_upper">
+				<span class="btn__text">Продолжить&nbsp;поиски</span>
+			</button>
+		</div>
 		<p class="modal__footer-text">
 			Расскажи друзьям о своих поисковых способностях и получи <br>
 			подсказку где искать следующий купон!
@@ -31,21 +32,15 @@
 		<div class="social">
 			<ul class="social__list">
 				<li class="social__item">
-					<i class="icon icon-vk"></i>
+					<a href="#" class="social__link"><i class="icon icon-vk"></i></a>
 				</li>
 				<li class="social__item">
-					<i class="icon icon-facebook"></i>
+					<a href="#" class="social__link"><i class="icon icon-facebook"></i></a>
 				</li>
 				<li class="social__item">
-					<i class="icon icon-twitter"></i>
+					<a href="#" class="social__link"><i class="icon icon-twitter"></i></a>
 				</li>
 			</ul>
 		</div>
 	</footer>
 </div>
-
-
-
-<h1>
-	Hello, this is your coupon #{{count}}
-</h1>

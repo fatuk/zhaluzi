@@ -71,7 +71,8 @@ angular.module('homeCtrl', ['ngDialog'])
 					preCloseCallback: function () {
 						$scope.currentCouponEl.fadeOut('slow');
 					},
-					scope: $scope
+					scope: $scope,
+					className: 'ngdialog ngdialog_coupon ngdialog-theme-default'
 				});
 			};
 

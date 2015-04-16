@@ -8,8 +8,9 @@
 	display: inline-block;
 	color: #fff;
 	text-decoration: none;
-	padding: 0 @base;
+	padding: 0 @base*2;
 	cursor: pointer;
+	width: @base*17;
 	&__text {
 		line-height: 32px;
 		font-weight: @bold;
@@ -21,16 +22,22 @@
 	}
 	&_green {
 		background: @btn-green;
-		border: solid 1px lighten(@btn-green, 20%);
+		border: solid 1px darken(@btn-green, 7%);
 	}
 	&_violet {
 		background: @btn-violet;
-		border: solid 1px lighten(@btn-violet, 20%);
+		border: solid 1px darken(@btn-violet, 7%);
 	}
 	&_menu {
 		padding: @base*2;
 		float: right;
 		color: #000;
 		padding-top: @base*2.5;
+	}
+	&_upper {
+		text-transform: uppercase;
+		.btn__text {
+			font-size: 11px;
+		}
 	}
 }

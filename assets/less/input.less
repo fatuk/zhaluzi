@@ -1,8 +1,30 @@
 @input-color: #2C2B29;
+@input-border-color: #B6B6B6;
+@placeholder-color: #2B2928;
 .input {
 	color: @input-color;
 	border-radius: 3px;
-	border: none;
+	border: solid 1px @input-border-color;
 	height: 33px;
 	padding: @base/2 @base*1.2;
+}
+::-webkit-input-placeholder {
+	color:@placeholder-color;
+	line-height: 20px;
+	font-size: 13px;
+}
+::-moz-placeholder {
+	color:@placeholder-color;
+	line-height: 20px;
+	font-size: 13px;
+	}/* Firefox 19+ */
+:-moz-placeholder {
+	color:@placeholder-color;
+	line-height: 20px;
+	font-size: 13px;
+	}/* Firefox 18- */
+:-ms-input-placeholder {
+	color:@placeholder-color;
+	line-height: 20px;
+	font-size: 13px;
 }

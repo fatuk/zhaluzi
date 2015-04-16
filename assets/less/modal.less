@@ -1,0 +1,55 @@
+.modal {
+	@img: '../img/popup_for_coupon.svg';
+	background: url(@img) no-repeat;
+	width: @base*55;
+	height: @base*64;
+	text-align: center;
+	&__container {
+		background-position: top top;
+		height: auto;
+		padding: @base*2;
+		.icon {
+			margin-left: @base*3;
+		}
+	}
+	&__title {
+		.lobster();
+		font-size: 22px;
+		font-weight: @normal;
+	}
+	&__description {
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.2px
+	}
+	&__form {
+		padding: @base*2;
+		width: @base*45.5;
+		margin: 0 auto;
+		.clearfix();
+		.input {
+			float: left;
+			margin-right: @base*2;
+		}
+		.btn {
+			float: left;
+		}
+	}
+	&__continue {
+		padding-top: @base*5;
+	}
+	&__footer {
+		.social {
+			margin-left: @base;
+		}
+	}
+	&__footer-text {
+		padding-top: @base*5;
+		font-size: 14px;
+		line-height: 22px;
+		letter-spacing: 0.2px
+	}
+	&_coupon {
+
+	}
+}
