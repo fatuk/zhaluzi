@@ -9,6 +9,7 @@ angular.module('homeCtrl', ['ngDialog'])
 			$scope.couponMessages = [];
 			$scope.coupons = [];
 			$scope.couponsOnStage = [];
+			$scope.callMeHover2 = false;
 
 			$scope.init = function () {
 				$scope.getCouponMessages();
@@ -17,14 +18,15 @@ angular.module('homeCtrl', ['ngDialog'])
 			};
 
 			$scope.callMeShow = function () {
-				$timeout(function () {
-					$scope.callMeHover = true;
+				$timeout(function (e) {
+					// e.preventDefault();
+					$scope.callMeHover2 = true;
 				}, 0);
 			};
 
 			$scope.callMeHide = function () {
 				$timeout(function () {
-					$scope.callMeHover = false;
+					$scope.callMeHover2 = false;
 				}, 500);
 			};
 

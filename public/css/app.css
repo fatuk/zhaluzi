@@ -1280,7 +1280,7 @@ body.ngdialog-open {
   width: 154px;
   height: 113px;
   position: absolute;
-  top: 400px;
+  top: 1000px;
   right: 16%;
   z-index: 100;
   -webkit-transition: all 1s;
