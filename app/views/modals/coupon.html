@@ -1,4 +1,4 @@
-<div class="modal modal_coupon">
+<div class="modal modal_coupon" ng-class="{'modal_coupon-fifth': collected.length==5}">
 	<div class="modal__container">
 		<i class="icon icon-coupon-big"></i>
 		<h2 class="modal__title">
@@ -20,7 +20,7 @@
 	<!-- Footer -->
 	<footer class="modal__footer">
 		<!-- Continue block -->
-		<div class="modal__continue">
+		<div ng-hide="collected.length==5" class="modal__continue">
 			<button class="btn btn_violet btn_upper">
 				<span class="btn__text">Продолжить&nbsp;поиски</span>
 			</button>
