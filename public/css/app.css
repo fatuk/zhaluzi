@@ -491,7 +491,7 @@ body {
   height: 192px;
 }
 .cloud_2 {
-  top: 280px;
+  top: 250px;
   left: 10%;
   width: 530.90909091px;
   height: 174.54545455px;
@@ -1273,6 +1273,25 @@ body.ngdialog-open {
 .social__item {
   display: inline-block;
   margin-right: 20px;
+}
+.dog {
+  background-image: url(../img/dog.png);
+  background-repeat: no-repeat;
+  width: 154px;
+  height: 113px;
+  position: absolute;
+  top: 400px;
+  right: 16%;
+  z-index: 100;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .dog {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/dog@2x.png);
+    background-size: 154px 113px;
+  }
 }
 @media (max-width: 1024px) {
   .tooltip_gorizontal {
