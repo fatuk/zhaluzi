@@ -513,7 +513,7 @@ body {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  padding: 0 20px;
+  padding: 0 10px;
   cursor: pointer;
   width: 170px;
 }
@@ -539,6 +539,7 @@ body {
   float: right;
   color: #000;
   padding-top: 25px;
+  width: auto;
 }
 .btn_upper {
   text-transform: uppercase;
@@ -549,7 +550,7 @@ body {
 .coupons-info {
   float: left;
   padding: 10px 18px;
-  padding-right: 30px;
+  padding-right: 17px;
   position: relative;
 }
 .coupons-info:after {
@@ -564,6 +565,8 @@ body {
 .coupons-info .btn {
   float: left;
   margin-top: 2.5px;
+  width: auto;
+  padding: 0 20px;
 }
 .coupons-info__container {
   float: left;
@@ -582,7 +585,7 @@ body {
 .call-me {
   float: right;
   position: relative;
-  padding-left: 20px;
+  padding-left: 23px;
   padding-bottom: 19px;
 }
 .call-me:before {
@@ -681,6 +684,9 @@ body {
 }
 .dropdown__form .btn {
   float: left;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .dropdown_coupon-info {
   background: url('../img/coupon_info_popup.png') 100% bottom no-repeat;
