@@ -81,7 +81,7 @@
 						<div class="coupons-info__container">
 							<i class="icon icon-coupon"></i>
 							<span class="coupons-info__count">
-								<span class="coupons-info__current">{{collected.length}}</span>/<span class="coupons-info__max">5</span>
+								<span class="coupons-info__current">{{collected.counter}}</span>/<span class="coupons-info__max">5</span>
 							</span>
 							<div class="coupons-info__text">
 								найдено купонов на скидку <strong>{{discount()}} %</strong>
@@ -154,11 +154,11 @@
 				</div>
 			</div>
 		</div>
-		<div id="skrollr-body">
+		<div id="skrollr-body" ng-init="found=collected.counter">
 			<!-- Coupons -->
 			<div ng-controller="couponCtrl">
 				<coupon
-					ng-repeat="(i, coupon) in couponsOnStage"
+					ng-repeat="(i, coupon) in couponsOnStage | limitTo: couponsOnStage.length-found"
 					location="{{coupon.location}}"
 					ng-click="collect(i, $event)"
 					id="{{coupon.id}}"

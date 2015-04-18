@@ -1,9 +1,17 @@
-angular.module('homeCtrl', ['ngDialog'])
-	.controller('HomeCtrl', ['$scope', 'ngDialog', 'couponsService', '$log', '$timeout',
-		function ($scope, ngDialog, couponsService, $log, $timeout) {
+angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
+	.controller('HomeCtrl', [
+		'$scope',
+		'ngDialog',
+		'couponsService',
+		'$log',
+		'$timeout',
+		'$localStorage',
+		function ($scope, ngDialog, couponsService, $log, $timeout, $localStorage) {
 			'use strict';
 
-			$scope.collected = [];
+			$scope.collected = $localStorage.$default({
+				counter: 0
+			});
 			$scope.currentCouponEl = {};
 			$scope.currentCouponId = '';
 			$scope.couponMessages = [];
@@ -15,6 +23,8 @@ angular.module('homeCtrl', ['ngDialog'])
 				$scope.getCouponMessages();
 				$scope.getCoupons();
 				$scope.skrollr();
+
+				console.log($localStorage);
 			};
 
 			// For points position adjusting
@@ -115,7 +125,7 @@ angular.module('homeCtrl', ['ngDialog'])
 			};
 
 			$scope.discount = function () {
-				return $scope.collected.length * 2;
+				return $scope.collected.counter * 2;
 			};
 
 			$scope.menuToggle = function () {
@@ -125,9 +135,8 @@ angular.module('homeCtrl', ['ngDialog'])
 			$scope.collect = function (id, e) {
 				$scope.currentCouponEl = $(e.currentTarget);
 				$scope.currentCouponId = id;
-				$scope.collected.push({
-					id: id
-				});
+
+				$scope.collected.counter++;
 
 				$scope.currentCouponEl.find('.js-coupon').addClass('collected');
 

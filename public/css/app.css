@@ -1245,11 +1245,13 @@ body.ngdialog-open {
   font-family: 'Lobster', cursive;
   font-size: 22px;
   font-weight: 400;
+  min-height: 20px;
 }
 .modal__description {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.2px;
+  min-height: 50px;
 }
 .modal__form {
   padding: 20px;
