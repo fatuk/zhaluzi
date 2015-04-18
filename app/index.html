@@ -12,7 +12,7 @@
 <body
 	ng-controller="HomeCtrl"
 	ng-mouseover="callMeHover=false; couponInfoHover=false">
-	<div class="wrapper">
+	<div class="wrapper" ng-click="getLocation($event)">
 		<header
 			class="site-header"
 			ng-class="{expanded: menuState}">
@@ -155,18 +155,19 @@
 			</div>
 		</div>
 		<div id="skrollr-body">
+			<!-- Coupons -->
+			<div ng-controller="couponCtrl">
+				<coupon
+					ng-repeat="(i, coupon) in couponsOnStage"
+					location="{{coupon.location}}"
+					ng-click="collect(i, $event)"
+					id="{{coupon.id}}"
+					img="{{coupon.img}}"
+					floor="{{coupon.floor}}">
+				</coupon>
+			</div>
 			<!-- House -->
 			<div class="house">
-				<!-- Coupons -->
-				<div ng-controller="couponCtrl">
-					<coupon
-						ng-repeat="(i, coupon) in couponsOnStage"
-						location="{{coupon.location}}"
-						ng-click="collect(i, $event)"
-						id="{{coupon.id}}"
-						floor="{{coupon.floor}}">
-					</coupon>
-				</div>
 				<!-- <img src="img/house.png" alt="" class="house__img"> -->
 				<!-- Tooltip gorizontal zhaluzi -->
 				<div class="tooltip tooltip_gorizontal tooltip-west">

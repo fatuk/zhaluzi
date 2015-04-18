@@ -914,12 +914,42 @@ body {
   position: absolute;
   width: 30px;
   height: 30px;
-  background: orange;
+  display: inline-block;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: rgba(255, 0, 255, 0.7);
   border-radius: 50%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: #fff;
   z-index: 5;
 }
 .coupon.collected {
   background: green;
+}
+.coupon:before {
+  content: '';
+  width: 1px;
+  height: 50px;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.coupon:after {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 @-webkit-keyframes ngdialog-fadeout {
   0% {

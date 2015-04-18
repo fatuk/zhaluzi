@@ -17,6 +17,16 @@ angular.module('homeCtrl', ['ngDialog'])
 				$scope.skrollr();
 			};
 
+			// For points position adjusting
+			$scope.getLocation = function (e) {
+				var width = $('body').width(),
+					height = $('body').height(),
+					x = e.pageX,
+					y = e.pageY;
+
+				console.info(x / width * 100 + '%, ' + y + 'px');
+			};
+
 			$scope.callMeShow = function () {
 				console.log('mouse over');
 				var offCallMeFn = $scope.$on("mouseover", function () {
@@ -83,7 +93,6 @@ angular.module('homeCtrl', ['ngDialog'])
 					randomCoupon.floor = i + 1;
 
 					$scope.couponsOnStage.push(randomCoupon);
-					console.log(randomCoupon);
 				}
 			};
 

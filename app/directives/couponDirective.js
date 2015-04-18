@@ -12,6 +12,7 @@ angular.module('couponDirective', [])
 				restrict: 'E',
 				templateUrl: 'views/coupon/index.html',
 				scope: {},
+				replace: true,
 				link: function (scope, el, attr) {
 					var locationArray = attr.location.split(','),
 						left = $.trim(locationArray[0]),
@@ -19,8 +20,9 @@ angular.module('couponDirective', [])
 
 					scope.id = attr.id;
 					scope.floor = attr.floor;
+					scope.img = attr.img;
 
-					el.find('.js-coupon').css({
+					el.css({
 						left: left,
 						top: top
 					});
