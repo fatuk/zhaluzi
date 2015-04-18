@@ -18,6 +18,15 @@ angular.module('homeCtrl', ['ngDialog'])
 			};
 
 			$scope.callMeShow = function () {
+				console.log('mouse over');
+				var offCallMeFn = $scope.$on("mouseover", function () {
+					console.log('unregister mouse over');
+				});
+
+				offCallMeFn();
+
+				//this will deregister that listener
+				offCallMeFn();
 				$timeout(function (e) {
 					// e.preventDefault();
 					$scope.callMeHover2 = true;

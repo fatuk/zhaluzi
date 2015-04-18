@@ -1293,6 +1293,25 @@ body.ngdialog-open {
     background-size: 154px 113px;
   }
 }
+.plane {
+  background-image: url(../img/plane.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 36px;
+  position: absolute;
+  top: 500px;
+  right: -30%;
+  z-index: 100;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .plane {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/plane@2x.png);
+    background-size: 100px 36px;
+  }
+}
 @media (max-width: 1024px) {
   .tooltip_gorizontal {
     top: 200px;
