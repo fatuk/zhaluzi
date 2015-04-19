@@ -28,25 +28,27 @@
 	&__item {
 		width: @base*3;
 		height: @base*3;
+		background: url('../img/plus.svg');
 		left: 50%;
 		top: 70%;
 		margin: -15px 0 0 -15px;
 		position: absolute;
-		border-radius: 50%;
-		border: 2px solid @tooltip-point-color;
+		// border-radius: 50%;
+		// border: 2px solid @tooltip-point-color;
 		animation: pulse 0.6s infinite alternate;
 		transition: border .5s;
-		&:before {
-			content: '+';
-			position: absolute;
-			color: @tooltip-point-color;
-			font-size: 25px;
-			font-weight: @normal;
-			top: 0;
-			left: 7px;
-			line-height: 1;
-			transition: color .5s;
-		}
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 0;
+		// 	line-height: 0;
+		// 	height: 0;
+		// 	left: 6px;
+		// 	line-height: 1;
+		// 	transform: translate(-50%, -50%);
+		// 	transition: color .5s;
+		// 	width: 0;
+		// }
 	}
 	&__content {
 		-webkit-font-smoothing: antialiased;

@@ -87,6 +87,7 @@ figure {
   margin: 1em 40px;
 }
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -139,6 +140,7 @@ input[type="submit"] {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -148,6 +150,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -327,6 +330,19 @@ body {
     background-size: 55px 53px;
   }
 }
+.icon-coupon-small {
+  background-image: url(../img/coupon-small.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 18px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-coupon-small {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/coupon-small@2x.png);
+    background-size: 20px 18px;
+  }
+}
 .wrapper {
   overflow: hidden;
   width: 2000px;
@@ -335,6 +351,7 @@ body {
   position: absolute;
 }
 * {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:focus {
@@ -369,7 +386,7 @@ body {
 .site-header {
   position: fixed;
   height: 235px;
-  background: url('../img/menu_bg.png') 0 142px repeat-x;
+  background: url('../img/menu_bg.png') 0 bottom repeat-x;
   -webkit-transform: translateY(-147px);
   -ms-transform: translateY(-147px);
   transform: translateY(-147px);
@@ -555,7 +572,7 @@ body {
   right: 0;
   top: 0;
   width: 1px;
-  height: 63px;
+  height: 69px;
   background: #cccccc;
 }
 .coupons-info .btn {
@@ -593,7 +610,7 @@ body {
   left: 0;
   top: 0;
   width: 1px;
-  height: 64px;
+  height: 69px;
   background: #cccccc;
 }
 .call-me:after {
@@ -602,7 +619,7 @@ body {
   right: 0;
   top: 0;
   width: 1px;
-  height: 64px;
+  height: 66px;
   background: #cccccc;
 }
 .call-me .icon-phone {
@@ -747,28 +764,15 @@ body {
 .tooltip__item {
   width: 30px;
   height: 30px;
+  background: url('../img/plus.svg');
   left: 50%;
   top: 70%;
   margin: -15px 0 0 -15px;
   position: absolute;
-  border-radius: 50%;
-  border: 2px solid #fdeb38;
   -webkit-animation: pulse 0.6s infinite alternate;
   animation: pulse 0.6s infinite alternate;
   -webkit-transition: border .5s;
   transition: border .5s;
-}
-.tooltip__item:before {
-  content: '+';
-  position: absolute;
-  color: #fdeb38;
-  font-size: 25px;
-  font-weight: 400;
-  top: 0;
-  left: 7px;
-  line-height: 1;
-  -webkit-transition: color .5s;
-  transition: color .5s;
 }
 .tooltip__content {
   -webkit-font-smoothing: antialiased;
@@ -992,11 +996,13 @@ body {
   }
 }
 .ngdialog {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .ngdialog *,
 .ngdialog *:before,
 .ngdialog *:after {
+  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 .ngdialog {

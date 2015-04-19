@@ -30,8 +30,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 
 			// For points position adjusting
 			$scope.getLocation = function (e) {
-				var width = $('body').width(),
-					height = $('body').height(),
+				var width = $('.js-house').width(),
+					height = $('.js-house').height(),
 					x = e.pageX,
 					y = e.pageY;
 
@@ -102,7 +102,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 					couponsIdArray.push(i + 1);
 				});
 
-				// Get left floors
+				// Get rest floors
 				$scope.actualFloors = _.difference(couponsIdArray, $scope.floors.floorsArray);
 
 				for (var i = 0; i < $scope.actualFloors.length; i++) {
