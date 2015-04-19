@@ -731,7 +731,10 @@ body {
   cursor: pointer;
 }
 .tooltip:hover .tooltip__item {
-  border-color: #fdeb38;
+  border-color: #ffffff;
+}
+.tooltip:hover .tooltip__item:before {
+  color: #ffffff;
 }
 .tooltip_gorizontal {
   top: 250px;
@@ -742,33 +745,33 @@ body {
   left: 27%;
 }
 .tooltip__item {
-  width: 27px;
-  height: 27px;
+  width: 30px;
+  height: 30px;
   left: 50%;
   top: 70%;
   margin: -15px 0 0 -15px;
   position: absolute;
   border-radius: 50%;
-  border: 3px solid #fdeb38;
+  border: 2px solid #fdeb38;
   -webkit-animation: pulse 0.6s infinite alternate;
   animation: pulse 0.6s infinite alternate;
+  -webkit-transition: border .5s;
+  transition: border .5s;
 }
 .tooltip__item:before {
   content: '+';
   position: absolute;
   color: #fdeb38;
   font-size: 25px;
-  font-weight: 700;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  font-weight: 400;
+  top: 0;
+  left: 7px;
   line-height: 1;
+  -webkit-transition: color .5s;
+  transition: color .5s;
 }
 .tooltip__content {
   -webkit-font-smoothing: antialiased;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   background-image: url(../img/popup_for_tooltip.png);
   background-repeat: no-repeat;
   width: 267px;

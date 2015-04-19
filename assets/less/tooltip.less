@@ -2,6 +2,7 @@
 @tooltip-bg-color: #fff;
 @tooltip-color: #3A393A;
 @tooltip-point-color: #FDEB38;
+@tooltip-hover-color: #fff;
 .tooltip {
 	position: absolute;
 	z-index: 999;
@@ -10,7 +11,10 @@
 	cursor: pointer;
 	&:hover {
 		.tooltip__item {
-			border-color: @tooltip-point-color;
+			border-color: @tooltip-hover-color;
+			&:before {
+				color: @tooltip-hover-color;
+			}
 		}
 	}
 	&_gorizontal {
@@ -22,30 +26,30 @@
 		left: 27%;
 	}
 	&__item {
-		width: 27px;
-		height: 27px;
+		width: @base*3;
+		height: @base*3;
 		left: 50%;
 		top: 70%;
 		margin: -15px 0 0 -15px;
 		position: absolute;
 		border-radius: 50%;
-		border: 3px solid @tooltip-point-color;
+		border: 2px solid @tooltip-point-color;
 		animation: pulse 0.6s infinite alternate;
+		transition: border .5s;
 		&:before {
 			content: '+';
 			position: absolute;
 			color: @tooltip-point-color;
 			font-size: 25px;
-			font-weight: @bold;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			font-weight: @normal;
+			top: 0;
+			left: 7px;
 			line-height: 1;
+			transition: color .5s;
 		}
 	}
 	&__content {
 		-webkit-font-smoothing: antialiased;
-		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
 		.image-2x('../img/popup_for_tooltip.png');
 		border-radius: 10px;
 		bottom: 50%;
@@ -82,8 +86,12 @@
 }
 
 @keyframes pulse {
-	from { -webkit-transform: scale3d(0.5,0.5,1); transform: scale3d(0.5,0.5,1); }
-	to { -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1); }
+	from {
+		transform: scale3d(0.5,0.5,1);
+	}
+	to {
+		transform: scale3d(1,1,1);
+	}
 }
 
 .tooltip-west .tooltip__content {
