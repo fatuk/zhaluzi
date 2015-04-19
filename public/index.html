@@ -156,15 +156,16 @@
 		</div>
 		<div id="skrollr-body" ng-init="found=collected.counter">
 			<!-- House -->
-			<div class="house js-house">
+			<div class="house">
 				<!-- Coupons -->
-				<div ng-controller="couponCtrl">
+				<div class="coupons-container js-couponsContainer" ng-controller="couponCtrl">
 					<coupon
 						ng-repeat="(i, coupon) in couponsOnStage"
 						location="{{coupon.location}}"
 						ng-click="collect(coupon.floor, $event)"
 						id="{{coupon.id}}"
 						img="{{coupon.img}}"
+						type="{{coupon.type}}"
 						floor="{{coupon.floor}}">
 					</coupon>
 				</div>

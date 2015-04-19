@@ -2,72 +2,84 @@
 	"floor": 1,
 	"coupons": [{
 		"id": 1,
-		"location": "34.78260869565217%, 532px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "38.56086956521739%, 667px",
+		"type": 1
 	}, {
 		"id": 2,
-		"location": "60.597826086956516%, 681px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "47.28260869565217%, 720px",
+		"type": 1
+	}, {
+		"id": 3,
+		"location": "48.423913043478265%, 877px",
+		"type": 1
 	}]
 }, {
 	"floor": 2,
 	"coupons": [{
 		"id": 1,
-		"location": "24.67391304347826%, 1187px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "53.47826086956522%, 1084px",
+		"type": 1
 	}, {
 		"id": 2,
-		"location": "47.28260869565217%, 1112px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "65.27173913043478%, 1103px",
+		"type": 1
 	}, {
 		"id": 3,
-		"location": "49.836956521739125%, 1301px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "54.72826086956522%, 1411px",
+		"type": 1
+	}, {
+		"id": 4,
+		"location": "31.25%, 1209px",
+		"type": 1
 	}]
 }, {
 	"floor": 3,
 	"coupons": [{
 		"id": 1,
-		"location": "50.65217391304348%, 1935px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "67.66304347826086%, 1645px",
+		"type": 1
 	}, {
 		"id": 2,
-		"location": "60.76086956521739%, 1717px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "56.57608695652174%, 1679px",
+		"type": 1
 	}, {
 		"id": 3,
-		"location": "59.72826086956522%, 1875px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "63.04347826086957%, 1661px",
+		"type": 1
 	}, {
 		"id": 4,
-		"location": "69.94565217391305%, 1754px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "67.66304347826086%, 1646px",
+		"type": 1
 	}]
 }, {
 	"floor": 4,
 	"coupons": [{
 		"id": 1,
-		"location": "21.141304347826086%, 2104px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "62.17391304347826%, 2109px",
+		"type": 1
 	}, {
 		"id": 2,
-		"location": "33.641304347826086%, 2155px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "48.09782608695652%, 2326px",
+		"type": 1
+	}, {
+		"id": 3,
+		"location": "45%, 2273px",
+		"type": 1
 	}]
 }, {
 	"floor": 5,
 	"coupons": [{
 		"id": 1,
-		"location": "50%, 2731px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "24.836956521739133%, 2819px",
+		"type": 1
 	}, {
 		"id": 2,
-		"location": "56.52173913043478%, 2730px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "53.04347826086957%, 2810px",
+		"type": 1
 	}, {
 		"id": 3,
-		"location": "51.03260869565217%, 2610px",
-		"img": "http://lorempixel.com/100/100/people"
+		"location": "50.815217391304344%, 2648px",
+		"type": 1
 	}]
 
 }]

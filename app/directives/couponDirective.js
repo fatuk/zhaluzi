@@ -21,6 +21,7 @@ angular.module('couponDirective', [])
 					scope.id = attr.id;
 					scope.floor = attr.floor;
 					scope.img = attr.img;
+					scope.type = attr.type;
 
 					el.css({
 						left: left,

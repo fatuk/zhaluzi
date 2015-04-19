@@ -23,47 +23,29 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 			$scope.callMeHover2 = false;
 
 			$scope.init = function () {
+				$scope.setCouponsContainerWidth();
 				$scope.getCouponMessages();
 				$scope.getCoupons();
 				$scope.skrollr();
 			};
 
+			// Set coupons container width
+			$scope.setCouponsContainerWidth = function () {
+				var $couponsContainer = $('.js-couponsContainer');
+				$couponsContainer.css({
+					width: $(window).width()
+				});
+			};
+
 			// For points position adjusting
 			$scope.getLocation = function (e) {
-				var width = $('.js-house').width(),
-					height = $('.js-house').height(),
+				var $couponsContainer = $('.js-couponsContainer'),
+					width = $couponsContainer.width(),
+					height = $('body').height(),
 					x = e.pageX,
 					y = e.pageY;
 
 				console.info(x / width * 100 + '%, ' + y + 'px');
-			};
-
-			$scope.callMeShow = function () {
-				console.log('mouse over');
-				var offCallMeFn = $scope.$on("mouseover", function () {
-					console.log('unregister mouse over');
-				});
-
-				offCallMeFn();
-
-				//this will deregister that listener
-				offCallMeFn();
-				$timeout(function (e) {
-					// e.preventDefault();
-					$scope.callMeHover2 = true;
-				}, 0);
-			};
-
-			$scope.callMeHide = function () {
-				$timeout(function () {
-					$scope.callMeHover2 = false;
-				}, 500);
-			};
-
-			$scope.hideIt = function () {
-				$timeout(function () {
-					$scope.hovering = false;
-				}, 500); // 500ms delay
 			};
 
 			$scope.getCouponMessages = function () {

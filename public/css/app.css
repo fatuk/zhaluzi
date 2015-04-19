@@ -930,38 +930,25 @@ body {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background: rgba(255, 0, 255, 0.7);
   border-radius: 50%;
-  -webkit-transition: all 1s;
-  transition: all 1s;
   color: #fff;
   z-index: 5;
 }
 .coupon.collected {
   background: green;
 }
-.coupon:before {
-  content: '';
-  width: 1px;
-  height: 50px;
-  background: #000;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+.coupon_type-1 {
+  background-image: url(../img/coupon-small.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 18px;
 }
-.coupon:after {
-  content: '';
-  width: 50px;
-  height: 1px;
-  background: #000;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .coupon_type-1 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/coupon-small@2x.png);
+    background-size: 20px 18px;
+  }
 }
 @-webkit-keyframes ngdialog-fadeout {
   0% {
@@ -1357,6 +1344,10 @@ body.ngdialog-open {
     background-image: url(../img/plane@2x.png);
     background-size: 100px 36px;
   }
+}
+.coupons-container {
+  position: relative;
+  margin: 0 auto;
 }
 @media (max-width: 1024px) {
   .tooltip_gorizontal {
