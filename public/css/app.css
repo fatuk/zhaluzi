@@ -572,6 +572,9 @@ body {
   font-size: 30px;
   margin-left: 5px;
 }
+.coupons-info__current {
+  color: #C27A95;
+}
 .coupons-info__text {
   display: inline-block;
   width: 100px;

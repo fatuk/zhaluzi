@@ -12,6 +12,9 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 			$scope.collected = $localStorage.$default({
 				counter: 0
 			});
+			$scope.floors = $localStorage.$default({
+				floorsArray: []
+			});
 			$scope.currentCouponEl = {};
 			$scope.currentCouponId = '';
 			$scope.couponMessages = [];
@@ -96,6 +99,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 				var floorsCount = $scope.coupons.length;
 
 				for (var i = 0; i < floorsCount; i++) {
+					console.log($scope.floors.floorsArray);
 					var max = $scope.coupons[i].coupons.length - 1,
 						rnd = $scope.random(0, max),
 						randomCoupon = $scope.coupons[i].coupons[rnd];
@@ -103,6 +107,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 					randomCoupon.floor = i + 1;
 
 					$scope.couponsOnStage.push(randomCoupon);
+
 				}
 			};
 
@@ -141,6 +146,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 				$scope.currentCouponEl.find('.js-coupon').addClass('collected');
 
 				$scope.openCollectModal();
+
+				$scope.floors.floorsArray.push($scope.currentCouponId + 1);
 			};
 
 			$scope.init();
