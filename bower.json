@@ -33,6 +33,7 @@
     "angular-route": "1.2.x",
     "angular-loader": "1.2.x",
     "ngDialog": "0.3.12",
-    "ngstorage": "~0.3.0"
+    "ngstorage": "~0.3.0",
+    "underscore": "~1.8.3"
   }
 }

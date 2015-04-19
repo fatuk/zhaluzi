@@ -26,8 +26,6 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 				$scope.getCouponMessages();
 				$scope.getCoupons();
 				$scope.skrollr();
-
-				console.log($localStorage);
 			};
 
 			// For points position adjusting
@@ -96,18 +94,24 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 			};
 
 			$scope.gambleCoupons = function () {
-				var floorsCount = $scope.coupons.length;
+				var floorsCount = $scope.coupons.length,
+					couponsIdArray = [];
 
-				for (var i = 0; i < floorsCount; i++) {
-					console.log($scope.floors.floorsArray);
-					var max = $scope.coupons[i].coupons.length - 1,
+				// Get coupons flat id array
+				_.each($scope.coupons, function (item, i) {
+					couponsIdArray.push(i + 1);
+				});
+
+				// Get left floors
+				$scope.actualFloors = _.difference(couponsIdArray, $scope.floors.floorsArray);
+
+				for (var i = 0; i < $scope.actualFloors.length; i++) {
+					var max = $scope.coupons[$scope.actualFloors[i] - 1].coupons.length - 1,
 						rnd = $scope.random(0, max),
-						randomCoupon = $scope.coupons[i].coupons[rnd];
+						randomCoupon = $scope.coupons[$scope.actualFloors[i] - 1].coupons[rnd];
 
-					randomCoupon.floor = i + 1;
-
+					randomCoupon.floor = $scope.actualFloors[i];
 					$scope.couponsOnStage.push(randomCoupon);
-
 				}
 			};
 
@@ -147,7 +151,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 
 				$scope.openCollectModal();
 
-				$scope.floors.floorsArray.push($scope.currentCouponId + 1);
+				$scope.floors.floorsArray.push($scope.currentCouponId);
 			};
 
 			$scope.init();

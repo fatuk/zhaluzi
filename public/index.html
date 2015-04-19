@@ -155,19 +155,19 @@
 			</div>
 		</div>
 		<div id="skrollr-body" ng-init="found=collected.counter">
-			<!-- Coupons -->
-			<div ng-controller="couponCtrl">
-				<coupon
-					ng-repeat="(i, coupon) in couponsOnStage | limitTo: couponsOnStage.length-found"
-					location="{{coupon.location}}"
-					ng-click="collect(i, $event)"
-					id="{{coupon.id}}"
-					img="{{coupon.img}}"
-					floor="{{coupon.floor}}">
-				</coupon>
-			</div>
 			<!-- House -->
 			<div class="house">
+				<!-- Coupons -->
+				<div ng-controller="couponCtrl">
+					<coupon
+						ng-repeat="(i, coupon) in couponsOnStage"
+						location="{{coupon.location}}"
+						ng-click="collect(coupon.floor, $event)"
+						id="{{coupon.id}}"
+						img="{{coupon.img}}"
+						floor="{{coupon.floor}}">
+					</coupon>
+				</div>
 				<!-- <img src="img/house.png" alt="" class="house__img"> -->
 				<!-- Tooltip gorizontal zhaluzi -->
 				<div class="tooltip tooltip_gorizontal tooltip-west">
@@ -211,8 +211,8 @@
 				</div>
 				<div
 					class="dog"
-					data-300="transform:translateY(0px);"
-					data-1000="transform:translateY(-800px);">
+					data-500="transform:translateY(0px);"
+					data-1500="transform:translateY(-800px);">
 				</div>
 				<div
 					class="cloud cloud_1"
