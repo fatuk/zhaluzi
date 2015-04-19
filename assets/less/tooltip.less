@@ -88,24 +88,20 @@
 
 .tooltip-west .tooltip__content {
 	left: 4em;
-	-webkit-transform-origin: -2em 50%;
 	transform-origin: -2em 50%;
-	-webkit-transform: translate3d(0,50%,0) rotate3d(1,1,1,30deg);
-	transform: translate3d(0,50%,0) rotate3d(1,1,1,30deg);
+	transform: translateY(50%) rotate(30deg);
 }
 
 .tooltip-east .tooltip__content {
 	right: 4em;
-	-webkit-transform-origin: calc(100% + 2em) 50%;
 	transform-origin: calc(100% + 2em) 50%;
-	-webkit-transform: translate3d(0,50%,0) rotate3d(1,1,1,-30deg);
+	transform: translate3d(0,50%,0) rotate3d(1,1,1,-30deg);
 	transform: translate3d(0,50%,0) rotate3d(1,1,1,-30deg);
 }
 
 .tooltip:hover .tooltip__content {
 	opacity: 1;
-	-webkit-transform: translate3d(0,50%,0) rotate3d(0,0,0,0);
-	transform: translate3d(0,50%,0) rotate3d(0,0,0,0);
+	transform: translateY(50%) rotate(0deg);
 	pointer-events: auto;
 }
 
