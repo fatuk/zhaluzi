@@ -343,6 +343,9 @@ body {
     background-size: 20px 18px;
   }
 }
+body {
+  height: inherit !important;
+}
 .wrapper {
   overflow: hidden;
   width: 2000px;
@@ -464,8 +467,14 @@ body {
   color: #42423f;
 }
 .site-footer {
-  padding: 100px;
-  background: #777;
+  background: url('../img/footer.jpg') no-repeat;
+  width: 2000px;
+  height: 390px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
+  top: 4126px;
+  z-index: 10;
 }
 .house {
   background-image: url(../img/house.jpg);
@@ -478,6 +487,7 @@ body {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  overflow: hidden;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .house {
