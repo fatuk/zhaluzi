@@ -6,7 +6,8 @@
 var app = angular.module('myApp', [
 	'ngRoute',
 	'homeCtrl',
-	'couponDirective'
+	'couponDirective',
+	'perfect_scrollbar'
 ])
 	.config(['$routeProvider',
 		function ($routeProvider) {

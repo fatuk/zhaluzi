@@ -1,0 +1,75 @@
+<perfect-scrollbar
+	class="scroller scroller_tooltip"
+	wheel-propagation="false"
+	wheel-speed="1.5"
+	swipe-propagation="false"
+	min-scrollbar-length="20"
+	scrollymarginoffset="300">
+	<div class="tooltip-modal">
+		<!-- Main image -->
+		<img src="img/tooltip-modal-image.jpg" alt="" class="tooltip-modal__img">
+		<!-- Header -->
+		<h2 class="tooltip-modal__title">
+			Горизонтальные жалюзи
+		</h2>
+		<h3 class="tooltip-modal__subtitle">
+			алюминиевые, пластиковые, деревянные
+		</h3>
+		<!-- Small images -->
+		<ul class="tooltip-modal__img-list">
+			<li class="tooltip-modal__img-item">
+				<img src="img/gorizontal_menu.png" alt="" class="tooltip-modal__img-small">
+			</li>
+			<li class="tooltip-modal__img-item">
+				<img src="img/scheme-gor.png" alt="" class="tooltip-modal__img-small">
+			</li>
+		</ul>
+		<!-- Description -->
+		<div class="tooltip-modal__text">
+			<p>
+				Сергей и Юля установили себе жалюзи на наклонные мансардные окна. Это самое лучшее решение для окон, которые находятся под наклоном либо на потолке. Благодаря боковым направляющим жалюзи хорошо фиксируются и не болтаются.
+			</p>
+			<p>
+				Спросите у нас сколько они стоят, из каких материалов делаются, узнайте выгодные для вас условия, просто оставив свой номер телефона:
+			</p>
+		</div>
+		<!-- Call me -->
+		<div class="tooltip-modal__call-me">
+			<i class="icon icon-operator"></i>
+			<div class="tooltip-modal__call-me-form">
+				<form name="callMeForm" action="#">
+					<input
+						name="callmeNumber"
+						type="text"
+						required
+						ng-model="callmeNumber"
+						placeholder="Введите номер телефона"
+						class="input"><button class="btn btn_blue btn_upper">
+							<span class="btn__text">Жду звонка!</span>
+						</button>
+				</form>
+				<!-- Form description -->
+				<p class="tooltip-modal__call-me-description">
+					Мы никому не передадим номера наших дорогих клиентов. Мы заботимся о вашей безопасности.
+				</p>
+			</div>
+		</div>
+		<!-- Social -->
+		<div class="social">
+			<p class="social__description">
+				Сохраните эту страницу у себя в социальной сети, чтобы не потерять:
+			</p>
+			<ul class="social__list">
+				<li class="social__item">
+					<a href="#" class="social__link"><i class="icon icon-vk"></i></a>
+				</li>
+				<li class="social__item">
+					<a href="#" class="social__link"><i class="icon icon-facebook"></i></a>
+				</li>
+				<li class="social__item">
+					<a href="#" class="social__link"><i class="icon icon-twitter"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</perfect-scrollbar>

@@ -1,39 +1,46 @@
 {
-  "name": "gulp-frontend-boilerplate",
-  "version": "0.1.0",
-  "homepage": "https://github.com/fatuk/gulp-frontend-boilerplate",
-  "authors": [
-    "fatuk <fatukk@gmail.com>"
-  ],
-  "moduleType": [
-    "amd"
-  ],
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "overrides": {
-    "normalize-less": {
-      "ignore": "normalize.less"
-    },
-    "ngDialog": {
-      "main": "js/ngDialog.js"
-    }
-  },
-  "dependencies": {
-    "jquery": "2.1.1",
-    "normalize-less": "*",
-    "skrollr": "0.6.29",
-    "angular": "1.2.x",
-    "angular-route": "1.2.x",
-    "angular-loader": "1.2.x",
-    "ngDialog": "0.3.12",
-    "ngstorage": "~0.3.0",
-    "underscore": "~1.8.3"
-  }
+	"name": "gulp-frontend-boilerplate",
+	"version": "0.1.0",
+	"homepage": "https://github.com/fatuk/gulp-frontend-boilerplate",
+	"authors": [
+		"fatuk <fatukk@gmail.com>"
+	],
+	"moduleType": [
+		"amd"
+	],
+	"license": "MIT",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"overrides": {
+		"normalize-less": {
+			"ignore": "normalize.less"
+		},
+		"ngDialog": {
+			"main": "js/ngDialog.js"
+		},
+		"angular-perfect-scrollbar-4.1.1fixed": {
+			"main": "src/angular-perfect-scrollbar.js"
+		},
+		"perfect-scrollbar": {
+			"main": "src/perfect-scrollbar.js"
+		}
+	},
+	"dependencies": {
+		"jquery": "2.1.1",
+		"normalize-less": "*",
+		"skrollr": "0.6.29",
+		"angular": "1.2.x",
+		"angular-route": "1.2.x",
+		"angular-loader": "1.2.x",
+		"ngDialog": "0.3.12",
+		"ngstorage": "~0.3.0",
+		"underscore": "~1.8.3",
+		"angular-perfect-scrollbar-4.1.1fixed": "~0.0.5"
+	}
 }

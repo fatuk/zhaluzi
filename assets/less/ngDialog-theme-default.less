@@ -195,6 +195,7 @@
 	color: #777;
 }
 
+// Coupon
 .ngdialog.ngdialog-theme-default.ngdialog_coupon  {
 	.ngdialog-content {
 		padding: 0;
@@ -209,4 +210,24 @@
 		}
 	}
 }
-
+// Tooltip
+.ngdialog.ngdialog-theme-default.ngdialog_tooltip  {
+	padding: 0;
+	.ngdialog-content {
+		background: none;
+		width: @base*66;
+		border-radius: 0;
+		height: 100%;
+		padding: 0;
+		.scroller {
+			padding-right: @base*2;
+		}
+		.ngdialog-close {
+			right: -@base*0.5;
+			&:before {
+				content: '';
+				.image-2x('../img/close_white.png');
+			}
+		}
+	}
+}

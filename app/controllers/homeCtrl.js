@@ -29,6 +29,14 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 				$scope.skrollr();
 			};
 
+			$scope.openTooltipModal = function () {
+				ngDialog.open({
+					template: 'views/modals/tooltip.html',
+					scope: $scope,
+					className: 'ngdialog ngdialog_tooltip ngdialog-theme-default'
+				});
+			};
+
 			// Set coupons container width
 			$scope.setCouponsContainerWidth = function () {
 				var $couponsContainer = $('.js-couponsContainer');
