@@ -12,10 +12,14 @@
 	&__column {
 		width: 50%;
 		float: left;
+		position: relative;
 	}
 	&__container {
 		width: 50%;
 		float: left;
+		&:nth-child(2) {
+			padding-left: @base;
+		}
 		&_contacts {
 			.site-footer__link {
 				margin-bottom: @base*2;
@@ -55,6 +59,9 @@
 	}
 	.social {
 		float: left;
-		margin-top: @base*4;
+		margin-top: @base*3.5;
+		&__item {
+			margin-right: @base*1.6;
+		}
 	}
 }

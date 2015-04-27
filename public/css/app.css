@@ -2272,17 +2272,14 @@ body {
   height: 50px;
 }
 .icon-vk {
-  background-image: url(../img/vk.png);
-  background-repeat: no-repeat;
+  background: url('../img/vk.svg');
   width: 40px;
   height: 40px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .icon-vk {
-    /* on retina, use image that's scaled by 2 */
-    background-image: url(../img/vk@2x.png);
-    background-size: 40px 40px;
-  }
+.icon-ok {
+  background: url('../img/ok.svg');
+  width: 40px;
+  height: 40px;
 }
 .icon-twitter {
   background-image: url(../img/tw.png);
@@ -2298,17 +2295,9 @@ body {
   }
 }
 .icon-facebook {
-  background-image: url(../img/fb.png);
-  background-repeat: no-repeat;
+  background: url('../img/fb.svg');
   width: 40px;
   height: 40px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .icon-facebook {
-    /* on retina, use image that's scaled by 2 */
-    background-image: url(../img/fb@2x.png);
-    background-size: 40px 40px;
-  }
 }
 .icon-coupon-big {
   background-image: url(../img/coupon_for_popup.png);
@@ -2488,10 +2477,14 @@ body {
 .site-footer__column {
   width: 50%;
   float: left;
+  position: relative;
 }
 .site-footer__container {
   width: 50%;
   float: left;
+}
+.site-footer__container:nth-child(2) {
+  padding-left: 10px;
 }
 .site-footer__container_contacts .site-footer__link {
   margin-bottom: 20px;
@@ -2527,7 +2520,10 @@ body {
 }
 .site-footer .social {
   float: left;
-  margin-top: 40px;
+  margin-top: 35px;
+}
+.site-footer .social__item {
+  margin-right: 16px;
 }
 .house {
   background-image: url(../img/house.jpg);
@@ -3695,7 +3691,7 @@ body.ngdialog-open {
   width: 80%;
   border-top: solid 1px #eee;
   padding-top: 30px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 .vendor:after {
   content: "";
@@ -3714,6 +3710,13 @@ body.ngdialog-open {
 .vendor__link {
   text-decoration: underline;
   color: #0F0F0F;
+}
+.map {
+  width: 100%;
+  height: 370px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
 }
 @media (max-width: 1024px) {
   .tooltip_gorizontal {

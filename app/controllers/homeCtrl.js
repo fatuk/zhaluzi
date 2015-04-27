@@ -27,6 +27,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				$scope.getCouponMessages();
 				$scope.getCoupons();
 				$scope.skrollr();
+				$scope.map();
 			};
 
 			$scope.openTooltipModal = function () {
@@ -34,6 +35,87 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 					template: 'views/modals/tooltip.html',
 					scope: $scope,
 					className: 'ngdialog ngdialog_tooltip ngdialog-theme-default'
+				});
+			};
+
+			$scope.map = function () {
+				$('.js-map').gmap3({
+					marker: {
+						latLng: [55.762024, 37.559649],
+						options: {
+							animation: 'DROP',
+							icon: {
+								url: '../img/pin.svg'
+							}
+						}
+					},
+					map: {
+						// address: "POURRIERES, Москва",
+						options: {
+							center: [55.759534, 37.652598],
+							zoom: 13,
+							mapTypeControl: false,
+							panControl: false,
+							ZoomControlOptions: false,
+							navigationControl: false,
+							scrollwheel: false,
+							disableDefaultUI: true,
+							streetViewControl: false,
+							styles: [{
+								"featureType": "administrative",
+								"elementType": "labels.text.fill",
+								"stylers": [{
+									"color": "#444444"
+								}]
+							}, {
+								"featureType": "landscape",
+								"elementType": "all",
+								"stylers": [{
+									"color": "#f2f2f2"
+								}]
+							}, {
+								"featureType": "poi",
+								"elementType": "all",
+								"stylers": [{
+									"visibility": "off"
+								}]
+							}, {
+								"featureType": "road",
+								"elementType": "all",
+								"stylers": [{
+									"saturation": -100
+								}, {
+									"lightness": 45
+								}]
+							}, {
+								"featureType": "road.highway",
+								"elementType": "all",
+								"stylers": [{
+									"visibility": "simplified"
+								}]
+							}, {
+								"featureType": "road.arterial",
+								"elementType": "labels.icon",
+								"stylers": [{
+									"visibility": "off"
+								}]
+							}, {
+								"featureType": "transit",
+								"elementType": "all",
+								"stylers": [{
+									"visibility": "off"
+								}]
+							}, {
+								"featureType": "water",
+								"elementType": "all",
+								"stylers": [{
+									"color": "#46bcec"
+								}, {
+									"visibility": "on"
+								}]
+							}]
+						}
+					}
 				});
 			};
 
