@@ -2336,6 +2336,19 @@ body {
     background-size: 20px 18px;
   }
 }
+.icon-brainmaze {
+  background-image: url(../img/brainmaze.png);
+  background-repeat: no-repeat;
+  width: 41px;
+  height: 44px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-brainmaze {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/brainmaze@2x.png);
+    background-size: 41px 44px;
+  }
+}
 body {
   height: inherit !important;
 }
@@ -2463,14 +2476,58 @@ body {
   position: absolute;
   -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
-  top: 4126px;
+  top: 3896px;
   left: 0;
   width: 100%;
+  background: #fff;
   z-index: 10;
+}
+.site-footer__data {
+  height: 370px;
 }
 .site-footer__column {
   width: 50%;
   float: left;
+}
+.site-footer__container {
+  width: 50%;
+  float: left;
+}
+.site-footer__container_contacts .site-footer__link {
+  margin-bottom: 20px;
+  float: left;
+  clear: both;
+}
+.site-footer__container_contacts .site-footer__link:last-of-type {
+  margin-bottom: 0;
+}
+.site-footer__title {
+  font-family: 'Lobster', cursive;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.site-footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer__link {
+  color: #8D8D8D;
+  font-size: 14px;
+  display: inline-block;
+  padding: 5.88235294px 0;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+.site-footer__link:hover {
+  color: #414141;
+}
+.site-footer .social {
+  float: left;
+  margin-top: 40px;
 }
 .house {
   background-image: url(../img/house.jpg);
@@ -3602,6 +3659,7 @@ body.ngdialog-open {
   font-family: 'Lobster', cursive;
   font-size: 22px;
   margin-bottom: 20px;
+  font-weight: 400;
 }
 .contacts-form__text {
   color: #ffffff;
@@ -3631,6 +3689,31 @@ body.ngdialog-open {
 }
 .contacts-form .btn__text {
   font-size: 13px;
+}
+.vendor {
+  float: left;
+  width: 80%;
+  border-top: solid 1px #eee;
+  padding-top: 30px;
+  margin-top: 20px;
+}
+.vendor:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.vendor .icon-brainmaze {
+  float: left;
+  margin-right: 10px;
+}
+.vendor__text {
+  float: left;
+  font-size: 12px;
+  color: #0F0F0F;
+}
+.vendor__link {
+  text-decoration: underline;
+  color: #0F0F0F;
 }
 @media (max-width: 1024px) {
   .tooltip_gorizontal {
