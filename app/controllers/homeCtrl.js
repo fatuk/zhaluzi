@@ -1,4 +1,4 @@
-angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
+angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 	.controller('HomeCtrl', [
 		'$scope',
 		'ngDialog',
@@ -35,6 +35,10 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage'])
 					scope: $scope,
 					className: 'ngdialog ngdialog_tooltip ngdialog-theme-default'
 				});
+			};
+
+			$scope.wow = function () {
+				new WOW().init();
 			};
 
 			// Set coupons container width

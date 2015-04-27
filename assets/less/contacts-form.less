@@ -1,0 +1,43 @@
+@bg-color: #5AAFD1;
+@color: #fff;
+.contacts-form {
+	background: @bg-color;
+	padding-top: @base*5;
+	padding-bottom: @base*4.5;
+	&__title {
+		color: @color;
+		margin: 0;
+		.lobster();
+		font-size: 22px;
+		margin-bottom: @base*2;
+	}
+	&__text {
+		color: @color;
+		margin: 0;
+		font-size: 14px;
+		line-height: 20px;
+	}
+	&__container {
+		width: @base*26;
+		float: left;
+		&:first-child {
+			margin-right: @base*4;
+		}
+	}
+	.textarea {
+		width: @base*56;
+		height: @base*16;
+		float: left;
+		margin-right: @base*4;
+	}
+	.input {
+		width: 100%;
+		margin-bottom: @base*3;
+	}
+	.btn {
+		width: 100%;
+		&__text {
+			font-size: 13px;
+		}
+	}
+}
