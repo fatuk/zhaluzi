@@ -2963,24 +2963,24 @@ body {
   padding: 5px 12px;
 }
 ::-webkit-input-placeholder {
-  color: #2b2928;
+  color: #919191;
   line-height: 20px;
   font-size: 13px;
 }
 ::-moz-placeholder {
-  color: #2b2928;
+  color: #919191;
   line-height: 20px;
   font-size: 13px;
 }
 /* Firefox 19+ */
 :-moz-placeholder {
-  color: #2b2928;
+  color: #919191;
   line-height: 20px;
   font-size: 13px;
 }
 /* Firefox 18- */
 :-ms-input-placeholder {
-  color: #2b2928;
+  color: #919191;
   line-height: 20px;
   font-size: 13px;
 }
@@ -3690,7 +3690,7 @@ body.ngdialog-open {
   float: left;
   width: 80%;
   border-top: solid 1px #eee;
-  padding-top: 30px;
+  padding-top: 20px;
   margin-top: 25px;
 }
 .vendor:after {

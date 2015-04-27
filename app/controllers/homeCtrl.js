@@ -20,7 +20,6 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.couponMessages = [];
 			$scope.coupons = [];
 			$scope.couponsOnStage = [];
-			$scope.callMeHover2 = false;
 
 			$scope.init = function () {
 				$scope.setCouponsContainerWidth();
@@ -45,7 +44,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 						options: {
 							animation: 'DROP',
 							icon: {
-								url: '../img/pin.svg'
+								url: '../img/pin.png'
 							}
 						}
 					},
