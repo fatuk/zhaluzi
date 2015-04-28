@@ -7,7 +7,7 @@ var app = angular.module('myApp', [
 	'ngRoute',
 	'homeCtrl',
 	'couponDirective',
-	'perfect_scrollbar'
+	'sun.scrollable'
 ])
 	.config(['$routeProvider',
 		function ($routeProvider) {

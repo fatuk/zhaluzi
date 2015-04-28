@@ -2348,6 +2348,10 @@ body {
   width: 100%;
   position: absolute;
 }
+.block-scroll {
+  height: 100%;
+  overflow: hidden;
+}
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2842,6 +2846,8 @@ body {
   top: 70%;
   margin: -15px 0 0 -15px;
   position: absolute;
+  -webkit-animation: pulse 0.6s infinite alternate;
+  animation: pulse 0.6s infinite alternate;
   -webkit-transition: border .5s;
   transition: border .5s;
 }
@@ -3309,7 +3315,8 @@ body.ngdialog-open {
   padding-right: 20px;
 }
 .ngdialog.ngdialog-theme-default.ngdialog_tooltip .ngdialog-content .ngdialog-close {
-  right: -5px;
+  right: -8px;
+  top: 10px;
 }
 .ngdialog.ngdialog-theme-default.ngdialog_tooltip .ngdialog-content .ngdialog-close:before {
   content: '';
@@ -3452,120 +3459,6 @@ body.ngdialog-open {
 .coupons-container {
   position: relative;
   margin: 0 auto;
-}
-.scroller {
-  height: 100%;
-  overflow-y: hidden;
-  position: relative;
-}
-.scroller_tooltip .ps-scrollbar-x-rail {
-  display: none !important;
-}
-.ps-container.ps-active-x > .ps-scrollbar-x-rail,
-.ps-container.ps-active-y > .ps-scrollbar-y-rail {
-  display: block;
-}
-.ps-container.ps-in-scrolling {
-  pointer-events: none;
-}
-.ps-container.ps-in-scrolling > .ps-scrollbar-x-rail {
-  background-color: #eee;
-  opacity: 0.9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  filter: alpha(opacity=90);
-}
-.ps-container.ps-in-scrolling > .ps-scrollbar-x-rail > .ps-scrollbar-x {
-  background-color: #999;
-}
-.ps-container.ps-in-scrolling > .ps-scrollbar-y-rail {
-  background: none;
-}
-.ps-container > .ps-scrollbar-x-rail {
-  display: none;
-  position: absolute;
-  /* please don't change 'position' */
-  border-radius: 4px;
-  opacity: .7;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
-  transition: background-color 0.2s linear, opacity 0.2s linear;
-  bottom: 3px;
-  /* there must be 'bottom' for ps-scrollbar-x-rail */
-  height: 8px;
-}
-.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
-  position: absolute;
-  /* please don't change 'position' */
-  background-color: #aaa;
-  border-radius: 4px;
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
-  bottom: 0;
-  /* there must be 'bottom' for ps-scrollbar-x */
-  height: 8px;
-}
-.ps-container > .ps-scrollbar-y-rail {
-  display: none;
-  position: absolute;
-  /* please don't change 'position' */
-  border-radius: 4px;
-  opacity: .4;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
-  transition: background-color 0.2s linear, opacity 0.2s linear;
-  right: 3px;
-  /* there must be 'right' for ps-scrollbar-y-rail */
-  width: 4px;
-}
-.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
-  position: absolute;
-  /* please don't change 'position' */
-  background-color: #fff;
-  border-radius: 4px;
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
-  right: 0;
-  margin-top: 30px;
-  /* there must be 'right' for ps-scrollbar-y */
-  width: 4px;
-}
-.ps-container:hover.ps-in-scrolling {
-  pointer-events: none;
-}
-.ps-container:hover.ps-in-scrolling > .ps-scrollbar-x-rail {
-  background-color: #eee;
-  opacity: 0.9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  filter: alpha(opacity=90);
-}
-.ps-container:hover.ps-in-scrolling > .ps-scrollbar-x-rail > .ps-scrollbar-x {
-  background-color: #999;
-}
-.ps-container:hover.ps-in-scrolling > .ps-scrollbar-y-rail {
-  background-color: #eee;
-  opacity: 0.9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  filter: alpha(opacity=90);
-}
-.ps-container:hover.ps-in-scrolling > .ps-scrollbar-y-rail > .ps-scrollbar-y {
-  background-color: #999;
-}
-.ps-container:hover > .ps-scrollbar-x-rail,
-.ps-container:hover > .ps-scrollbar-y-rail {
-  opacity: 0.6;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-  filter: alpha(opacity=60);
-}
-.ps-container:hover > .ps-scrollbar-x-rail:hover {
-  background-color: #eee;
-  opacity: 0.9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  filter: alpha(opacity=90);
-}
-.ps-container:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x {
-  background-color: #999;
 }
 .tooltip-modal {
   background: #f2f2f2;
@@ -3717,15 +3610,59 @@ body.ngdialog-open {
   left: 50%;
   bottom: 0;
 }
-@media (max-width: 1024px) {
-  .tooltip_gorizontal {
-    top: 200px;
-    left: 60%;
-  }
-  .tooltip_wood {
-    top: 530px;
-    left: 33%;
-  }
+/** initial setup **/
+.nano {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.nano > .nano-content {
+  position: absolute;
+  overflow: scroll;
+  overflow-x: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-right: 20px;
+}
+.nano > .nano-content:focus {
+  outline: thin dotted;
+}
+.nano > .nano-content::-webkit-scrollbar {
+  display: none;
+}
+.nano > .nano-pane {
+  position: absolute;
+  width: 5px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* Target only IE7 and IE8 with this hack */
+  visibility: hidden\9;
+  opacity: .5;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border-radius: 5px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.nano > .nano-pane > .nano-slider {
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+  margin: 0 1px;
+  border-radius: 3px;
+}
+.nano:hover > .nano-pane,
+.nano-pane.active,
+.nano-pane.flashed {
+  /* Target only IE7 and IE8 with this hack */
+  visibility: visible\9;
+  opacity: 0.99;
+}
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  display: block;
 }
 
 /*# sourceMappingURL=../css/app.css.map */

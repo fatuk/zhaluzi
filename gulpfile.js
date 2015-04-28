@@ -61,8 +61,8 @@ gulp.task('image-min', function () {
 gulp.task('pluginsConcat', function () {
 	gulp.src(bowerFiles)
 		.pipe(concat('plugins.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('public/js'));
+	// .pipe(uglify())
+	.pipe(gulp.dest('public/js'));
 });
 
 /******************************
@@ -72,8 +72,8 @@ gulp.task('jsConcat', function () {
 	gulp.src(['app/**/*.js'])
 		.pipe(sourcemaps.init())
 		.pipe(concat('app.js'))
-		.pipe(uglify())
-		.pipe(sourcemaps.write('../js'))
+	// .pipe(uglify())
+	.pipe(sourcemaps.write('../js'))
 		.pipe(gulp.dest('public/js'));
 });
 

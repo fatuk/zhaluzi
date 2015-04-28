@@ -30,9 +30,13 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			};
 
 			$scope.openTooltipModal = function () {
+				$('html').addClass('block-scroll');
 				ngDialog.open({
 					template: 'views/modals/tooltip.html',
 					scope: $scope,
+					preCloseCallback: function () {
+						$('html').removeClass('block-scroll');
+					},
 					className: 'ngdialog ngdialog_tooltip ngdialog-theme-default'
 				});
 			};
