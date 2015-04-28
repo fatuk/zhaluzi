@@ -11,6 +11,9 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	rename = require('gulp-rename'),
 	imagemin = require('gulp-imagemin'),
+	gutil = require('gulp-util'),
+	ftp = require('gulp-ftp'),
+	ftpCredentials = require('./tmp/ftp.json'),
 	buildPath = 'public';
 
 
@@ -42,6 +45,27 @@ gulp.task('copyAssets', function () {
 });
 
 /******************************
+ * FTP task
+ ******************************/
+gulp.task('ftp', function () {
+	return gulp.src([
+		'public/**/*.js',
+		'public/**/*.html',
+		'public/**/*.css'
+	])
+		.pipe(ftp({
+			host: 'brainmaze.net',
+			user: ftpCredentials.login,
+			pass: ftpCredentials.pass,
+			remotePath: '/static'
+		}))
+	// you need to have some kind of stream after gulp-ftp to make sure it's flushed
+	// this can be a gulp plugin, gulp.dest, or any kind of stream
+	// here we use a passthrough stream
+	.pipe(gutil.noop());
+});
+
+/******************************
  * Imagemin task
  ******************************/
 gulp.task('image-min', function () {
@@ -61,8 +85,8 @@ gulp.task('image-min', function () {
 gulp.task('pluginsConcat', function () {
 	gulp.src(bowerFiles)
 		.pipe(concat('plugins.min.js'))
-	// .pipe(uglify())
-	.pipe(gulp.dest('public/js'));
+		.pipe(uglify())
+		.pipe(gulp.dest('public/js'));
 });
 
 /******************************

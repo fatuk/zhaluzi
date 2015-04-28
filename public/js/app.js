@@ -54,12 +54,16 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			};
 
 			$scope.openTooltipModal = function () {
-				$('html').addClass('block-scroll');
+				$timeout(function () {
+					$('html').addClass('block-scroll');
+				}, 300);
 				ngDialog.open({
 					template: 'views/modals/tooltip.html',
 					scope: $scope,
 					preCloseCallback: function () {
-						$('html').removeClass('block-scroll');
+						$timeout(function () {
+							$('html').removeClass('block-scroll');
+						}, 300);
 					},
 					className: 'ngdialog ngdialog_tooltip ngdialog-theme-default'
 				});
@@ -72,7 +76,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 						options: {
 							animation: 'DROP',
 							icon: {
-								url: '../img/pin.png'
+								url: 'img/pin.png'
 							}
 						}
 					},
