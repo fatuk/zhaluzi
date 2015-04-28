@@ -6,28 +6,22 @@
 		<img src="img/tooltip-modal-image.jpg" alt="" class="tooltip-modal__img">
 		<!-- Header -->
 		<h2 class="tooltip-modal__title">
-			Горизонтальные жалюзи
+			{{tooltipModals[tooltipId-1].title}}
 		</h2>
 		<h3 class="tooltip-modal__subtitle">
-			алюминиевые, пластиковые, деревянные
+			{{tooltipModals[tooltipId-1].subtitle}}
 		</h3>
 		<!-- Small images -->
 		<ul class="tooltip-modal__img-list">
-			<li class="tooltip-modal__img-item">
-				<img src="img/gorizontal_menu.png" alt="" class="tooltip-modal__img-small">
-			</li>
-			<li class="tooltip-modal__img-item">
-				<img src="img/scheme-gor.png" alt="" class="tooltip-modal__img-small">
+			<li
+				class="tooltip-modal__img-item"
+				ng-repeat="icon in tooltipModals[tooltipId-1].icons">
+				<img ng-src="{{icon}}" alt="" class="tooltip-modal__img-small">
 			</li>
 		</ul>
 		<!-- Description -->
 		<div class="tooltip-modal__text">
-			<p>
-				Сергей и Юля установили себе жалюзи на наклонные мансардные окна. Это самое лучшее решение для окон, которые находятся под наклоном либо на потолке. Благодаря боковым направляющим жалюзи хорошо фиксируются и не болтаются.
-			</p>
-			<p>
-				Спросите у нас сколько они стоят, из каких материалов делаются, узнайте выгодные для вас условия, просто оставив свой номер телефона:
-			</p>
+			{{tooltipModals[tooltipId-1].text}}
 		</div>
 		<!-- Call me -->
 		<div class="tooltip-modal__call-me">

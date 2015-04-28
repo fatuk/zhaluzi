@@ -22,6 +22,40 @@ var app = angular.module('myApp', [
 		}
 	]);
 
+angular.module('couponDirective', [])
+	.controller('couponCtrl', ['$scope',
+		function ($scope) {
+			'use strict';
+		}
+	])
+	.directive('coupon', [
+
+		function () {
+			'use strict';
+			return {
+				restrict: 'E',
+				templateUrl: 'views/coupon/index.html',
+				scope: {},
+				replace: true,
+				link: function (scope, el, attr) {
+					var locationArray = attr.location.split(','),
+						left = $.trim(locationArray[0]),
+						top = $.trim(locationArray[1]);
+
+					scope.id = attr.id;
+					scope.floor = attr.floor;
+					scope.img = attr.img;
+					scope.type = attr.type;
+
+					el.css({
+						left: left,
+						top: top
+					});
+				}
+			};
+		}
+	]);
+
 angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 	.controller('HomeCtrl', [
 		'$scope',
@@ -44,16 +78,30 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.couponMessages = [];
 			$scope.coupons = [];
 			$scope.couponsOnStage = [];
+			$scope.tooltipModals = [];
 
 			$scope.init = function () {
 				$scope.setCouponsContainerWidth();
 				$scope.getCouponMessages();
 				$scope.getCoupons();
+				$scope.getTooltipModals();
 				$scope.skrollr();
 				$scope.map();
 			};
 
-			$scope.openTooltipModal = function () {
+			$scope.getTooltipModals = function () {
+				couponsService.getTooltipModals()
+					.then(function (res) {
+						// Success
+						$scope.tooltipModals = res;
+					}, function (err) {
+						// Error
+						$log.error(err);
+					});
+			};
+
+			$scope.openTooltipModal = function (id) {
+				$scope.tooltipId = id;
 				$timeout(function () {
 					$('html').addClass('block-scroll');
 				}, 300);
@@ -85,12 +133,10 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 						options: {
 							center: [55.759534, 37.652598],
 							zoom: 13,
-							mapTypeControl: false,
 							panControl: false,
-							ZoomControlOptions: false,
 							navigationControl: false,
 							scrollwheel: false,
-							disableDefaultUI: true,
+							disableDefaultUI: false,
 							streetViewControl: false,
 							styles: [{
 								"featureType": "administrative",
@@ -265,46 +311,28 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 		}
 	]);
 
-angular.module('couponDirective', [])
-	.controller('couponCtrl', ['$scope',
-		function ($scope) {
-			'use strict';
-		}
-	])
-	.directive('coupon', [
-
-		function () {
-			'use strict';
-			return {
-				restrict: 'E',
-				templateUrl: 'views/coupon/index.html',
-				scope: {},
-				replace: true,
-				link: function (scope, el, attr) {
-					var locationArray = attr.location.split(','),
-						left = $.trim(locationArray[0]),
-						top = $.trim(locationArray[1]);
-
-					scope.id = attr.id;
-					scope.floor = attr.floor;
-					scope.img = attr.img;
-					scope.type = attr.type;
-
-					el.css({
-						left: left,
-						top: top
-					});
-				}
-			};
-		}
-	]);
-
 app.service('couponsService', ['$http', '$q',
 
 	function ($http, $q) {
 		var coupon = this;
 		coupon.couponMessages = {};
+		coupon.tooltipModals = {};
 		coupon.coupons = [];
+
+		coupon.getTooltipModals = function () {
+			var defer = $q.defer();
+
+			$http.get('data/tooltip-modals.json')
+				.success(function (res) {
+					coupon.tooltipModals = res;
+					defer.resolve(res);
+				})
+				.error(function (err, status) {
+					defer.reject(err);
+				});
+
+			return defer.promise;
+		};
 
 		coupon.getMessages = function () {
 			var defer = $q.defer();

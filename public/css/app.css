@@ -2343,8 +2343,8 @@ body {
 }
 .wrapper {
   overflow: hidden;
-  width: 2000px;
-  height: 4126px;
+  width: 2600px;
+  height: 4351px;
   width: 100%;
   position: absolute;
 }
@@ -2469,7 +2469,7 @@ body {
   position: absolute;
   -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
-  top: 3896px;
+  top: 4115px;
   left: 0;
   width: 100%;
   background: #fff;
@@ -2533,8 +2533,8 @@ body {
 .house {
   background-image: url(../img/house.jpg);
   background-repeat: no-repeat;
-  width: 2000px;
-  height: 4126px;
+  width: 2600px;
+  height: 4351px;
   position: absolute;
   left: 50%;
   top: 0;
@@ -2547,7 +2547,7 @@ body {
   .house {
     /* on retina, use image that's scaled by 2 */
     background-image: url(../img/house@2x.jpg);
-    background-size: 2000px 4126px;
+    background-size: 2600px 4351px;
   }
 }
 .dot {
@@ -3426,7 +3426,7 @@ body.ngdialog-open {
   height: 113px;
   position: absolute;
   top: 1000px;
-  right: 16%;
+  right: 26%;
   z-index: 100;
   -webkit-transition: all 1s;
   transition: all 1s;

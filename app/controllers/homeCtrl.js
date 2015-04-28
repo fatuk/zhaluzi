@@ -20,16 +20,30 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.couponMessages = [];
 			$scope.coupons = [];
 			$scope.couponsOnStage = [];
+			$scope.tooltipModals = [];
 
 			$scope.init = function () {
 				$scope.setCouponsContainerWidth();
 				$scope.getCouponMessages();
 				$scope.getCoupons();
+				$scope.getTooltipModals();
 				$scope.skrollr();
 				$scope.map();
 			};
 
-			$scope.openTooltipModal = function () {
+			$scope.getTooltipModals = function () {
+				couponsService.getTooltipModals()
+					.then(function (res) {
+						// Success
+						$scope.tooltipModals = res;
+					}, function (err) {
+						// Error
+						$log.error(err);
+					});
+			};
+
+			$scope.openTooltipModal = function (id) {
+				$scope.tooltipId = id;
 				$timeout(function () {
 					$('html').addClass('block-scroll');
 				}, 300);
@@ -61,12 +75,10 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 						options: {
 							center: [55.759534, 37.652598],
 							zoom: 13,
-							mapTypeControl: false,
 							panControl: false,
-							ZoomControlOptions: false,
 							navigationControl: false,
 							scrollwheel: false,
-							disableDefaultUI: true,
+							disableDefaultUI: false,
 							streetViewControl: false,
 							styles: [{
 								"featureType": "administrative",
