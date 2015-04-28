@@ -62,7 +62,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.map = function () {
 				$('.js-map').gmap3({
 					marker: {
-						latLng: [55.762024, 37.559649],
+						latLng: [55.648677, 37.735566],
 						options: {
 							animation: 'DROP',
 							icon: {
@@ -73,8 +73,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 					map: {
 						// address: "POURRIERES, Москва",
 						options: {
-							center: [55.759534, 37.652598],
-							zoom: 13,
+							center: [55.648677, 37.735566],
+							zoom: 14,
 							panControl: false,
 							navigationControl: false,
 							scrollwheel: false,

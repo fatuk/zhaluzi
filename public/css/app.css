@@ -3607,7 +3607,7 @@ body.ngdialog-open {
   color: #0F0F0F;
 }
 .map {
-  width: 100%;
+  width: 50%;
   height: 370px;
   position: absolute;
   left: 50%;

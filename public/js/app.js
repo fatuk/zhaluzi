@@ -22,40 +22,6 @@ var app = angular.module('myApp', [
 		}
 	]);
 
-angular.module('couponDirective', [])
-	.controller('couponCtrl', ['$scope',
-		function ($scope) {
-			'use strict';
-		}
-	])
-	.directive('coupon', [
-
-		function () {
-			'use strict';
-			return {
-				restrict: 'E',
-				templateUrl: 'views/coupon/index.html',
-				scope: {},
-				replace: true,
-				link: function (scope, el, attr) {
-					var locationArray = attr.location.split(','),
-						left = $.trim(locationArray[0]),
-						top = $.trim(locationArray[1]);
-
-					scope.id = attr.id;
-					scope.floor = attr.floor;
-					scope.img = attr.img;
-					scope.type = attr.type;
-
-					el.css({
-						left: left,
-						top: top
-					});
-				}
-			};
-		}
-	]);
-
 angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 	.controller('HomeCtrl', [
 		'$scope',
@@ -120,7 +86,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.map = function () {
 				$('.js-map').gmap3({
 					marker: {
-						latLng: [55.762024, 37.559649],
+						latLng: [55.648677, 37.735566],
 						options: {
 							animation: 'DROP',
 							icon: {
@@ -131,8 +97,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 					map: {
 						// address: "POURRIERES, Москва",
 						options: {
-							center: [55.759534, 37.652598],
-							zoom: 13,
+							center: [55.648677, 37.735566],
+							zoom: 14,
 							panControl: false,
 							navigationControl: false,
 							scrollwheel: false,
@@ -308,6 +274,40 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			};
 
 			$scope.init();
+		}
+	]);
+
+angular.module('couponDirective', [])
+	.controller('couponCtrl', ['$scope',
+		function ($scope) {
+			'use strict';
+		}
+	])
+	.directive('coupon', [
+
+		function () {
+			'use strict';
+			return {
+				restrict: 'E',
+				templateUrl: 'views/coupon/index.html',
+				scope: {},
+				replace: true,
+				link: function (scope, el, attr) {
+					var locationArray = attr.location.split(','),
+						left = $.trim(locationArray[0]),
+						top = $.trim(locationArray[1]);
+
+					scope.id = attr.id;
+					scope.floor = attr.floor;
+					scope.img = attr.img;
+					scope.type = attr.type;
+
+					el.css({
+						left: left,
+						top: top
+					});
+				}
+			};
 		}
 	]);
 
