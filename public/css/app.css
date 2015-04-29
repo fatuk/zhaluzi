@@ -3667,5 +3667,10 @@ body.ngdialog-open {
 .has-scrollbar > .nano-content::-webkit-scrollbar {
   display: block;
 }
+@media (max-width: 480px) {
+  .desktop {
+    display: none !important;
+  }
+}
 
 /*# sourceMappingURL=../css/app.css.map */

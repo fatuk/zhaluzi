@@ -12,7 +12,7 @@
 <body
 	ng-controller="HomeCtrl"
 	ng-mouseover="callMeHover=false; couponInfoHover=false">
-	<div class="wrapper" ng-click="getLocation($event)">
+	<div class="wrapper desktop ipad" ng-click="getLocation($event)">
 		<header
 			class="site-header"
 			ng-class="{expanded: menuState}">
@@ -106,7 +106,7 @@
 					<div
 						class="call-me"
 						ng-mouseover="callMeShow();callMeHover=true; $event.stopPropagation()">
-						<a href="tel:+7(495)542-64-84" class="call-me__number">
+						<a href="tel:+74955426484" class="call-me__number">
 							<i class="icon icon-phone"></i>
 							+7 (495) 542-64-84
 						</a>
@@ -434,15 +434,15 @@
 								</p>
 							</div>
 						</div>
-						<div class="site-footer__column">
-
-						</div>
+						<div class="site-footer__column"></div>
 					</div>
 					<!-- Map -->
 					<div class="js-map map">map</div>
 				</footer>
 		</div>
 	</div>
+
+	<div ng-include src="'views/mobile/index.html'" class="mobile"></div>
 
 	<script type="text/javascript"
 src="http://maps.google.com/maps/api/js?sensor=false&amp;language=ru"></script>
