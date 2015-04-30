@@ -1,15 +1,61 @@
 <!-- Mobile header -->
 <header class="mobile-header">
 	<a href="tel:+74955426484" class="mobile-header__call">
-		<i class="icon phone-big"></i>
+		<i class="icon icon-phone-big"></i>
 	</a>
 	<a href="#" class="mobile-header__logo"></a>
-	<a ng-click="toggleMobileMenu()"></a>
+	<a class="mobile-header__menu" ng-click="mobileMenuToggle()">
+		<i class="icon icon-menu-big"></i>
+	</a>
 </header>
+<!-- Mobile menu -->
+<nav class="mobile-menu" ng-class="{'toggled': mobileMenuState}">
+	<div class="mobile-menu__close" ng-click="mobileMenuToggle()">
+		<i class="icon icon-close"></i>
+	</div>
+	<ul class="mobile-menu__list">
+		<li class="mobile-menu__item">
+			<img src="img/rollet_menu.png" alt="" class="mobile-menu__img">
+			<div class="mobile-menu__text">
+				Горизонтальные
+			</div>
+		</li>
+		<li class="mobile-menu__item">
+			<img src="img/rollet_menu.png" alt="" class="mobile-menu__img">
+			<div class="mobile-menu__text">
+				Горизонтальные
+			</div>
+		</li>
+		<li class="mobile-menu__item">
+			<img src="img/rollet_menu.png" alt="" class="mobile-menu__img">
+			<div class="mobile-menu__text">
+				Горизонтальные
+			</div>
+		</li>
+		<li class="mobile-menu__item">
+			<img src="img/rollet_menu.png" alt="" class="mobile-menu__img">
+			<div class="mobile-menu__text">
+				Горизонтальные
+			</div>
+		</li>
+		<li class="mobile-menu__item">
+			<img src="img/rollet_menu.png" alt="" class="mobile-menu__img">
+			<div class="mobile-menu__text">
+				Горизонтальные
+			</div>
+		</li>
+		<li class="mobile-menu__item">
+			<img src="img/rollet_menu.png" alt="" class="mobile-menu__img">
+			<div class="mobile-menu__text">
+				Горизонтальные
+			</div>
+		</li>
+	</ul>
+</nav>
 <!-- Mobile main content -->
-<main class="mobile-main">
+<main class="mobile-main" ng-class="{'toggled': mobileMenuState}">
 	<!-- Mobile main section -->
-	<section class="mobile-section mobile-section_main">
+	<section class="mobile-section mobile-section_1">
 		<h2 class="mobile-section__title">
 			Дизайн окна
 		</h2>
@@ -28,28 +74,28 @@
 					<input
 						type="tel"
 						name="callMePhone"
-						placeholder="Введите номер телфона"
+						placeholder="Введите номер телефона"
 						class="input">
 
-					<button class="btn btn_blue btn_up">
-						Жду звонка
+					<button class="btn btn_blue btn_upper">
+						<span class="btn__text">Жду звонка!</span>
 					</button>
 				</form>
 			</div>
-			<!-- Discount info -->
-			<div class="discount-info">
-				<i class="icon icon-search"></i>
-				<h3 class="discount-info__title">
-					Хотите скидку 10%?
-				</h3>
-				<p class="discount-info__text">
-					Зайдите на этот сайт с компьютера или планшета и найдите 5 купонов спрятанных на этажах здания!
-				</p>
-			</div>
+		</div>
+		<!-- Discount info -->
+		<div class="mobile-discount-info">
+			<i class="icon icon-search"></i>
+			<h3 class="mobile-discount-info__title">
+				Хотите скидку 10%?
+			</h3>
+			<p class="mobile-discount-info__text">
+				Зайдите на этот сайт с компьютера или планшета и найдите 5 купонов спрятанных на этажах здания!
+			</p>
 		</div>
 	</section>
 	<!-- Mobile section -->
-	<section class="mobile-section">
+	<section class="mobile-section mobile-section_2">
 		<h2 class="mobile-section__title">
 			Горизонтальные жалюзи
 		</h2>
@@ -58,18 +104,49 @@
 		</h3>
 		<ul class="mobile-section__icons-list">
 			<li class="mobile-section__icons-item">
-				<img src="#" alt="" class="mobile-section__icons-img">
+				<img src="img/rollet_menu.png" alt="" class="mobile-section__icons-img">
 			</li>
 			<li class="mobile-section__icons-item">
-				<img src="#" alt="" class="mobile-section__icons-img">
+				<img src="img/scheme-gor.png" alt="" class="mobile-section__icons-img">
 			</li>
 		</ul>
 		<p class="mobile-section__text">
 			Сергей и Юля установили себе жалюзи на наклонные мансардные окна. Это самое лучшее решение для окон, которые находятся под наклоном либо на потолке. Благодаря боковым направляющим жалюзи хорошго фиксируются к откосам окна и не болтаются.
 		</p>
-		<button class="btn btn_green btn_up">
-			Заказать такие же!
-		</button>
+		<div class="mobile-section__controls">
+			<button class="btn btn_green btn_upper">
+				<span class="btn__text">
+					Заказать такие же!
+				</span>
+			</button>
+		</div>
+	</section>
+	<!-- Mobile section -->
+	<section class="mobile-section mobile-section_2">
+		<h2 class="mobile-section__title">
+			Горизонтальные жалюзи
+		</h2>
+		<h3 class="mobile-section__subtitle">
+			алюминиевые, пластиковые, деревянные
+		</h3>
+		<ul class="mobile-section__icons-list">
+			<li class="mobile-section__icons-item">
+				<img src="img/rollet_menu.png" alt="" class="mobile-section__icons-img">
+			</li>
+			<li class="mobile-section__icons-item">
+				<img src="img/scheme-gor.png" alt="" class="mobile-section__icons-img">
+			</li>
+		</ul>
+		<p class="mobile-section__text">
+			Сергей и Юля установили себе жалюзи на наклонные мансардные окна. Это самое лучшее решение для окон, которые находятся под наклоном либо на потолке. Благодаря боковым направляющим жалюзи хорошго фиксируются к откосам окна и не болтаются.
+		</p>
+		<div class="mobile-section__controls">
+			<button class="btn btn_green btn_upper">
+				<span class="btn__text">
+					Заказать такие же!
+				</span>
+			</button>
+		</div>
 	</section>
 </main>
 <!-- Mobile footer -->

@@ -1,0 +1,39 @@
+@bg-color: #F4E57A;
+.mobile-menu {
+	background: @bg-color;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateX(100%);
+	transition: transform .5s;
+	backface-visibility: hidden;
+	text-align: center;
+	z-index: 20;
+	&.toggled {
+		transform: translateX(0%);
+	}
+	&__close {
+		position: absolute;
+		right: @base*2;
+		top: @base*2;
+	}
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		margin-top: @base*5;
+	}
+	&__item {
+		display: inline-block;
+		width: 42%;
+		margin-bottom: @base*3;
+	}
+	&__img {
+		margin-left: @base;
+	}
+	&__text {
+		text-transform: uppercase;
+	}
+}

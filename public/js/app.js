@@ -51,7 +51,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				$scope.getCouponMessages();
 				$scope.getCoupons();
 				$scope.getTooltipModals();
-				$scope.skrollr();
+				// $scope.skrollr();
 				$scope.map();
 			};
 
@@ -241,6 +241,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				});
 			};
 
+			$scope.test = 123;
+
 			$scope.openCollectModal = function () {
 				ngDialog.open({
 					template: 'views/modals/coupon.html',
@@ -258,6 +260,10 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 
 			$scope.menuToggle = function () {
 				this.menuState = !this.menuState;
+			};
+
+			$scope.mobileMenuToggle = function () {
+				this.mobileMenuState = !this.mobileMenuState;
 			};
 
 			$scope.collect = function (id, e) {

@@ -1,0 +1,30 @@
+.mobile-header {
+	.clearfix();
+	box-shadow: 0 3px 10px rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	z-index: 20;
+	// display: none;
+	&__call {
+		display: inline-block;
+		padding: @base @base*2;
+		float: left;
+	}
+	&__logo {
+		display: inline-block;
+		background: url('../img/logo.svg') no-repeat;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: @base*10;
+		height: @base*10;
+	}
+	&__menu {
+		float: right;
+		padding: @base @base*2;
+	}
+}

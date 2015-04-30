@@ -1,0 +1,10 @@
+.mobile-main {
+	background: url('../img/mobile/tooltip-modal-bg.jpg');
+	transition: transform .5s;
+	backface-visibility: hidden;
+	position: relative;
+	z-index: 5;
+	&.toggled {
+		transform: translateX(-100%);
+	}
+}
