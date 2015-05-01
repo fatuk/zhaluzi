@@ -3527,6 +3527,7 @@ body.ngdialog-open {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 .social__item {
   display: inline-block;
@@ -3836,6 +3837,19 @@ body.ngdialog-open {
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
+.mobile-footer .social {
+  padding: 40px 0;
+}
+.mobile-footer .social .icon {
+  width: 40px;
+  height: 40px;
+}
+.mobile-footer .social__item {
+  margin-right: 7%;
+}
+.mobile-footer .social__item:last-child {
+  margin-right: 0;
+}
 .mobile-section {
   padding-top: 120%;
   text-align: center;
@@ -4075,8 +4089,31 @@ body.ngdialog-open {
 }
 .mobile-footer-menu__link {
   display: inline-block;
-  padding: 10px 0;
+  padding: 10px 5%;
   color: #fff;
+  font-size: 20px;
+}
+.mobile-contacts {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.mobile-contacts__title {
+  margin: 0;
+  font-family: 'Lobster', cursive;
+  font-weight: 400;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.mobile-contacts__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-contacts__link {
+  color: #7E7E7E;
+  display: inline-block;
+  padding: 15px 5%;
   font-size: 20px;
 }
 @media (max-width: 768px) {
