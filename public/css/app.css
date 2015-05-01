@@ -2366,6 +2366,84 @@ body {
     background-size: 41px 44px;
   }
 }
+.icon-wood {
+  background-image: url(../img/menu/icon_derevyannye.png);
+  background-repeat: no-repeat;
+  width: 93px;
+  height: 83px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-wood {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/menu/icon_derevyannye@2x.png);
+    background-size: 93px 83px;
+  }
+}
+.icon-horizontal {
+  background-image: url(../img/menu/icon_gorizontalnye.png);
+  background-repeat: no-repeat;
+  width: 93px;
+  height: 83px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-horizontal {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/menu/icon_gorizontalnye@2x.png);
+    background-size: 93px 83px;
+  }
+}
+.icon-contacts {
+  background-image: url(../img/menu/icon_kontakty.png);
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 74px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-contacts {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/menu/icon_kontakty@2x.png);
+    background-size: 75px 74px;
+  }
+}
+.icon-rollet {
+  background-image: url(../img/menu/icon_rulonnye.png);
+  background-repeat: no-repeat;
+  width: 93px;
+  height: 83px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-rollet {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/menu/icon_rulonnye@2x.png);
+    background-size: 93px 83px;
+  }
+}
+.icon-vertical {
+  background-image: url(../img/menu/icon_verticalnye.png);
+  background-repeat: no-repeat;
+  width: 93px;
+  height: 83px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-vertical {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/menu/icon_verticalnye@2x.png);
+    background-size: 93px 83px;
+  }
+}
+.icon-zebra {
+  background-image: url(../img/menu/icon_zebra.png);
+  background-repeat: no-repeat;
+  width: 93px;
+  height: 83px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-zebra {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/menu/icon_zebra@2x.png);
+    background-size: 93px 83px;
+  }
+}
 body {
   height: inherit !important;
 }
@@ -2486,9 +2564,12 @@ body {
   text-decoration: none;
   display: inline-block;
 }
-.main-menu__img {
+.main-menu .icon {
   display: inline-block;
   margin-left: 10px;
+}
+.main-menu .icon-contacts {
+  margin-left: 0;
 }
 .main-menu__text {
   font-size: 13px;
@@ -3769,8 +3850,6 @@ body.ngdialog-open {
   padding-bottom: 20px;
   font-size: 30px;
   margin: 0;
-  position: relative;
-  background: #fff;
   z-index: 10;
 }
 .mobile-section__icons-list {
