@@ -3766,8 +3766,12 @@ body.ngdialog-open {
 }
 .mobile-section__text {
   padding: 0 30px;
+  padding-bottom: 20px;
   font-size: 30px;
   margin: 0;
+  position: relative;
+  background: #fff;
+  z-index: 10;
 }
 .mobile-section__icons-list {
   list-style: none;
@@ -3787,9 +3791,6 @@ body.ngdialog-open {
 }
 .mobile-section__controls {
   padding: 0 5%;
-}
-.mobile-section .btn_green {
-  margin: 13% 0;
 }
 .mobile-section_1 {
   margin-top: 45px;
@@ -3904,6 +3905,36 @@ body.ngdialog-open {
 }
 .mobile-menu__text {
   text-transform: uppercase;
+}
+.mobile-dropdown {
+  background: url('../img/mobile/bg_buy.jpg');
+  padding: 7% 5%;
+  padding-bottom: 0;
+  position: relative;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  margin-bottom: 90px;
+  z-index: 5;
+}
+.mobile-dropdown.expanded {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.mobile-dropdown__container {
+  padding-bottom: 60px;
+}
+.mobile-dropdown__controls {
+  position: relative;
+}
+.mobile-dropdown .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
 }
 @media (max-width: 768px) {
   .desktop {

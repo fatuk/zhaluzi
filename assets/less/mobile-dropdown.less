@@ -1,0 +1,24 @@
+.mobile-dropdown {
+	background: url('../img/mobile/bg_buy.jpg');
+	padding: 7% 5%;
+	padding-bottom: 0;
+	position: relative;
+	transform: translateY(0%);
+	margin-bottom: @base*9;
+	z-index: 5;
+	&.expanded {
+		transform: translateY(-100%);
+	}
+	&__container {
+		padding-bottom: @base*6;
+	}
+	&__controls {
+		position: relative;
+	}
+	.btn {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translateY(50%);
+	}
+}
