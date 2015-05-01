@@ -5,9 +5,12 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	transition: transform .5s;
 	background: #fff;
 	z-index: 20;
-	// display: none;
+	&.toggled {
+		transform: translateX(-100%);
+	}
 	&__call {
 		display: inline-block;
 		padding: @base @base*2;

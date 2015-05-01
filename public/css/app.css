@@ -3786,6 +3786,8 @@ body.ngdialog-open {
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-transition: -webkit-transform .5s;
+  transition: transform .5s;
   background: #fff;
   z-index: 20;
 }
@@ -3793,6 +3795,11 @@ body.ngdialog-open {
   content: "";
   display: table;
   clear: both;
+}
+.mobile-header.toggled {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 .mobile-header__call {
   display: inline-block;
@@ -3965,8 +3972,10 @@ body.ngdialog-open {
 }
 .mobile-menu__close {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  display: inline-block;
 }
 .mobile-menu__list {
   list-style: none;
@@ -3979,8 +3988,12 @@ body.ngdialog-open {
   width: 42%;
   margin-bottom: 30px;
 }
-.mobile-menu__img {
+.mobile-menu .icon {
   margin-left: 10px;
+}
+.mobile-menu .icon-contacts,
+.mobile-menu .icon-close {
+  margin-left: 0;
 }
 .mobile-menu__text {
   text-transform: uppercase;

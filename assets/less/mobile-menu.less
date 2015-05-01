@@ -16,8 +16,10 @@
 	}
 	&__close {
 		position: absolute;
-		right: @base*2;
-		top: @base*2;
+		right: 0;
+		top: 0;
+		padding: @base*2;
+		display: inline-block;
 	}
 	&__list {
 		list-style: none;
@@ -30,8 +32,11 @@
 		width: 42%;
 		margin-bottom: @base*3;
 	}
-	&__img {
+	.icon {
 		margin-left: @base;
+	}
+	.icon-contacts, .icon-close {
+		margin-left: 0;
 	}
 	&__text {
 		text-transform: uppercase;
