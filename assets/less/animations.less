@@ -1,0 +1,15 @@
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(@base*2);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.scroll-down {
+	animation: scroll 1s infinite;
+}

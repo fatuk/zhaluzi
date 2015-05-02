@@ -2184,6 +2184,38 @@ a {
   display: table;
   clear: both;
 }
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.scroll-down {
+  -webkit-animation: scroll 1s infinite;
+  animation: scroll 1s infinite;
+}
 /*
  * This file is NOT needed in order to use skrollr.
  * The demo uses it and it may help you as well.
@@ -2419,6 +2451,24 @@ body {
     background-image: url(../img/house-parts/15@2x.jpg);
     background-size: 2448px 275px;
   }
+}
+.icon-ribbon {
+  background-image: url(../img/ribbon.png);
+  background-repeat: no-repeat;
+  width: 572px;
+  height: 124px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-ribbon {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/ribbon@2x.png);
+    background-size: 572px 124px;
+  }
+}
+.icon-scroll {
+  background: url('../img/scroll_down.svg') no-repeat;
+  width: 20px;
+  height: 35px;
 }
 .icon-phone {
   background-image: url(../img/icon_phone.png);
@@ -4064,6 +4114,37 @@ body.ngdialog-open {
 }
 .has-scrollbar > .nano-content::-webkit-scrollbar {
   display: block;
+}
+.jumbotron {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
+  z-index: 10;
+}
+.jumbotron .icon-ribbon {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  margin-left: -60px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.jumbotron__title {
+  margin: 0;
+  margin-top: 215px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+}
+.jumbotron__text {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 30px;
 }
 .accordion {
   text-align: center;

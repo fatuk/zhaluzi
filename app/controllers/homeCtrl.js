@@ -27,7 +27,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				$scope.getCouponMessages();
 				$scope.getCoupons();
 				$scope.getTooltipModals();
-				// $scope.skrollr();
+				$scope.skrollr();
 				$scope.map();
 			};
 

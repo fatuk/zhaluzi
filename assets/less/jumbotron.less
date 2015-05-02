@@ -1,0 +1,31 @@
+.jumbotron {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	transition: transform 1s;
+	z-index: 10;
+	.icon-ribbon {
+		position: absolute;
+		top: @base*6;
+		left: 50%;
+		margin-left: -@base*6;
+		transform: translateX(-50%);
+	}
+	.icon-scroll {
+
+	}
+	&__title {
+		margin: 0;
+		margin-top: @base*21.5;
+		margin-bottom: @base*3;
+		font-weight: @normal;
+		font-size: 24px;
+		color: #fff;
+	}
+	&__text {
+		color: #fff;
+		font-size: 14px;
+		margin: 0;
+		margin-bottom: @base*3;
+	}
+}

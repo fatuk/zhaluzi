@@ -13,6 +13,7 @@
 	ng-controller="HomeCtrl"
 	ng-mouseover="callMeHover=false; couponInfoHover=false">
 	<div class="wrapper desktop ipad" ng-click="getLocation($event)">
+		<!-- Header -->
 		<header
 			class="site-header"
 			ng-class="{expanded: menuState}">
@@ -115,6 +116,23 @@
 				</div>
 			</div>
 		</header>
+		<!-- Jumbotron -->
+		<div
+			class="jumbotron"
+			data-start="transform:translateY(0px);"
+			data-150="transform:translateY(-80px);">
+			<i class="icon icon-ribbon"></i>
+			<h2 class="jumbotron__title">
+				Мастерская по изготовлению <br>
+				высококачественных жалюзи в Москве
+			</h2>
+			<p class="jumbotron__text">
+				Путешествуйте по этажам, изучайте наши предложения и находите купоны на скидку!
+			</p>
+			<!-- Scroll icon -->
+			<i class="icon icon-scroll scroll-down js-scrollIcon"></i>
+		</div>
+		<!-- Dropdown -->
 		<div class="container container_dropdown">
 			<!-- Dropdown coupon info -->
 			<div
@@ -289,26 +307,31 @@
 						</span>
 					</span>
 				</div>
+				<!-- Dog -->
 				<div
 					class="dog"
 					data-500="transform:translateY(0px);"
 					data-1500="transform:translateY(-800px);">
 				</div>
+				<!-- Cloud 1 -->
 				<div
 					class="cloud cloud_1"
 					data-0="transform:translateY(0px);"
 					data-1500="transform:translateY(-1200px);">
 				</div>
+				<!-- Cloud 2 -->
 				<div
 					class="cloud cloud_2"
 					data-0="transform:translateY(0px);"
 					data-1200="transform:translateY(-900px);">
 				</div>
+				<!-- Cloud 3 -->
 				<div
 					class="cloud cloud_3"
 					data-0="transform:translateY(0px);"
 					data-2500="transform:translateY(-700px);">
 				</div>
+				<!-- Cloud 4 -->
 				<div
 					class="plane"
 					data-0="transform:translate(0px, 0px);"
@@ -332,128 +355,128 @@
 				<i class="icon icon-house-15"></i>
 			</div>
 			<!-- Footer -->
-				<footer
-					class="site-footer"
-					data-3000="transform:translateY(0px);"
-					data-end="transform:translateY(-390px);">
-					<!-- Contact form -->
-					<div class="contacts-form">
-						<div class="container">
-							<div class="contacts-form__container">
-								<h3 class="contacts-form__title">
-									Напишите нам
-								</h3>
-								<p class="contacts-form__text">
-									У вас остались вопросы по устройствам жалюзи, их стоимости, или вы просто хотите оставить свой комментарий по нашей работе? Наша дружная команда всегда готова выслушать вопросы!
-								</p>
-							</div>
-							<form name="contactForm" action="#">
-								<textarea
-									name="comment"
-									placeholder="Ваш вопрос или комментарий"
-									class="textarea"></textarea>
-								<div class="contacts-form__container">
-									<input
-										name="contactName"
-										required
-										placeholder="Введите ваше имя"
-										type="text"
-										class="input">
-									<input
-										name="contactEmail"
-										required
-										placeholder="Введите вам email"
-										type="email"
-										class="input">
-									<button class="btn btn_green-1 btn_upper">
-										<span class="btn__text">
-											Отправить
-										</span>
-									</button>
-								</div>
-							</form>
+			<footer
+				class="site-footer"
+				data-3000="transform:translateY(0px);"
+				data-end="transform:translateY(-390px);">
+				<!-- Contact form -->
+				<div class="contacts-form">
+					<div class="container">
+						<div class="contacts-form__container">
+							<h3 class="contacts-form__title">
+								Напишите нам
+							</h3>
+							<p class="contacts-form__text">
+								У вас остались вопросы по устройствам жалюзи, их стоимости, или вы просто хотите оставить свой комментарий по нашей работе? Наша дружная команда всегда готова выслушать вопросы!
+							</p>
 						</div>
+						<form name="contactForm" action="#">
+							<textarea
+								name="comment"
+								placeholder="Ваш вопрос или комментарий"
+								class="textarea"></textarea>
+							<div class="contacts-form__container">
+								<input
+									name="contactName"
+									required
+									placeholder="Введите ваше имя"
+									type="text"
+									class="input">
+								<input
+									name="contactEmail"
+									required
+									placeholder="Введите вам email"
+									type="email"
+									class="input">
+								<button class="btn btn_green-1 btn_upper">
+									<span class="btn__text">
+										Отправить
+									</span>
+								</button>
+							</div>
+						</form>
 					</div>
-					<!-- Footer data -->
-					<div class="site-footer__data container">
-						<div class="site-footer__column">
-							<!-- Footer menu -->
-							<div class="site-footer__container">
-								<h3 class="site-footer__title">
-									Интересное
-								</h3>
-								<ul class="site-footer__list">
-									<li class="site-footer__item">
-										<a href="#" class="site-footer__link">
-											Основной сайт компании
-										</a>
+				</div>
+				<!-- Footer data -->
+				<div class="site-footer__data container">
+					<div class="site-footer__column">
+						<!-- Footer menu -->
+						<div class="site-footer__container">
+							<h3 class="site-footer__title">
+								Интересное
+							</h3>
+							<ul class="site-footer__list">
+								<li class="site-footer__item">
+									<a href="#" class="site-footer__link">
+										Основной сайт компании
+									</a>
+								</li>
+								<li class="site-footer__item">
+									<a href="#" class="site-footer__link">
+										Горизонтальные жалюзи
+									</a>
+								</li>
+								<li class="site-footer__item">
+									<a href="#" class="site-footer__link">
+										Вертикальные жалюзи
+									</a>
+								</li>
+								<li class="site-footer__item">
+									<a href="#" class="site-footer__link">
+										Рулонные жалюзи
+									</a>
+								</li>
+								<li class="site-footer__item">
+									<a href="#" class="site-footer__link">
+										Деревянные жалюзи
+									</a>
+								</li>
+								<li class="site-footer__item">
+									<a href="#" class="site-footer__link">
+										Жалюза зебра
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- Footer contacts -->
+						<div class="site-footer__container site-footer__container_contacts">
+							<h3 class="site-footer__title">
+								Мы всегдя рядом
+							</h3>
+							<a href="tel:+74955426484" class="site-footer__link">
+								+7 (495) 542-64-84
+							</a>
+							<a href="mailto:info@design-okna.ru" class="site-footer__link">
+								info@design-okna.ru
+							</a>
+							<!-- Social -->
+							<div class="social">
+								<ul class="social__list">
+									<li class="social__item">
+										<a href="#" class="social__link"><i class="icon icon-vk"></i></a>
 									</li>
-									<li class="site-footer__item">
-										<a href="#" class="site-footer__link">
-											Горизонтальные жалюзи
-										</a>
+									<li class="social__item">
+										<a href="#" class="social__link"><i class="icon icon-facebook"></i></a>
 									</li>
-									<li class="site-footer__item">
-										<a href="#" class="site-footer__link">
-											Вертикальные жалюзи
-										</a>
-									</li>
-									<li class="site-footer__item">
-										<a href="#" class="site-footer__link">
-											Рулонные жалюзи
-										</a>
-									</li>
-									<li class="site-footer__item">
-										<a href="#" class="site-footer__link">
-											Деревянные жалюзи
-										</a>
-									</li>
-									<li class="site-footer__item">
-										<a href="#" class="site-footer__link">
-											Жалюза зебра
-										</a>
+									<li class="social__item">
+										<a href="#" class="social__link"><i class="icon icon-ok"></i></a>
 									</li>
 								</ul>
 							</div>
-							<!-- Footer contacts -->
-							<div class="site-footer__container site-footer__container_contacts">
-								<h3 class="site-footer__title">
-									Мы всегдя рядом
-								</h3>
-								<a href="tel:+74955426484" class="site-footer__link">
-									+7 (495) 542-64-84
-								</a>
-								<a href="mailto:info@design-okna.ru" class="site-footer__link">
-									info@design-okna.ru
-								</a>
-								<!-- Social -->
-								<div class="social">
-									<ul class="social__list">
-										<li class="social__item">
-											<a href="#" class="social__link"><i class="icon icon-vk"></i></a>
-										</li>
-										<li class="social__item">
-											<a href="#" class="social__link"><i class="icon icon-facebook"></i></a>
-										</li>
-										<li class="social__item">
-											<a href="#" class="social__link"><i class="icon icon-ok"></i></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- Vendor -->
-							<div class="vendor">
-								<i class="icon icon-brainmaze"></i>
-								<p class="vendor__text">
-									Все придумано и реализовано командой <a href="#" class="vendor__link">brainmaze.net</a>
-								</p>
-							</div>
 						</div>
-						<div class="site-footer__column"></div>
+						<!-- Vendor -->
+						<div class="vendor">
+							<i class="icon icon-brainmaze"></i>
+							<p class="vendor__text">
+								Все придумано и реализовано командой <a href="#" class="vendor__link">brainmaze.net</a>
+							</p>
+						</div>
 					</div>
-					<!-- Map -->
-					<div class="js-map map">map</div>
-				</footer>
+					<div class="site-footer__column"></div>
+				</div>
+				<!-- Map -->
+				<div class="js-map map">map</div>
+			</footer>
 		</div>
 	</div>
 
