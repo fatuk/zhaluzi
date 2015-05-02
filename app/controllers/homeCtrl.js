@@ -31,6 +31,19 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				$scope.map();
 			};
 
+			$scope.scrollTo = function (hash) {
+				var $body = $('html, body'),
+					scrollLocation = $('#' + hash)[0].offsetTop;
+
+				$scope.mobileMenuState = !$scope.mobileMenuState;
+
+				setTimeout(function () {
+					$body.animate({
+						scrollTop: scrollLocation
+					}, '500');
+				}, 500);
+			};
+
 			$scope.getViewSize = function () {
 				alert($(window).width() + 'x' + $(window).height());
 			};
@@ -254,7 +267,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			};
 
 			$scope.mobileMenuToggle = function () {
-				this.mobileMenuState = !this.mobileMenuState;
+				$scope.mobileMenuState = !$scope.mobileMenuState;
 			};
 
 			$scope.collect = function (id, e) {

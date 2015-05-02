@@ -14,37 +14,49 @@
 		<i class="icon icon-close"></i>
 	</div>
 	<ul class="mobile-menu__list">
-		<li class="mobile-menu__item">
+		<li
+			ng-click="scrollTo('horizontal')"
+			class="mobile-menu__item">
 			<i class="icon icon-horizontal"></i>
 			<div class="mobile-menu__text">
 				Горизонтальные
 			</div>
 		</li>
-		<li class="mobile-menu__item">
+		<li
+			ng-click="scrollTo('vertical')"
+			class="mobile-menu__item">
 			<i class="icon icon-vertical"></i>
 			<div class="mobile-menu__text">
 				Вертикальные
 			</div>
 		</li>
-		<li class="mobile-menu__item">
+		<li
+			ng-click="scrollTo('rollet')"
+			class="mobile-menu__item">
 			<i class="icon icon-rollet"></i>
 			<div class="mobile-menu__text">
 				Рулонные
 			</div>
 		</li>
-		<li class="mobile-menu__item">
+		<li
+			ng-click="scrollTo('zebra')"
+			class="mobile-menu__item">
 			<i class="icon icon-zebra"></i>
 			<div class="mobile-menu__text">
 				Жалюзи Зебра
 			</div>
 		</li>
-		<li class="mobile-menu__item">
+		<li
+			ng-click="scrollTo('wood')"
+			class="mobile-menu__item">
 			<i class="icon icon-wood"></i>
 			<div class="mobile-menu__text">
 				Деревянные
 			</div>
 		</li>
-		<li class="mobile-menu__item">
+		<li
+			ng-click="scrollTo('contacts')"
+			class="mobile-menu__item">
 			<i class="icon icon-contacts"></i>
 			<div class="mobile-menu__text">
 				Контакты
@@ -95,7 +107,7 @@
 		</div>
 	</section>
 	<!-- Horizontal section -->
-	<section class="mobile-section mobile-section_2">
+	<section id="horizontal" class="mobile-section mobile-section_2">
 		<h2 class="mobile-section__title">
 			Горизонтальные жалюзи
 		</h2>
@@ -147,7 +159,7 @@
 		</div>
 	</section>
 	<!-- Vertical section -->
-	<section class="mobile-section mobile-section_3">
+	<section id="vertical" class="mobile-section mobile-section_3">
 		<h2 class="mobile-section__title">
 			Вертикальные жалюзи
 		</h2>
@@ -199,7 +211,7 @@
 		</div>
 	</section>
 	<!-- Rollet section -->
-	<section class="mobile-section mobile-section_4">
+	<section id="rollet" class="mobile-section mobile-section_4">
 		<h2 class="mobile-section__title">
 			Рулонные жалюзи
 		</h2>
@@ -251,7 +263,7 @@
 		</div>
 	</section>
 	<!-- Zebra section -->
-	<section class="mobile-section mobile-section_5">
+	<section id="zebra" class="mobile-section mobile-section_5">
 		<h2 class="mobile-section__title">
 			Жалюзи зебра
 		</h2>
@@ -303,7 +315,7 @@
 		</div>
 	</section>
 	<!-- Wood section -->
-	<section class="mobile-section mobile-section_6">
+	<section id="wood" class="mobile-section mobile-section_6">
 		<h2 class="mobile-section__title">
 			Деревянные жалюзи
 		</h2>
@@ -369,34 +381,44 @@
 				</a>
 			</li>
 			<li class="mobile-footer-menu__item">
-				<a href="" class="mobile-footer-menu__link">
+				<a
+					class="mobile-footer-menu__link"
+					ng-click="scrollTo('horizontal')">
 					Горизонтальные жалюзи
 				</a>
 			</li>
 			<li class="mobile-footer-menu__item">
-				<a href="" class="mobile-footer-menu__link">
+				<a
+					class="mobile-footer-menu__link"
+					ng-click="scrollTo('vertical')">
 					Вертикальные жалюзи
 				</a>
 			</li>
 			<li class="mobile-footer-menu__item">
-				<a href="" class="mobile-footer-menu__link">
+				<a
+					class="mobile-footer-menu__link"
+					ng-click="scrollTo('rollet')">
 					Рулонные жалюзи
 				</a>
 			</li>
 			<li class="mobile-footer-menu__item">
-				<a href="" class="mobile-footer-menu__link">
+				<a
+					class="mobile-footer-menu__link"
+					ng-click="scrollTo('wood')">
 					Деревянные жалюзи
 				</a>
 			</li>
 			<li class="mobile-footer-menu__item">
-				<a href="" class="mobile-footer-menu__link">
+				<a
+					class="mobile-footer-menu__link"
+					ng-click="scrollTo('zebra')">
 					Жалюзи зебра
 				</a>
 			</li>
 		</ul>
 	</nav>
 	<!-- Mobile contacts -->
-	<div class="mobile-contacts">
+	<div id="contacts" class="mobile-contacts">
 		<h2 class="mobile-contacts__title">
 			Мы всегда рядом
 		</h2>
