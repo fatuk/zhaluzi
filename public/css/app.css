@@ -2655,10 +2655,6 @@ p {
   margin-right: 16px;
 }
 .house {
-  background-image: url(../img/house.jpg);
-  background-repeat: no-repeat;
-  width: 2600px;
-  height: 4351px;
   position: absolute;
   left: 50%;
   top: 0;
@@ -2666,13 +2662,6 @@ p {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   overflow: hidden;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .house {
-    /* on retina, use image that's scaled by 2 */
-    background-image: url(../img/house@2x.jpg);
-    background-size: 2600px 4351px;
-  }
 }
 .dot {
   position: absolute;
@@ -3922,7 +3911,7 @@ body.ngdialog-open {
   margin-right: 0;
 }
 .mobile-section {
-  padding-top: 120%;
+  padding-top: 89.0625%;
   text-align: center;
 }
 .mobile-section__title {
@@ -3962,7 +3951,7 @@ body.ngdialog-open {
   height: 160px;
 }
 .mobile-section__controls {
-  padding: 0 5%;
+  padding: 0 7.8125%;
 }
 .mobile-section_1 {
   margin-top: 45px;
@@ -3972,11 +3961,13 @@ body.ngdialog-open {
   padding-top: 80%;
 }
 .mobile-section_1 .mobile-section__title {
-  margin-bottom: 5%;
+  margin-bottom: 7.03125%;
 }
 .mobile-section_2 {
   background: url('../img/mobile/2_level.jpg') top no-repeat;
-  margin-top: 30px;
+  background-position: top center;
+  background-size: 100%;
+  margin-top: -30px;
 }
 .mobile-section_3 {
   background: url('../img/mobile/3_level.jpg') top no-repeat;
@@ -3994,8 +3985,8 @@ body.ngdialog-open {
   background: url('../img/mobile/bg_callback.jpg') top no-repeat;
   background-size: 100% 100%;
   padding: 0 7.8125%;
-  padding-bottom: 12%;
-  margin-top: 15%;
+  padding-bottom: 18.75%;
+  margin-top: 20.3125%;
 }
 .mobile-call-me .icon-operator {
   width: 75px;
@@ -4008,33 +3999,37 @@ body.ngdialog-open {
   margin: 0;
   font-size: 0.875em;
   padding-top: 12.5%;
+  padding-bottom: 6.25%;
 }
 .mobile-call-me .input {
-  margin-bottom: 6%;
+  margin-bottom: 11.25%;
 }
 .mobile-discount-info {
-  background: url('../img/mobile/bg_search_coupon.jpg') top no-repeat;
+  background: url('../img/mobile/bg_search_coupon.png') top no-repeat;
   background-size: 100% 100%;
-  padding: 0 5%;
+  padding: 0 7.8125%;
   padding-bottom: 10%;
-  margin-top: 15%;
+  margin-top: 7.8125%;
   position: relative;
   z-index: 10;
 }
 .mobile-discount-info .icon-search {
-  width: 100px;
-  height: 100px;
+  width: 62px;
+  height: 62px;
   margin-top: -20px;
 }
 .mobile-discount-info__title {
   color: #fff;
-  font-size: 30px;
-  padding: 0 5%;
+  margin: 0;
+  margin-top: 10.15625%;
+  margin-bottom: 8.59375%;
+  font-size: 0.9375em;
 }
 .mobile-discount-info__text {
   color: #fff;
-  font-size: 25px;
-  padding: 0 5%;
+  margin: 0;
+  margin-bottom: 8.59375%;
+  font-size: 0.875em;
 }
 .mobile-menu {
   background: #f4e57a;
@@ -4222,7 +4217,7 @@ body.ngdialog-open {
 .mobile-order-form__text {
   color: #fff;
   font-size: 20px;
-  padding: 0 5%;
+  padding: 0 7.8125%;
   padding-bottom: 5%;
 }
 @media (max-width: 765px) {

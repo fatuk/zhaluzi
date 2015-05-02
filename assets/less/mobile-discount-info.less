@@ -1,24 +1,27 @@
 .mobile-discount-info {
-	background: url('../img/mobile/bg_search_coupon.jpg') top no-repeat;
+	background: url('../img/mobile/bg_search_coupon.png') top no-repeat;
 	background-size: 100% 100%;
-	padding: 0 5%;
+	padding: 0 50px/@mobile*100%;
 	padding-bottom: 10%;
-	margin-top: 15%;
+	margin-top: 50px/@mobile*100%;
 	position: relative;
 	z-index: 10;
 	.icon-search {
-		width: @base*10;
-		height: @base*10;
+		width: @base*6.2;
+		height: @base*6.2;
 		margin-top: -@base*2;
 	}
 	&__title {
 		color: #fff;
-		font-size: 30px;
-		padding: 0 5%;
+		margin: 0;
+		margin-top: 65px/@mobile*100%;
+		margin-bottom: 55px/@mobile*100%;
+		.em(15);
 	}
 	&__text {
 		color: #fff;
-		font-size: 25px;
-		padding: 0 5%;
+		margin: 0;
+		margin-bottom: 55px/@mobile*100%;
+		.em(14);
 	}
 }
