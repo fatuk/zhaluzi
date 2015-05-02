@@ -55,6 +55,10 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				$scope.map();
 			};
 
+			$scope.getViewSize = function () {
+				alert($(window).width() + 'x' + $(window).height());
+			};
+
 			$scope.getTooltipModals = function () {
 				couponsService.getTooltipModals()
 					.then(function (res) {
@@ -64,6 +68,17 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 						// Error
 						$log.error(err);
 					});
+			};
+
+			$scope.openAccordion = function (e) {
+				var $accordion = $(e.target).parents('.accordion');
+
+				if (!$accordion.hasClass('expanded')) {
+					$('.accordion').removeClass('expanded');
+					$accordion.addClass('expanded');
+				} else {
+					$accordion.removeClass('expanded');
+				}
 			};
 
 			$scope.openTooltipModal = function (id) {

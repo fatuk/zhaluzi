@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 765px) {
 	.desktop {
 		display: none !important;
 	}
@@ -7,58 +7,57 @@
 	}
 	.btn {
 		width: 100%;
-		height: 32px*2;
 		&__text {
 			font-weight: @bold;
-			font-size: 26px;
 		}
 		&_upper {
 			.btn__text {
 				font-weight: @bold;
-				font-size: 26px;
+				.em(13);
 			}
 		}
 	}
 	.input {
+		border-radius: 2px;
 		width: 100%;
-		height: 32px*2;
-		font-size: 26px;
+		.em(14);
+	}
+	.textarea {
+		float: left;
+		width: 100%;
+		height: @base*10;
 	}
 	::-webkit-input-placeholder {
 		color:@placeholder-color;
-		// line-height: 20px;
 		vertical-align: middle;
 		line-height: 1;
-		padding-top: 5px;
+		padding-top: 2px;
 		text-align: center;
-		font-size: 26px;
+		.em(14, 14);
 	}
 	::-moz-placeholder {
 		color:@placeholder-color;
-		// line-height: 64px;
 		vertical-align: middle;
 		line-height: 1;
-		padding-top: 5px;
+		padding-top: 2px;
 		text-align: center;
-		font-size: 26px;
+		.em(14, 14);
 		}/* Firefox 19+ */
 	:-moz-placeholder {
 		color:@placeholder-color;
-		// line-height: 64px;
 		vertical-align: middle;
 		line-height: 1;
-		padding-top: 5px;
+		padding-top: 2px;
 		text-align: center;
-		font-size: 26px;
+		.em(14, 14);
 		}/* Firefox 18- */
 	:-ms-input-placeholder {
 		color:@placeholder-color;
-		// line-height: 64px;
 		vertical-align: middle;
 		line-height: 1;
-		padding-top: 5px;
+		padding-top: 2px;
 		text-align: center;
-		font-size: 26px;
+		.em(14, 14);
 	}
 
 }

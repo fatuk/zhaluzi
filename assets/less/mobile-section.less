@@ -5,18 +5,19 @@
 		margin: 0;
 		.lobster();
 		font-weight: @normal;
-		font-size: 45px;
+		.em(25);
 	}
 	&__subtitle {
 		margin: 0;
 		font-weight: @normal;
-		font-size: 25px;
+		font-size: 1em;
 		padding: 1% 0;
 	}
 	&__text {
-		padding: 0 @base*3;
+		padding: 0 50px/@mobile*100%;
 		padding-bottom: @base*2;
-		font-size: 30px;
+		.em(14);
+		color: @grey;
 		margin: 0;
 		z-index: 10;
 	}
@@ -50,7 +51,7 @@
 		background-size: 100%;
 		padding-top: 80%;
 		.mobile-section__title {
-			margin-bottom: 4%;
+			margin-bottom: 5%;
 		}
 	}
 	&_2 {

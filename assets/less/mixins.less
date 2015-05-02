@@ -33,3 +33,11 @@
 		background-size: @width @height;
 	}
 }
+
+// px to em
+@base-size: 16;
+.em( @value: @base-size, @context: @base-size ) {
+	font-size: (@value / @context) + 0em;
+}
+
+//.em(13,16); // 13px with a context of 16px

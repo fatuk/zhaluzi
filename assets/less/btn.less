@@ -1,12 +1,17 @@
-@btn-blue: #82C6DF;
-@btn-green: #AEC431;
-@btn-violet: #C27B95;
+@btn-blue: #97c5de;
+@btn-blue-1: #a9d8f2;
+@btn-blue-2: #74aece;
+@btn-green: #afbd44;
+@btn-green-1: #c0cf4e;
+@btn-green-2: #9bab26;
+@btn-violet: #b47b94;
+@btn-violet-1: #CF9DB3;
+@btn-violet-2: #a25b7a;
 .btn {
 	border: none;
 	border-radius: 4px;
 	background: none;
 	display: inline-block;
-	color: #fff;
 	text-decoration: none;
 	padding: 0 @base;
 	cursor: pointer;
@@ -16,24 +21,36 @@
 		line-height: 32px;
 		font-weight: @bold;
 		font-size: 13px;
+		color: #fff;
 	}
-	&_blue {
+	&_blue-1 {
 		background: @btn-blue;
-		border: solid 1px darken(@btn-blue, 20%);
+		border: solid 1px @btn-blue-1;
 	}
-	&_green {
+	&_blue-2 {
+		background: @btn-blue;
+		border: solid 1px @btn-blue-2;
+	}
+	&_green-1 {
 		background: @btn-green;
-		// border: solid 1px darken(@btn-green, 7%);
-		border: solid 1px #c0cf4e;
+		border: solid 1px @btn-green-1;
 	}
-	&_violet {
+	&_green-2 {
+		background: @btn-green;
+		border: solid 1px @btn-green-2;
+	}
+	&_violet-1 {
 		background: @btn-violet;
-		border: solid 1px darken(@btn-violet, 7%);
+		border: solid 1px @btn-violet-1;
+	}
+	&_violet-2 {
+		background: @btn-violet;
+		border: solid 1px @btn-violet-2;
 	}
 	&_menu {
 		padding: @base*2;
 		float: right;
-		color: #000;
+		color: @black;
 		padding-top: @base*2.5;
 		width: auto;
 	}

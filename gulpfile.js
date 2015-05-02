@@ -16,6 +16,9 @@ var gulp = require('gulp'),
 	ftpCredentials = require('./tmp/ftp.json'),
 	buildPath = 'public';
 
+console.info('********** Bower Files **********');
+console.info(bowerFiles);
+
 
 // TODO: Add sprites http://habrahabr.ru/post/227945/
 

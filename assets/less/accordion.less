@@ -1,3 +1,42 @@
+@accordion-blue: #5AAFD1;
 .accordion {
-
+	text-align: center;
+	&.expanded {
+		.accordion__content {
+			max-height: 550px;
+		}
+		.icon-chevron {
+			transform: rotate(180deg);
+			vertical-align: middle;
+		}
+	}
+	.icon-chevron {
+		transform: rotate(0deg);
+		transition: transform .5s;
+		margin-left: @base;
+	}
+	&__btn {
+		height: @base*8;
+		display: inline-block;
+		width: 100%;
+		line-height: @base*8;
+		text-transform: uppercase;
+		font-weight: @bold;
+		color: #fff;
+	}
+	&__content {
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height .5s;
+	}
+	&__content-inner {
+		padding: 10% 5%;
+		padding-top: 0;
+	}
+	&_blue {
+		background: @accordion-blue;
+	}
+	&_order {
+		background: url('../img/mobile/bg_buy.jpg') no-repeat;
+	}
 }
