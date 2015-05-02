@@ -14,7 +14,7 @@
 		<i class="icon icon-close"></i>
 	</div>
 	<ul class="mobile-menu__list">
-		<li class="mobile-menu__item" ng-click="getViewSize();">
+		<li class="mobile-menu__item">
 			<i class="icon icon-horizontal"></i>
 			<div class="mobile-menu__text">
 				Горизонтальные
@@ -75,7 +75,7 @@
 						type="tel"
 						name="callMePhone"
 						placeholder="Введите номер телефона"
-						class="input">
+						class="input input_orange">
 
 					<button class="btn btn_blue-1 btn_upper">
 						<span class="btn__text">Жду звонка!</span>
@@ -94,7 +94,7 @@
 			</p>
 		</div>
 	</section>
-	<!-- Mobile section -->
+	<!-- Horizontal section -->
 	<section class="mobile-section mobile-section_2">
 		<h2 class="mobile-section__title">
 			Горизонтальные жалюзи
@@ -107,18 +107,18 @@
 				<i class="icon icon-horizontal"></i>
 			</li>
 			<li class="mobile-section__icons-item">
-				<img src="img/scheme-gor.png" alt="" class="mobile-section__icons-img">
+				<i class="icon icon-horizontal-scheme"></i>
 			</li>
 		</ul>
 		<p class="mobile-section__text">
 			Сергей и Юля установили себе жалюзи на наклонные мансардные окна. Это самое лучшее решение для окон, которые находятся под наклоном либо на потолке. Благодаря боковым направляющим жалюзи хорошго фиксируются к откосам окна и не болтаются.
 		</p>
 		<!-- Accordion -->
-		<div class="accordion accordion_order">
+		<div class="accordion accordion_order accordion_no-margin">
 			<div
 				class="accordion__btn"
 				ng-click="openAccordion($event);">
-				Заказавать горизонтальные жалюзи&nbsp;<i class="icon icon-chevron"></i>
+				<span class="accordion__btn-text">Заказать горизонтальные жалюзи</span>&nbsp;<i class="icon icon-chevron"></i>
 			</div>
 			<div class="accordion__content">
 				<div class="accordion__content-inner">
@@ -128,16 +128,226 @@
 							Оставьте свой телефон - мы позвоиним и поможем оформить заказ прямо сейчас
 						</p>
 						<form action="#" name="orderForm">
-							<input
-								type="tel"
-								class="input"
-								placeholder="Введите номер телефона">
-							<input
-								name="orderFormZhaluziType"
-								type="hidden">
-							<button class="btn btn_green-1 btn_upper">
-								<span class="btn__text">Жду звонка!</span>
-							</button>
+							<div class="mobile-order-form__fields">
+								<input
+									type="tel"
+									class="input input_orange"
+									placeholder="Введите номер телефона">
+								<input
+									name="orderFormZhaluziType"
+									type="hidden">
+								<button class="btn btn_green-1 btn_upper">
+									<span class="btn__text">Жду звонка!</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Vertical section -->
+	<section class="mobile-section mobile-section_3">
+		<h2 class="mobile-section__title">
+			Вертикальные жалюзи
+		</h2>
+		<h3 class="mobile-section__subtitle">
+			алюминиевые, пластиковые, деревянные
+		</h3>
+		<ul class="mobile-section__icons-list">
+			<li class="mobile-section__icons-item">
+				<i class="icon icon-vertical"></i>
+			</li>
+			<li class="mobile-section__icons-item">
+				<i class="icon icon-vertical-scheme"></i>
+			</li>
+		</ul>
+		<p class="mobile-section__text">
+			Сергей и Юля установили себе жалюзи на наклонные мансардные окна. Это самое лучшее решение для окон, которые находятся под наклоном либо на потолке. Благодаря боковым направляющим жалюзи хорошго фиксируются к откосам окна и не болтаются.
+		</p>
+		<!-- Accordion -->
+		<div class="accordion accordion_order accordion_no-margin">
+			<div
+				class="accordion__btn"
+				ng-click="openAccordion($event);">
+				<span class="accordion__btn-text">Заказать вертикальные жалюзи</span>&nbsp;<i class="icon icon-chevron"></i>
+			</div>
+			<div class="accordion__content">
+				<div class="accordion__content-inner">
+					<!-- Mobile contacts form -->
+					<div class="mobile-order-form">
+						<p class="mobile-order-form__text">
+							Оставьте свой телефон - мы позвоиним и поможем оформить заказ прямо сейчас
+						</p>
+						<form action="#" name="orderForm">
+							<div class="mobile-order-form__fields">
+								<input
+									type="tel"
+									class="input input_orange"
+									placeholder="Введите номер телефона">
+								<input
+									name="orderFormZhaluziType"
+									type="hidden">
+								<button class="btn btn_green-1 btn_upper">
+									<span class="btn__text">Жду звонка!</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Rollet section -->
+	<section class="mobile-section mobile-section_4">
+		<h2 class="mobile-section__title">
+			Рулонные жалюзи
+		</h2>
+		<h3 class="mobile-section__subtitle">
+			алюминиевые, пластиковые, деревянные
+		</h3>
+		<ul class="mobile-section__icons-list">
+			<li class="mobile-section__icons-item">
+				<i class="icon icon-rollet"></i>
+			</li>
+			<li class="mobile-section__icons-item">
+				<i class="icon icon-rollet-scheme"></i>
+			</li>
+		</ul>
+		<p class="mobile-section__text">
+			Сергей и Юля установили себе жалюзи на наклонные мансардные окна. Это самое лучшее решение для окон, которые находятся под наклоном либо на потолке. Благодаря боковым направляющим жалюзи хорошго фиксируются к откосам окна и не болтаются.
+		</p>
+		<!-- Accordion -->
+		<div class="accordion accordion_order accordion_no-margin">
+			<div
+				class="accordion__btn"
+				ng-click="openAccordion($event);">
+				<span class="accordion__btn-text">Заказать рулонные жалюзи</span>&nbsp;<i class="icon icon-chevron"></i>
+			</div>
+			<div class="accordion__content">
+				<div class="accordion__content-inner">
+					<!-- Mobile contacts form -->
+					<div class="mobile-order-form">
+						<p class="mobile-order-form__text">
+							Оставьте свой телефон - мы позвоиним и поможем оформить заказ прямо сейчас
+						</p>
+						<form action="#" name="orderForm">
+							<div class="mobile-order-form__fields">
+								<input
+									type="tel"
+									class="input input_orange"
+									placeholder="Введите номер телефона">
+								<input
+									name="orderFormZhaluziType"
+									type="hidden">
+								<button class="btn btn_green-1 btn_upper">
+									<span class="btn__text">Жду звонка!</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Zebra section -->
+	<section class="mobile-section mobile-section_5">
+		<h2 class="mobile-section__title">
+			Жалюзи зебра
+		</h2>
+		<h3 class="mobile-section__subtitle">
+			алюминиевые, пластиковые, деревянные
+		</h3>
+		<ul class="mobile-section__icons-list">
+			<li class="mobile-section__icons-item">
+				<i class="icon icon-zebra"></i>
+			</li>
+			<li class="mobile-section__icons-item">
+				<i class="icon icon-zebra-scheme"></i>
+			</li>
+		</ul>
+		<p class="mobile-section__text">
+			Сергей и Юля установили себе жалюзи на наклонные мансардные окна. Это самое лучшее решение для окон, которые находятся под наклоном либо на потолке. Благодаря боковым направляющим жалюзи хорошго фиксируются к откосам окна и не болтаются.
+		</p>
+		<!-- Accordion -->
+		<div class="accordion accordion_order accordion_no-margin">
+			<div
+				class="accordion__btn"
+				ng-click="openAccordion($event);">
+				<span class="accordion__btn-text">Заказать жалюзи зебра</span>&nbsp;<i class="icon icon-chevron"></i>
+			</div>
+			<div class="accordion__content">
+				<div class="accordion__content-inner">
+					<!-- Mobile contacts form -->
+					<div class="mobile-order-form">
+						<p class="mobile-order-form__text">
+							Оставьте свой телефон - мы позвоиним и поможем оформить заказ прямо сейчас
+						</p>
+						<form action="#" name="orderForm">
+							<div class="mobile-order-form__fields">
+								<input
+									type="tel"
+									class="input input_orange"
+									placeholder="Введите номер телефона">
+								<input
+									name="orderFormZhaluziType"
+									type="hidden">
+								<button class="btn btn_green-1 btn_upper">
+									<span class="btn__text">Жду звонка!</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Wood section -->
+	<section class="mobile-section mobile-section_6">
+		<h2 class="mobile-section__title">
+			Деревянные жалюзи
+		</h2>
+		<h3 class="mobile-section__subtitle">
+			алюминиевые, пластиковые, деревянные
+		</h3>
+		<ul class="mobile-section__icons-list">
+			<li class="mobile-section__icons-item">
+				<i class="icon icon-wood"></i>
+			</li>
+			<li class="mobile-section__icons-item">
+				<i class="icon icon-wood-scheme"></i>
+			</li>
+		</ul>
+		<p class="mobile-section__text">
+			Сергей и Юля установили себе жалюзи на наклонные мансардные окна. Это самое лучшее решение для окон, которые находятся под наклоном либо на потолке. Благодаря боковым направляющим жалюзи хорошго фиксируются к откосам окна и не болтаются.
+		</p>
+		<!-- Accordion -->
+		<div class="accordion accordion_order accordion_no-margin">
+			<div
+				class="accordion__btn"
+				ng-click="openAccordion($event);">
+				<span class="accordion__btn-text">Заказать деревянные жалюзи</span>&nbsp;<i class="icon icon-chevron"></i>
+			</div>
+			<div class="accordion__content">
+				<div class="accordion__content-inner">
+					<!-- Mobile contacts form -->
+					<div class="mobile-order-form">
+						<p class="mobile-order-form__text">
+							Оставьте свой телефон - мы позвоиним и поможем оформить заказ прямо сейчас
+						</p>
+						<form action="#" name="orderForm">
+							<div class="mobile-order-form__fields">
+								<input
+									type="tel"
+									class="input input_orange"
+									placeholder="Введите номер телефона">
+								<input
+									name="orderFormZhaluziType"
+									type="hidden">
+								<button class="btn btn_green-1 btn_upper">
+									<span class="btn__text">Жду звонка!</span>
+								</button>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -212,7 +422,7 @@
 	<div class="social">
 		<ul class="social__list">
 			<li class="social__item">
-				<a href="#" class="social__link"><i class="icon icon-vk"></i></a>
+				<a href="http://vk.com/design_okna_msk" class="social__link"><i class="icon icon-vk"></i></a>
 			</li>
 			<li class="social__item">
 				<a href="#" class="social__link"><i class="icon icon-facebook"></i></a>
@@ -223,11 +433,11 @@
 		</ul>
 	</div>
 	<!-- Accordion -->
-	<div class="accordion accordion_blue">
+	<div class="accordion accordion_blue accordion_no-margin">
 		<div
 			class="accordion__btn"
 			ng-click="openAccordion($event);">
-			Напишите нам <i class="icon icon-chevron"></i>
+			<span class="accordion__btn-text">Напишите нам</span>&nbsp;<i class="icon icon-chevron"></i>
 		</div>
 		<div class="accordion__content">
 			<div class="accordion__content-inner">
@@ -237,15 +447,15 @@
 						<textarea
 							name="contactsMessage"
 							placeholder="Ваше сообщение"
-							class="textarea"></textarea>
+							class="textarea textarea_blue"></textarea>
 						<input
 							type="text"
-							class="input"
+							class="input input_blue"
 							placeholder="Ваше имя">
 						<input
 							type="email"
 							placeholder="Ваше email"
-							class="input">
+							class="input input_blue">
 						<button class="btn btn_green-1 btn_upper">
 							<span class="btn__text">Отправить</span>
 						</button>

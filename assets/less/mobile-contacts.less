@@ -1,13 +1,13 @@
 .mobile-contacts {
 	text-align: center;
-	margin-top: @base*10;
-	margin-bottom: @base;
+	padding-top: 100px/@mobile*100%;
+	margin-bottom: 10px/@mobile*100%;
 	&__title {
 		margin: 0;
 		.lobster();
 		font-weight: @normal;
-		font-size: 45px;
-		margin-bottom: @base*2;
+		.em(25);
+		margin-bottom: 70px/@mobile*100%;
 	}
 	&__list {
 		list-style: none;
@@ -20,7 +20,7 @@
 	&__link {
 		color: #7E7E7E;
 		display: inline-block;
-		padding: @base*1.5 5%;
-		font-size: 20px;
+		padding: 20px/@mobile*100% 70px/@mobile*100%;
+		.em(14);
 	}
 }

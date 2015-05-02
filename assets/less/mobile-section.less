@@ -10,12 +10,13 @@
 	&__subtitle {
 		margin: 0;
 		font-weight: @normal;
-		font-size: 1em;
-		padding: 1% 0;
+		color: @grey;
+		.em(14);
+		padding: 5px/@mobile*100% 50px/@mobile*100%;
 	}
 	&__text {
 		padding: 0 50px/@mobile*100%;
-		padding-bottom: @base*2;
+		padding-bottom: 70px/@mobile*100%;
 		.em(14);
 		color: @grey;
 		margin: 0;
@@ -28,14 +29,12 @@
 	}
 	&__icons-item {
 		display: inline-block;
-		margin-right: @base*4;
-		padding: 10% 0;
+		margin-right: 60px/@mobile*100%;
+		padding: 70px/@mobile*100% 0;
+		vertical-align: top;
 		&:last-child {
 			margin-right: 0;
 		}
-	}
-	&__icons-img {
-		height: @base*16;
 	}
 	&__controls {
 		padding: 0 50px/@mobile*100%;
@@ -58,14 +57,22 @@
 	}
 	&_3 {
 		background: url('../img/mobile/3_level.jpg') top no-repeat;
+		background-position: top center;
+		background-size: 100%;
 	}
 	&_4 {
 		background: url('../img/mobile/4_level.jpg') top no-repeat;
+		background-position: top center;
+		background-size: 100%;
 	}
 	&_5 {
 		background: url('../img/mobile/5_level.jpg') top no-repeat;
+		background-position: top center;
+		background-size: 100%;
 	}
 	&_6 {
 		background: url('../img/mobile/6_level.jpg') top no-repeat;
+		background-position: top center;
+		background-size: 100%;
 	}
 }

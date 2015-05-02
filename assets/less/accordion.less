@@ -1,13 +1,13 @@
 @accordion-blue: #5AAFD1;
 .accordion {
 	text-align: center;
+	margin-bottom: 120px/@mobile*100%;;
 	&.expanded {
 		.accordion__content {
 			max-height: 550px;
 		}
 		.icon-chevron {
 			transform: rotate(180deg);
-			vertical-align: middle;
 		}
 	}
 	.icon-chevron {
@@ -16,13 +16,17 @@
 		margin-left: @base;
 	}
 	&__btn {
-		height: @base*8;
+		.em(13);
 		display: inline-block;
 		width: 100%;
-		line-height: @base*8;
+		padding: 75px/@mobile*100% 20px/@mobile*100%;
+	}
+	&__btn-text {
 		text-transform: uppercase;
 		font-weight: @bold;
+		display: inline-block;
 		color: #fff;
+		vertical-align: top;
 	}
 	&__content {
 		overflow: hidden;
@@ -30,7 +34,7 @@
 		transition: max-height .5s;
 	}
 	&__content-inner {
-		padding: 10% 5%;
+		padding: 70px/@mobile*100% 0;
 		padding-top: 0;
 	}
 	&_blue {
@@ -38,5 +42,8 @@
 	}
 	&_order {
 		background: url('../img/mobile/bg_buy.jpg') no-repeat;
+	}
+	&_no-margin {
+		margin: 0;
 	}
 }
