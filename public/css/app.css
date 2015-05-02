@@ -2225,6 +2225,201 @@ body {
 .icon {
   display: inline-block;
 }
+.icon-house-1 {
+  background-image: url(../img/house-parts/1.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-1 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/1@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-2 {
+  background-image: url(../img/house-parts/2.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-2 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/2@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-3 {
+  background-image: url(../img/house-parts/3.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-3 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/3@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-4 {
+  background-image: url(../img/house-parts/4.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-4 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/4@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-5 {
+  background-image: url(../img/house-parts/5.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-5 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/5@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-6 {
+  background-image: url(../img/house-parts/6.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-6 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/6@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-7 {
+  background-image: url(../img/house-parts/7.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-7 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/7@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-8 {
+  background-image: url(../img/house-parts/8.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-8 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/8@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-9 {
+  background-image: url(../img/house-parts/9.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-9 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/9@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-10 {
+  background-image: url(../img/house-parts/10.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-10 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/10@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-11 {
+  background-image: url(../img/house-parts/11.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-11 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/11@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-12 {
+  background-image: url(../img/house-parts/12.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-12 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/12@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-13 {
+  background-image: url(../img/house-parts/13.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-13 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/13@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-14 {
+  background-image: url(../img/house-parts/14.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-14 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/14@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
+.icon-house-15 {
+  background-image: url(../img/house-parts/15.jpg);
+  background-repeat: no-repeat;
+  width: 2448px;
+  height: 275px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-house-15 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/house-parts/15@2x.jpg);
+    background-size: 2448px 275px;
+  }
+}
 .icon-phone {
   background-image: url(../img/icon_phone.png);
   background-repeat: no-repeat;
@@ -2726,6 +2921,9 @@ p {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   overflow: hidden;
+}
+.house .icon {
+  float: left;
 }
 .dot {
   position: absolute;
