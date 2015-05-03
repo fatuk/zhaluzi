@@ -370,7 +370,8 @@
 			<footer
 				class="site-footer"
 				data-3000="transform:translateY(0px);"
-				data-end="transform:translateY(-390px);">
+				data-end="transform:translateY(-390px);"
+				ng-class="{'is-mobile': isMobile()}">
 				<!-- Contact form -->
 				<div class="contacts-form">
 					<div class="container">
@@ -379,7 +380,7 @@
 								Напишите нам
 							</h3>
 							<p class="contacts-form__text">
-								У вас остались вопросы по устройствам жалюзи, их стоимости, или вы просто хотите оставить свой комментарий по нашей работе? Наша дружная команда всегда готова выслушать вопросы!
+								У вас остались вопросы по устройствам жалюзи, их стоимости, или вы просто хотите оставить свой комментарий по нашей работе? <span class="hide-portrait">Наша дружная команда всегда готова выслушать вопросы!</span><span class="show-portrait">Напишите нам!</span>
 							</p>
 						</div>
 						<form name="contactForm" action="#">
@@ -453,7 +454,7 @@
 						<!-- Footer contacts -->
 						<div class="site-footer__container site-footer__container_contacts">
 							<h3 class="site-footer__title">
-								Мы всегдя рядом
+								Мы <span class="hide-portrait">всегда</span> рядом
 							</h3>
 							<a href="tel:+74955426484" class="site-footer__link">
 								+7 (495) 542-64-84
@@ -462,7 +463,8 @@
 								info@design-okna.ru
 							</a>
 							<a href="geo:55.648677,37.735566" class="site-footer__link">
-								109369, г.Москва, Новочеркасский бульвар д.41, корп.3
+								г. Москва, Новочеркасский <br>
+								бульвар д.41, корп.3
 							</a>
 							<!-- Social -->
 							<div class="social">

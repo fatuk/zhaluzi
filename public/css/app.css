@@ -2908,6 +2908,9 @@ p {
   background: #fff;
   z-index: 10;
 }
+.site-footer.is-mobile {
+  top: 3730px;
+}
 .site-footer__data {
   height: 370px;
 }
@@ -2961,10 +2964,10 @@ p {
 }
 .site-footer .social {
   float: left;
-  margin-top: 35px;
+  margin-top: 20px;
 }
 .site-footer .social__item {
-  margin-right: 16px;
+  margin-right: 10px;
 }
 .house {
   position: absolute;
@@ -4010,6 +4013,9 @@ body.ngdialog-open {
   font-size: 14px;
   line-height: 20px;
 }
+.contacts-form__text span {
+  color: #fff;
+}
 .contacts-form__container {
   width: 260px;
   float: left;
@@ -4022,7 +4028,7 @@ body.ngdialog-open {
 }
 .contacts-form .textarea {
   width: 45%;
-  height: 160px;
+  height: 156px;
   float: left;
   margin-right: 20px;
   border-color: #a9d8f2;
@@ -4040,7 +4046,7 @@ body.ngdialog-open {
 }
 .vendor {
   float: left;
-  width: 80%;
+  width: 100%;
   border-top: solid 1px #eee;
   padding-top: 20px;
   margin-top: 25px;
@@ -4055,6 +4061,7 @@ body.ngdialog-open {
   margin-right: 10px;
 }
 .vendor__text {
+  width: 80%;
   float: left;
   font-size: 12px;
   color: #0F0F0F;
@@ -4613,6 +4620,9 @@ body.ngdialog-open {
 .mobile-order-form__fields {
   padding: 0 12.5%;
 }
+.show-portrait {
+  display: none;
+}
 @media (max-width: 765px) {
   .desktop {
     display: none !important;
@@ -4673,6 +4683,20 @@ body.ngdialog-open {
     padding-top: 2px;
     text-align: center;
     font-size: 1em;
+  }
+}
+@media (max-width: 768px) {
+  .show-portrait {
+    display: inline !important;
+  }
+  .hide-portrait {
+    display: none !important;
+  }
+  .vendor__text {
+    font-size: 0.6875em;
+  }
+  .site-footer__link {
+    font-size: 0.8125em;
   }
 }
 @media (max-width: 1100px) {

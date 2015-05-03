@@ -1,3 +1,7 @@
+.show-portrait {
+	display: none;
+}
+
 @media (max-width: 765px) {
 	.desktop {
 		display: none !important;
@@ -59,7 +63,25 @@
 		text-align: center;
 		.em(14, 14);
 	}
+}
 
+@media (max-width: 768px) {
+	.show-portrait {
+		display: inline !important;
+	}
+	.hide-portrait {
+		display: none !important;
+	}
+	.vendor {
+		&__text {
+			.em(11);
+		}
+	}
+	.site-footer {
+		&__link {
+			.em(13);
+		}
+	}
 }
 
 @media (max-width: 1100px) {
