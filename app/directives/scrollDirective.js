@@ -1,4 +1,4 @@
-app.controller('scrollCtrl', [
+/*app.controller('scrollCtrl', [
 	'$scope',
 	function ($scope) {
 		console.log($scope);
@@ -11,10 +11,11 @@ app.controller('scrollCtrl', [
 				angular.element($window).bind('scroll', function () {
 					console.log('scroll');
 					console.log(scope.menuState);
-					$('.site-header').removeClass('expanded');
+					// $('.site-header').removeClass('expanded');
 
 					scope.$apply();
 				});
 			}
 		};
 	});
+*/

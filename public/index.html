@@ -12,6 +12,7 @@
 <body
 	ng-controller="HomeCtrl"
 	ng-mouseover="callMeHover=false; couponInfoHover=false"
+	ng-class="{'is-mobile': isMobile()}"
 	scroll>
 	<div class="wrapper desktop ipad" ng-click="getLocation($event)">
 		<!-- Header -->
@@ -233,7 +234,11 @@
 				</div>
 				<!-- Tooltip gorizontal zhaluzi -->
 				<div class="tooltip tooltip_gorizontal tooltip-west">
-					<span class="tooltip__item"></span>
+					<span
+						ng-click="openTooltipModal(1)"
+						class="tooltip__item">
+						<i class="icon icon-plus"></i>
+					</span>
 					<span class="tooltip__content">
 						Сергей и Аня поставили себе горизонтальные жалюзи для мансардных окон за 2000 р.
 						<!-- Buttons -->
@@ -257,7 +262,11 @@
 				</div>
 				<!-- Tooltip wood zhaluzi -->
 				<div class="tooltip tooltip_wood tooltip-west">
-					<span class="tooltip__item"></span>
+					<span
+						ng-click="openTooltipModal(2)"
+						class="tooltip__item">
+						<i class="icon icon-plus"></i>
+					</span>
 					<span class="tooltip__content">
 						Семья Павловых выбрала горизонтальные деревянные жалюзи из-за экологичности
 						<!-- Buttons -->
@@ -281,7 +290,11 @@
 				</div>
 				<!-- Tooltip role zhaluzi -->
 				<div class="tooltip tooltip_role tooltip-west">
-					<span class="tooltip__item"></span>
+					<span
+						ng-click="openTooltipModal(3)"
+						class="tooltip__item">
+						<i class="icon icon-plus"></i>
+					</span>
 					<span class="tooltip__content">
 						Сергей и Аня поставили себе горизонтальные жалюзи для мансардных окон за 2000 р.
 						<!-- Buttons -->
@@ -305,7 +318,11 @@
 				</div>
 				<!-- Tooltip vertical zhaluzi -->
 				<div class="tooltip tooltip_vertical tooltip-west">
-					<span class="tooltip__item"></span>
+					<span
+						ng-click="openTooltipModal(4)"
+						class="tooltip__item">
+						<i class="icon icon-plus"></i>
+					</span>
 					<span class="tooltip__content">
 						Сергей и Аня поставили себе горизонтальные жалюзи для мансардных окон за 2000 р.
 						<!-- Buttons -->
@@ -329,7 +346,11 @@
 				</div>
 				<!-- Tooltip zebra zhaluzi -->
 				<div class="tooltip tooltip_zebra tooltip-west">
-					<span class="tooltip__item"></span>
+					<span
+						ng-click="openTooltipModal(5)"
+						class="tooltip__item">
+						<i class="icon icon-plus"></i>
+					</span>
 					<span class="tooltip__content">
 						Сергей и Аня поставили себе горизонтальные жалюзи для мансардных окон за 2000 р.
 						<!-- Buttons -->

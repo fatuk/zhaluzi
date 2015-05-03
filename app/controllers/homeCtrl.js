@@ -40,14 +40,31 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 
 			$scope.scrollTo = function (hash) {
 				var $body = $('html, body'),
-					scrollLocation = $('#' + hash)[0].offsetTop;
+					scrollLocation = $('#' + hash)[0].offsetTop,
+					modals = {};
+
+				modals['desk-horizontal'] = 1;
+				modals['desk-vertical'] = 2;
+				modals['desk-rollet'] = 3;
+				modals['desk-wood'] = 4;
+				modals['desk-zebra'] = 5;
 
 				$scope.mobileMenuState = !$scope.mobileMenuState;
+				$scope.menuState = !$scope.menuState;
 
 				setTimeout(function () {
 					$body.animate({
 						scrollTop: scrollLocation
-					}, '500');
+					}, '500', function () {
+
+					});
+
+					setTimeout(function () {
+						if (modals[hash]) {
+							// Open modal
+							$scope.openTooltipModal(modals[hash]);
+						}
+					}, 800);
 				}, 500);
 			};
 

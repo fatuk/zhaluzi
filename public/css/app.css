@@ -2452,6 +2452,11 @@ body {
     background-size: 2448px 275px;
   }
 }
+.icon-plus {
+  width: 30px;
+  height: 30px;
+  background: url('../img/plus.svg');
+}
 .icon-ribbon {
   background-image: url(../img/ribbon.png);
   background-repeat: no-repeat;
@@ -3368,12 +3373,10 @@ p {
   left: 32.72%;
 }
 .tooltip__item {
-  width: 30px;
-  height: 30px;
-  background: url('../img/plus.svg');
   left: 50%;
   top: 70%;
-  margin: -15px 0 0 -15px;
+  margin: -35px 0 0 -35px;
+  padding: 20px;
   position: absolute;
   -webkit-animation: pulse 0.6s infinite alternate;
   animation: pulse 0.6s infinite alternate;
@@ -3464,7 +3467,7 @@ p {
 }
 .tooltip__content::before {
   height: 100%;
-  width: 3em;
+  width: 2em;
 }
 .tooltip__content::after {
   width: 2em;
@@ -4706,6 +4709,9 @@ body.ngdialog-open {
 }
 .mobile-order-form__fields {
   padding: 0 12.5%;
+}
+.is-mobile .tooltip__content {
+  display: none !important;
 }
 .show-portrait {
   display: none;
