@@ -277,8 +277,6 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				});
 			};
 
-			$scope.test = 123;
-
 			$scope.openCollectModal = function () {
 				ngDialog.open({
 					template: 'views/modals/coupon.html',
