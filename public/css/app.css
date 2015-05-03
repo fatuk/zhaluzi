@@ -4773,6 +4773,9 @@ body.ngdialog-open {
   }
 }
 @media (max-width: 800px) {
+  .tooltip {
+    display: none;
+  }
   .coupons-info:after {
     height: 63px;
   }
