@@ -3952,6 +3952,7 @@ body.ngdialog-open {
 .social__description {
   font-size: 14px;
   padding: 25px 0;
+  color: #444444;
 }
 .social__list {
   list-style: none;
@@ -4008,6 +4009,7 @@ body.ngdialog-open {
 .tooltip-modal {
   background: #f2f2f2;
   text-align: center;
+  background: url('../img/mobile/tooltip-modal-bg.jpg');
 }
 .tooltip-modal__img {
   border-radius: 6px;
@@ -4024,6 +4026,7 @@ body.ngdialog-open {
 }
 .tooltip-modal__subtitle {
   margin: 0;
+  color: #444444;
   font-weight: 400;
   font-size: 13px;
   margin-bottom: 30px;
@@ -4033,13 +4036,22 @@ body.ngdialog-open {
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+.tooltip-modal__img-list:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .tooltip-modal__img-item {
-  display: inline-block;
+  float: left;
   margin-right: 40px;
 }
 .tooltip-modal__img-item:last-child {
   margin-right: 0;
+  float: right;
 }
 .tooltip-modal__text p {
   margin: 0;
@@ -4048,6 +4060,7 @@ body.ngdialog-open {
   font-size: 14px;
   padding: 0 50px;
   line-height: 20px;
+  color: #444444;
 }
 .tooltip-modal__call-me {
   background: url('../img/bg_callback.png') no-repeat;
@@ -4069,14 +4082,27 @@ body.ngdialog-open {
 .tooltip-modal__call-me-form {
   padding: 65px 0;
 }
-.tooltip-modal__call-me-form .input {
+.tooltip-modal__call-me-form-inner {
+  width: 420px;
+  margin: 0 auto;
+}
+.tooltip-modal__call-me-form-inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tooltip-modal__call-me-form-inner .input {
   margin-right: 20px;
+  float: left;
+}
+.tooltip-modal__call-me-form-inner .btn {
+  float: right;
 }
 .tooltip-modal__call-me-description {
   font-size: 11px;
   color: #fff;
   margin: 0;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 .tooltip-modal .social {
   padding-bottom: 20px;

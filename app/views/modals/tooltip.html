@@ -13,30 +13,32 @@
 		</h3>
 		<!-- Small images -->
 		<ul class="tooltip-modal__img-list">
-			<li
-				class="tooltip-modal__img-item"
-				ng-repeat="icon in tooltipModals[tooltipId-1].icons">
-				<img ng-src="{{icon}}" alt="" class="tooltip-modal__img-small">
+			<li class="tooltip-modal__img-item">
+				<i class="icon icon-{{tooltipModals[tooltipId-1].iconType}}"></i>
+			</li><li class="tooltip-modal__img-item">
+				<i class="icon icon-{{tooltipModals[tooltipId-1].iconType}}-scheme"></i>
 			</li>
 		</ul>
 		<!-- Description -->
-		<div class="tooltip-modal__text">
-			{{tooltipModals[tooltipId-1].text}}
+		<div class="tooltip-modal__text" ng-bind-html="tooltipModals[tooltipId-1].text">
 		</div>
 		<!-- Call me -->
 		<div class="tooltip-modal__call-me">
 			<i class="icon icon-operator"></i>
 			<div class="tooltip-modal__call-me-form">
 				<form name="callMeForm" action="#">
-					<input
-						name="callmeNumber"
-						type="text"
-						required
-						ng-model="callmeNumber"
-						placeholder="Введите номер телефона"
-						class="input"><button class="btn btn_blue-1 btn_upper">
-							<span class="btn__text">Жду звонка!</span>
-						</button>
+					<div class="tooltip-modal__call-me-form-inner">
+						<input
+							name="callmeNumber"
+							type="text"
+							required
+							ng-model="callmeNumber"
+							placeholder="Введите номер телефона"
+							class="input input_orange">
+							<button class="btn btn_blue-1 btn_upper">
+								<span class="btn__text">Жду звонка!</span>
+							</button>
+					</div>
 				</form>
 				<!-- Form description -->
 				<p class="tooltip-modal__call-me-description">

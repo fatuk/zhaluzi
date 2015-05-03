@@ -10,9 +10,10 @@ var app = angular.module('myApp', [
 	'ng.deviceDetector',
 	'sun.scrollable'
 ])
-	.config(['$routeProvider',
-		function ($routeProvider) {
+	.config(['$routeProvider', '$sceProvider',
+		function ($routeProvider, $sceProvider) {
 			'use strict';
+			$sceProvider.enabled(false);
 			$routeProvider
 				.when('/', {
 					controller: 'HomeCtrl'
