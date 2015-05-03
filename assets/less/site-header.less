@@ -17,10 +17,29 @@
 		background: @header-color;
 	}
 	&__container {
-		border-left: solid 1px @header-border-color;
-		border-right: solid 1px @header-border-color;
+		// border-left: solid 1px @header-border-color;
+		// border-right: solid 1px @header-border-color;
+		position: relative;
 		.btn {
 			margin-top: -@base/4;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1px;
+			height: 63px;
+			background: @header-border-color;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 1px;
+			height: 63px;
+			background: @header-border-color;
 		}
 	}
 }

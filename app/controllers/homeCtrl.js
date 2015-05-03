@@ -270,7 +270,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			};
 
 			$scope.menuToggle = function () {
-				this.menuState = !this.menuState;
+				$scope.menuState = !$scope.menuState;
 			};
 
 			$scope.mobileMenuToggle = function () {

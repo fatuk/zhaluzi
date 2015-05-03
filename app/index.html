@@ -11,7 +11,8 @@
 </head>
 <body
 	ng-controller="HomeCtrl"
-	ng-mouseover="callMeHover=false; couponInfoHover=false">
+	ng-mouseover="callMeHover=false; couponInfoHover=false"
+	scroll>
 	<div class="wrapper desktop ipad" ng-click="getLocation($event)">
 		<!-- Header -->
 		<header
@@ -89,6 +90,7 @@
 					<!-- Coupons info -->
 					<div
 						class="coupons-info"
+						ng-class="{scrolling:boolChangeClass}"
 						ng-mouseover="couponInfoHover=true; $event.stopPropagation()">
 						<!-- Info -->
 						<div class="coupons-info__container">
@@ -107,7 +109,7 @@
 					</div>
 					<!-- Logo -->
 					<div class="logo">
-						<a href="#" class="logo__link">
+						<a ng-click="getViewSize()" class="logo__link">
 							<img src="img/logo.svg" alt="" class="logo__img">
 						</a>
 					</div>
@@ -155,7 +157,7 @@
 					На каждом этаже мы спрятали купоны на скидку!<br>
 					Ищите их в необычных местах! Каждый купон <br>
 					дает скидку 2% на заказ жалюзи!<br>
-					<strong>Всего спрятано 5 купонов</strong>
+					<b>Всего спрятано 5 купонов</b>
 				</p>
 			</div>
 			<!-- Dropdown call me -->
@@ -174,7 +176,7 @@
 				<!-- Form -->
 				<div class="dropdown__form">
 					<form action="#">
-						<input type="phone" class="input" value="+7">
+						<input type="phone" class="input input_red" value="+7">
 						<button class="btn btn_green-1">
 							<span class="btn__text">
 								Жду звонка!

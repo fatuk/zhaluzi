@@ -295,7 +295,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			};
 
 			$scope.menuToggle = function () {
-				this.menuState = !this.menuState;
+				$scope.menuState = !$scope.menuState;
 			};
 
 			$scope.mobileMenuToggle = function () {
@@ -352,6 +352,27 @@ angular.module('couponDirective', [])
 			};
 		}
 	]);
+
+app.controller('scrollCtrl', [
+	'$scope',
+	function ($scope) {
+		console.log($scope);
+	}
+])
+	.directive('scroll', function ($window) {
+		return {
+			scope: {},
+			link: function (scope, element, attrs) {
+				angular.element($window).bind('scroll', function () {
+					console.log('scroll');
+					console.log(scope.menuState);
+					$('.site-header').removeClass('expanded');
+
+					scope.$apply();
+				});
+			}
+		};
+	});
 
 app.service('couponsService', ['$http', '$q',
 

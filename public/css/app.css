@@ -2545,7 +2545,7 @@ body {
 .icon-operator {
   background: url('../img/manager.svg');
   width: 43px;
-  height: 50px;
+  height: 43px;
 }
 .icon-vk {
   background: url('../img/vk.svg');
@@ -2757,6 +2757,9 @@ body {
     background-size: 61px 63px;
   }
 }
+.scrolling {
+  background: orange !important;
+}
 body {
   font-size: 100%;
   overflow-x: hidden;
@@ -2837,11 +2840,28 @@ p {
   background: #ffffff;
 }
 .site-header__container {
-  border-left: solid 1px #cccccc;
-  border-right: solid 1px #cccccc;
+  position: relative;
 }
 .site-header__container .btn {
   margin-top: -2.5px;
+}
+.site-header__container:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 63px;
+  background: #cccccc;
+}
+.site-header__container:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 63px;
+  background: #cccccc;
 }
 .logo {
   display: inline-block;
@@ -3186,6 +3206,10 @@ p {
   margin: 0;
   padding: 20px;
   padding-right: 30px;
+  color: #fff;
+}
+.dropdown__text b {
+  color: #fff;
 }
 .dropdown__container {
   padding: 20px;
@@ -3413,6 +3437,9 @@ p {
   border: solid 1px #b6b6b6;
   height: 32px;
   padding: 5px 12px;
+}
+.input_red {
+  border-color: #9d483b;
 }
 .input_orange {
   border-color: #a55d40;
@@ -4687,7 +4714,7 @@ body.ngdialog-open {
     font-size: 1em;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .coupons-info:after {
     height: 63px;
   }
@@ -4719,6 +4746,14 @@ body.ngdialog-open {
   }
   .contacts-form__container {
     width: 30%;
+  }
+}
+@media (max-width: 1280px) {
+  .call-me:after {
+    height: 67px;
+  }
+  .site-header__container:after {
+    height: 67px;
   }
 }
 
