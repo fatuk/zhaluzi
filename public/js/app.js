@@ -315,6 +315,11 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				$scope.floors.floorsArray.push($scope.currentCouponId);
 			};
 
+			$scope.clearCollected = function () {
+				localStorage.clear();
+				location.reload();
+			};
+
 			$scope.init();
 		}
 	]);

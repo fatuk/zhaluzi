@@ -115,6 +115,7 @@ gulp.task('browser-sync', function () {
 	];
 
 	browserSync.init(files, {
+		ghostMode: false,
 		server: {
 			baseDir: './public'
 		},

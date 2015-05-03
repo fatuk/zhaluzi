@@ -151,14 +151,44 @@
 			<!-- Dropdown coupon info -->
 			<div
 				class="dropdown dropdown_coupon-info"
-				ng-class="{expanded: couponInfoHover, 'menu-expanded': menuState}"
+				ng-class="{expanded: couponInfoHover, 'menu-expanded': menuState, big: collected.counter>=1&&collected.counter!=5}"
 				ng-mouseover="couponInfoHover=true; $event.stopPropagation()">
-				<p class="dropdown__text">
-					На каждом этаже мы спрятали купоны на скидку!<br>
-					Ищите их в необычных местах! Каждый купон <br>
-					дает скидку 2% на заказ жалюзи!<br>
-					<b>Всего спрятано 5 купонов</b>
-				</p>
+				<!-- Message for zero coupons -->
+				<div ng-hide="collected.counter>=1">
+					<p class="dropdown__text">
+						На каждом этаже мы спрятали купоны на скидку!<br>
+						Ищите их в необычных местах! Каждый купон <br>
+						дает скидку 2% на заказ жалюзи!<br>
+						<b>Всего спрятано 5 купонов</b>
+					</p>
+				</div>
+				<!-- Message for more than 1 coupon -->
+				<div ng-show="collected.counter>=1">
+					<div ng-hide="collected.counter==5">
+						<p class="dropdown__text dropdown__text_border">
+							Продолжайте искать купоны на скидку! <br>
+							<span ng-show="collected.counter==1">Их осталось всего четыре!</span>
+							<span ng-show="collected.counter==2">Их осталось всего три!</span>
+							<span ng-show="collected.counter==3">Их осталось всего два!</span>
+							<span ng-show="collected.counter==4">Остался всего один!</span>
+						</p>
+						<p class="dropdown__text dropdown__text_border">
+							Не получается? Не беда! Оформите скидку на {{collected.counter*2}}%. <br>
+							Нажмите на кнопку "получить скидку"
+						</p>
+					</div>
+					<div ng-show="collected.counter==5">
+						<p class="dropdown__text dropdown__text_border">
+							Вы нашли все купоны на скидку 10%. <br>
+							Нажмите на кнопку "получить скидку"
+						</p>
+					</div>
+					<a
+						class="dropdown__btn"
+						ng-click="clearCollected()">
+						<i class="icon icon-reload"></i><span class="dropdown__btn-text">Сбросить счетчик купонов</span>
+					</a>
+				</div>
 			</div>
 			<!-- Dropdown call me -->
 			<div

@@ -2529,6 +2529,11 @@ body {
   width: 25px;
   height: 25px;
 }
+.icon-reload {
+  background: url('../img/reload.svg') no-repeat;
+  width: 20px;
+  height: 20px;
+}
 .icon-coupon {
   background-image: url(../img/icon_coupon.png);
   background-repeat: no-repeat;
@@ -3207,9 +3212,26 @@ p {
   padding: 20px;
   padding-right: 30px;
   color: #fff;
+  position: relative;
 }
 .dropdown__text b {
   color: #fff;
+}
+.dropdown__text span {
+  color: #fff;
+}
+.dropdown__text_border {
+  width: 300px;
+  padding: 0;
+}
+.dropdown__text_border:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
 }
 .dropdown__container {
   padding: 20px;
@@ -3240,6 +3262,35 @@ p {
   padding-left: 10px;
   padding-right: 10px;
 }
+.dropdown__btn {
+  display: inline-block;
+  padding: 30px 0;
+  cursor: pointer;
+}
+.dropdown__btn:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.dropdown__btn .icon {
+  color: #fff;
+  float: left;
+  margin-right: 10px;
+  -webkit-transition: -webkit-transform .5s;
+  transition: transform .5s;
+}
+.dropdown__btn:hover .icon {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.dropdown__btn-text {
+  color: #fff;
+  float: left;
+  line-height: 20px;
+  text-decoration: underline;
+  font-size: 0.875em;
+}
 .dropdown_coupon-info {
   background: url('../img/coupon_info_popup.png') 100% bottom no-repeat;
   width: 407px;
@@ -3257,6 +3308,12 @@ p {
   display: inline-block;
   line-height: 20px;
 }
+.dropdown_coupon-info.big {
+  height: 250px;
+}
+.dropdown_coupon-info.big .dropdown__text {
+  padding-bottom: 0;
+}
 .dropdown_call-me {
   background: url('../img/phone_info_popup.png') 100% bottom no-repeat;
   width: 339px;
@@ -3269,6 +3326,7 @@ p {
 .dropdown_call-me .icon-operator {
   float: left;
   margin-right: 10px;
+  margin-top: 5px;
 }
 .dropdown_call-me .dropdown__text {
   font-size: 14px;

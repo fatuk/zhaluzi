@@ -18,8 +18,25 @@
 		padding: @base*2;
 		padding-right: @base*3;
 		color: #fff;
+		position: relative;
 		b {
 			color: #fff;
+		}
+		span {
+			color: #fff;
+		}
+		&_border {
+			width: @base*30;
+			padding: 0;
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: -@base*1.5;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background: rgba(255,255,255,.2);
+			}
 		}
 	}
 	&__container {
@@ -43,6 +60,30 @@
 			padding-right: @base;
 		}
 	}
+	&__btn {
+		display: inline-block;
+		padding: @base*3 0;
+		cursor: pointer;
+		.clearfix();
+		.icon {
+			color: #fff;
+			float: left;
+			margin-right: @base;
+			transition: transform .5s;
+		}
+		&:hover {
+			.icon {
+				transform: rotate(360deg);
+			}
+		}
+	}
+	&__btn-text {
+		color: #fff;
+		float: left;
+		line-height: 20px;
+		text-decoration: underline;
+		.em(14);
+	}
 	&_coupon-info {
 		@img: '../img/coupon_info_popup.png';
 		background: url(@img) 100% bottom no-repeat;
@@ -60,6 +101,12 @@
 			display: inline-block;
 			line-height: 20px;
 		}
+		&.big {
+			height: @base*25;
+			.dropdown__text {
+				padding-bottom: 0;
+			}
+		}
 	}
 	&_call-me {
 		@img: '../img/phone_info_popup.png';
@@ -73,6 +120,7 @@
 		.icon-operator {
 			float: left;
 			margin-right: @base;
+			margin-top: @base/2;
 		}
 		.dropdown__text {
 			font-size: 14px;
