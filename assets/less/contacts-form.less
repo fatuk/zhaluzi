@@ -4,6 +4,9 @@
 	background: @bg-color;
 	padding-top: @base*5;
 	padding-bottom: @base*4.5;
+	.container {
+		padding: 0 @base*2;
+	}
 	&__title {
 		color: @color;
 		margin: 0;
@@ -24,12 +27,15 @@
 		&:first-child {
 			margin-right: @base*4;
 		}
+		&_right {
+			float: right;
+		}
 	}
 	.textarea {
-		width: @base*56;
+		width: 45%;
 		height: @base*16;
 		float: left;
-		margin-right: @base*4;
+		margin-right: @base*2;
 		border-color: #a9d8f2;
 	}
 	.input {

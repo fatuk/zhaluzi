@@ -47,6 +47,7 @@
     "animate.less": "*",
     "angular-inview": "~1.5.0",
     "gmap3": "~6.0.0",
-    "angular-nanoscroller": "~0.2.1"
+    "angular-nanoscroller": "~0.2.1",
+    "ng-device-detector": "~1.1.2"
   }
 }

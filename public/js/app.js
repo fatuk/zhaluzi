@@ -7,6 +7,7 @@ var app = angular.module('myApp', [
 	'ngRoute',
 	'homeCtrl',
 	'couponDirective',
+	'ng.deviceDetector',
 	'sun.scrollable'
 ])
 	.config(['$routeProvider',
@@ -30,7 +31,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 		'$log',
 		'$timeout',
 		'$localStorage',
-		function ($scope, ngDialog, couponsService, $log, $timeout, $localStorage) {
+		'detectUtils',
+		function ($scope, ngDialog, couponsService, $log, $timeout, $localStorage, detectUtils) {
 			'use strict';
 
 			$scope.collected = $localStorage.$default({
@@ -51,8 +53,14 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				$scope.getCouponMessages();
 				$scope.getCoupons();
 				$scope.getTooltipModals();
-				$scope.skrollr();
+				if (!$scope.isMobile()) {
+					$scope.skrollr();
+				}
 				$scope.map();
+			};
+
+			$scope.isMobile = function () {
+				return detectUtils.isMobile();
 			};
 
 			$scope.scrollTo = function (hash) {
@@ -127,10 +135,10 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 						options: {
 							center: [55.648677, 37.735566],
 							zoom: 14,
-							panControl: false,
+							zoomControl: true,
 							navigationControl: false,
 							scrollwheel: false,
-							disableDefaultUI: false,
+							disableDefaultUI: true,
 							streetViewControl: false,
 							styles: [{
 								"featureType": "administrative",

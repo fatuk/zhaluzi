@@ -7,6 +7,7 @@ var app = angular.module('myApp', [
 	'ngRoute',
 	'homeCtrl',
 	'couponDirective',
+	'ng.deviceDetector',
 	'sun.scrollable'
 ])
 	.config(['$routeProvider',
