@@ -3629,7 +3629,7 @@ p {
 }
 .ngdialog-overlay {
   position: fixed;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   top: 0;
   right: 0;
   bottom: 0;
@@ -4045,7 +4045,7 @@ body.ngdialog-open {
   padding: 0;
   margin-bottom: 30px;
   display: block;
-  width: 200px;
+  width: 220px;
   margin: 0 auto;
 }
 .tooltip-modal__img-list:after {
