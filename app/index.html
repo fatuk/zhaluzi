@@ -94,7 +94,7 @@
 						ng-class="{scrolling:boolChangeClass}"
 						ng-mouseover="couponInfoHover=true; $event.stopPropagation()">
 						<!-- Info -->
-						<div class="coupons-info__container">
+						<div ng-cloak class="coupons-info__container">
 							<i class="icon icon-coupon"></i>
 							<span class="coupons-info__count">
 								<span class="coupons-info__current">{{collected.counter}}</span>/<span class="coupons-info__max">5</span>

@@ -2770,6 +2770,14 @@ body {
 .scrolling {
   background: orange !important;
 }
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
 body {
   font-size: 100%;
   overflow-x: hidden;
