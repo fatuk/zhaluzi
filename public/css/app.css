@@ -2767,6 +2767,71 @@ body {
     background-size: 61px 63px;
   }
 }
+.icon-level-1 {
+  background-image: url(../img/tooltips/1_level.jpg);
+  background-repeat: no-repeat;
+  width: 620px;
+  height: 350px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-level-1 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/tooltips/1_level@2x.jpg);
+    background-size: 620px 350px;
+  }
+}
+.icon-level-2 {
+  background-image: url(../img/tooltips/2_level.jpg);
+  background-repeat: no-repeat;
+  width: 620px;
+  height: 350px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-level-2 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/tooltips/2_level@2x.jpg);
+    background-size: 620px 350px;
+  }
+}
+.icon-level-3 {
+  background-image: url(../img/tooltips/3_level.jpg);
+  background-repeat: no-repeat;
+  width: 620px;
+  height: 350px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-level-3 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/tooltips/3_level@2x.jpg);
+    background-size: 620px 350px;
+  }
+}
+.icon-level-4 {
+  background-image: url(../img/tooltips/4_level.jpg);
+  background-repeat: no-repeat;
+  width: 620px;
+  height: 350px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-level-4 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/tooltips/4_level@2x.jpg);
+    background-size: 620px 350px;
+  }
+}
+.icon-level-5 {
+  background-image: url(../img/tooltips/5_level.jpg);
+  background-repeat: no-repeat;
+  width: 620px;
+  height: 350px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-level-5 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/tooltips/5_level@2x.jpg);
+    background-size: 620px 350px;
+  }
+}
 .scrolling {
   background: orange !important;
 }
@@ -4159,9 +4224,10 @@ body.ngdialog-open {
   background: url('../img/mobile/tooltip-modal-bg.jpg');
 }
 .tooltip-modal__img {
-  border-radius: 6px;
-  width: 100%;
   padding: 10px;
+}
+.tooltip-modal__img .icon {
+  border-radius: 6px;
 }
 .tooltip-modal__title {
   font-family: 'Lobster', cursive;
