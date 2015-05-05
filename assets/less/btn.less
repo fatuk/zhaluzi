@@ -26,26 +26,50 @@
 	&_blue-1 {
 		background: @btn-blue;
 		border: solid 1px @btn-blue-1;
+		&[disabled] {
+			border: solid 1px desaturate(@btn-blue-1, 30%);
+			background: desaturate(@btn-blue, 30%);
+		}
 	}
 	&_blue-2 {
 		background: @btn-blue;
 		border: solid 1px @btn-blue-2;
+		&[disabled] {
+			border: solid 1px desaturate(@btn-blue-2, 30%);
+			background: desaturate(@btn-blue, 30%);
+		}
 	}
 	&_green-1 {
 		background: @btn-green;
 		border: solid 1px @btn-green-1;
+		&[disabled] {
+			border: solid 1px desaturate(@btn-green-1, 30%);
+			background: desaturate(@btn-green, 30%);
+		}
 	}
 	&_green-2 {
 		background: @btn-green;
 		border: solid 1px @btn-green-2;
+		&[disabled] {
+			border: solid 1px desaturate(@btn-green-2, 30%);
+			background: desaturate(@btn-green, 30%);
+		}
 	}
 	&_violet-1 {
 		background: @btn-violet;
 		border: solid 1px @btn-violet-1;
+		&[disabled] {
+			border: solid 1px desaturate(@btn-violet-1, 30%);
+			background: desaturate(@btn-violet, 30%);
+		}
 	}
 	&_violet-2 {
 		background: @btn-violet;
 		border: solid 1px @btn-violet-2;
+		&[disabled] {
+			border: solid 1px desaturate(@btn-violet-2, 30%);
+			background: desaturate(@btn-violet, 30%);
+		}
 	}
 	&_menu {
 		padding: @base*2;
@@ -59,7 +83,7 @@
 		text-transform: uppercase;
 		.btn__text {
 			font-size: 11px;
-			font-weight: @normal;
+			font-weight: @bold;
 		}
 	}
 }

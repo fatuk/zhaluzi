@@ -3,15 +3,15 @@
 	"coupons": [{
 		"id": 1,
 		"location": "38.56086956521739%, 667px",
-		"type": 1
+		"type": 2
 	}, {
 		"id": 2,
 		"location": "47.28260869565217%, 720px",
-		"type": 1
+		"type": 2
 	}, {
 		"id": 3,
 		"location": "48.423913043478265%, 877px",
-		"type": 1
+		"type": 2
 	}]
 }, {
 	"floor": 2,

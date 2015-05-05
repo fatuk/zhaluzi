@@ -1,0 +1,25 @@
+<div class="modal modal_discount">
+	<div class="modal__container">
+		<h2 class="modal__title">
+			Получить скидку {{collected.counter*2}}%
+		</h2>
+		<p class="modal__description">
+			Оставьте свой email и мы отправим на него промо-код с инструкцией.
+		</p>
+		<!-- Form -->
+		<div class="modal__form">
+			<form name="promoCodeForm" ng-submit="sendPromo()">
+				<input
+					type="email"
+					name="email"
+					ng-model="userData.email"
+					class="input"
+					required
+					placeholder="Введи свой e-mail">
+				<button class="btn btn_green-2 btn_upper">
+					<span class="btn__text">Отправить купон</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</div>

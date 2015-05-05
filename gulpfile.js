@@ -42,8 +42,10 @@ gulp.task('copyAssets', function () {
 	gulp.src([
 		'assets/**/*.*',
 		'!assets/**/*.less',
-		'app/**/*.html'
+		'app/**/*.html',
+		'!app/index.html'
 	])
+		.pipe(gulp.dest('../design-okna.brainmaze.net'))
 		.pipe(gulp.dest('public'));
 });
 
@@ -89,6 +91,7 @@ gulp.task('pluginsConcat', function () {
 	gulp.src(bowerFiles)
 		.pipe(concat('plugins.min.js'))
 		.pipe(uglify())
+		.pipe(gulp.dest('../design-okna.brainmaze.net/js'))
 		.pipe(gulp.dest('public/js'));
 });
 
@@ -101,6 +104,7 @@ gulp.task('jsConcat', function () {
 		.pipe(concat('app.js'))
 	// .pipe(uglify())
 	.pipe(sourcemaps.write('../js'))
+		.pipe(gulp.dest('../design-okna.brainmaze.net/js'))
 		.pipe(gulp.dest('public/js'));
 });
 
@@ -144,6 +148,7 @@ gulp.task('less', function () {
 			cascade: false
 		}))
 		.pipe(sourcemaps.write('../css'))
+		.pipe(gulp.dest('../design-okna.brainmaze.net/css'))
 		.pipe(gulp.dest('public/css'));
 });
 

@@ -235,3 +235,18 @@
 		background: rgba(0,0,0,.8);
 	}
 }
+// Discount
+.ngdialog.ngdialog-theme-default.ngdialog_discount {
+	.ngdialog-content {
+		padding: 0;
+		background: none;
+		width: @base*55;
+	}
+	.ngdialog-close {
+		&:before {
+			content: '';
+			.image-2x('../img/close.png');
+			margin: 21px 26px;
+		}
+	}
+}

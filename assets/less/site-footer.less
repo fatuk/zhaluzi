@@ -72,4 +72,37 @@
 			margin-right: @base;
 		}
 	}
+	&_blue {
+		background: @bg-mobile-footer-menu;
+		color: #fff;
+		text-align: center;
+		position: static;
+		padding: 120px/@mobile*100% 0;
+		.clearfix();
+		.site-footer__title {
+			.lobster();
+			font-weight: @normal;
+			.em(25);
+			margin: 0;
+			margin-bottom: 55px/@mobile*100%;
+			color: #fff;
+		}
+		.site-footer__list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.site-footer__container {
+			width: 100%;
+		}
+		.site-footer__item {
+
+		}
+		.site-footer__link {
+			display: inline-block;
+			padding: 20px/@mobile*100%  50px/@mobile*100%;
+			color: #fff;
+			.em(14);
+		}
+	}
 }

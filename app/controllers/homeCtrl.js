@@ -7,7 +7,9 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 		'$timeout',
 		'$localStorage',
 		'detectUtils',
-		function ($scope, ngDialog, couponsService, $log, $timeout, $localStorage, detectUtils) {
+		'notificationService',
+		'promoCodeService',
+		function ($scope, ngDialog, couponsService, $log, $timeout, $localStorage, detectUtils, notificationService, promoCodeService) {
 			'use strict';
 
 			$scope.collected = $localStorage.$default({
@@ -22,6 +24,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.coupons = [];
 			$scope.couponsOnStage = [];
 			$scope.tooltipModals = [];
+			$scope.userData = {};
+			$scope.userData.phone = '+7';
 
 			$scope.init = function () {
 				$scope.setCouponsContainerWidth();
@@ -32,6 +36,84 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 					$scope.skrollr();
 				}
 				$scope.map();
+			};
+
+			$scope.sendPromo = function () {
+				var data = {
+					email: $scope.userData.email,
+					promocodeId: $scope.collected.counter
+				};
+				promoCodeService.sendPromoCode(data)
+					.then(function (res) {
+						// Success
+						console.log(res);
+					}, function (err) {
+						// Error
+						console.log(err);
+					});
+			};
+
+			$scope.sendCallMe = function () {
+				var data = {
+					phone: $scope.userData.phone,
+					header: 'Перезвоните мне. Промо-сайт Дизайн окна',
+					text: 'Пользователь оставил свой номер телефона и попросил перезвонить.'
+				};
+				notificationService.sendUserData(data)
+					.then(function (res) {
+						// Success
+						console.log(res);
+					}, function (err) {
+						// Error
+						console.log(err);
+					});
+			};
+
+			$scope.sendCallMeZhaluzi = function () {
+				var data = {
+					phone: $scope.userData.phone,
+					header: 'Хочу заказать ' + $scope.userData.zhaluziType + '. Промо-сайт Дизайн окна',
+					text: 'Я хочу заказать ' + $scope.userData.zhaluziType + ' и задать по ним вопросы.'
+				};
+				notificationService.sendUserData(data)
+					.then(function (res) {
+						// Success
+						console.log(res);
+					}, function (err) {
+						// Error
+						console.log(err);
+					});
+			};
+
+			$scope.sendPromo = function () {
+				var data = {
+					email: $scope.userData.email,
+					promocodeId: $scope.collected.counter
+				};
+				promoCodeService.sendPromoCode(data)
+					.then(function (res) {
+						// Success
+						console.log(res);
+					}, function (err) {
+						// Error
+						console.log(err);
+					});
+			};
+
+			$scope.sendComment = function () {
+				var data = {
+					email: $scope.userData.email,
+					header: 'Комментарий пользователя. Промо-сайт Дизайн окна',
+					text: $scope.userData.comment
+				};
+				notificationService.sendUserData(data)
+					.then(function (res) {
+						// Success
+						console.log(res);
+					}, function (err) {
+						// Error
+						console.log(err);
+					});
 			};
 
 			$scope.isMobile = function () {
@@ -108,6 +190,22 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 						}, 300);
 					},
 					className: 'ngdialog ngdialog_tooltip ngdialog-theme-default'
+				});
+			};
+
+			$scope.openGetDiscountModal = function () {
+				$timeout(function () {
+					$('html').addClass('block-scroll');
+				}, 300);
+				ngDialog.open({
+					template: 'views/modals/get-discount.html',
+					scope: $scope,
+					preCloseCallback: function () {
+						$timeout(function () {
+							$('html').removeClass('block-scroll');
+						}, 300);
+					},
+					className: 'ngdialog ngdialog_discount ngdialog-theme-default'
 				});
 			};
 
@@ -198,7 +296,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.setCouponsContainerWidth = function () {
 				var $couponsContainer = $('.js-couponsContainer');
 				$couponsContainer.css({
-					width: $(window).width()
+					// width: $(window).width()
+					width: 1600
 				});
 			};
 

@@ -14,9 +14,17 @@
 		<!-- Small images -->
 		<ul class="tooltip-modal__img-list">
 			<li class="tooltip-modal__img-item">
-				<i class="icon icon-{{tooltipModals[tooltipId-1].iconType}}"></i>
+				<i ng-show="tooltipId==1" class="icon icon-horizontal"></i>
+				<i ng-show="tooltipId==2" class="icon icon-vertical"></i>
+				<i ng-show="tooltipId==3" class="icon icon-rollet"></i>
+				<i ng-show="tooltipId==4" class="icon icon-zebra"></i>
+				<i ng-show="tooltipId==5" class="icon icon-wood"></i>
 			</li><li class="tooltip-modal__img-item">
-				<i class="icon icon-{{tooltipModals[tooltipId-1].iconType}}-scheme"></i>
+				<i ng-show="tooltipId==1" class="icon icon-horizontal-scheme"></i>
+				<i ng-show="tooltipId==2" class="icon icon-vertical-scheme"></i>
+				<i ng-show="tooltipId==3" class="icon icon-rollet-scheme"></i>
+				<i ng-show="tooltipId==4" class="icon icon-zebra-scheme"></i>
+				<i ng-show="tooltipId==5" class="icon icon-wood-scheme"></i>
 			</li>
 		</ul>
 		<!-- Description -->
@@ -26,15 +34,20 @@
 		<div class="tooltip-modal__call-me">
 			<i class="icon icon-operator"></i>
 			<div class="tooltip-modal__call-me-form">
-				<form name="callMeForm" action="#">
+				<form name="callMeForm" ng-submit="sendCallMeZhaluzi()">
 					<div class="tooltip-modal__call-me-form-inner">
 						<input
-							name="callmeNumber"
+							name="userPhone"
 							type="text"
 							required
-							ng-model="callmeNumber"
-							placeholder="Введите номер телефона"
+							ng-model="userData.phone"
+							placeholder="+7"
 							class="input input_orange">
+						<input
+							ng-init="userData.zhaluziType=tooltipModals[tooltipId-1].title"
+							type="hidden"
+							ng-model="userData.zhaluziType"
+							name="zhaluziType">
 							<button class="btn btn_blue-1 btn_upper">
 								<span class="btn__text">Жду звонка!</span>
 							</button>

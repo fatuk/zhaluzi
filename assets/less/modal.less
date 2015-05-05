@@ -23,6 +23,7 @@
 		line-height: 20px;
 		letter-spacing: 0.2px;
 		min-height: @base*5;
+		color: @grey;
 	}
 	&__form {
 		padding: @base*2;
@@ -72,5 +73,13 @@
 			padding-top: @base*3;
 		}
 
+	}
+	&_discount {
+		background: #fff;
+		border-radius: 5px;
+		height: auto;
+		.modal__description {
+			min-height: inherit;
+		}
 	}
 }

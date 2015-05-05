@@ -3008,6 +3008,40 @@ p {
 .site-footer .social__item {
   margin-right: 10px;
 }
+.site-footer_blue {
+  background: #5aafd1;
+  color: #fff;
+  text-align: center;
+  position: static;
+  padding: 18.75% 0;
+}
+.site-footer_blue:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.site-footer_blue .site-footer__title {
+  font-family: 'Lobster', cursive;
+  font-weight: 400;
+  font-size: 1.5625em;
+  margin: 0;
+  margin-bottom: 8.59375%;
+  color: #fff;
+}
+.site-footer_blue .site-footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer_blue .site-footer__container {
+  width: 100%;
+}
+.site-footer_blue .site-footer__link {
+  display: inline-block;
+  padding: 3.125% 7.8125%;
+  color: #fff;
+  font-size: 0.875em;
+}
 .house {
   position: absolute;
   left: 50%;
@@ -3075,25 +3109,49 @@ p {
   background: #97c5de;
   border: solid 1px #a9d8f2;
 }
+.btn_blue-1[disabled] {
+  border: solid 1px #b8d4e3;
+  background: #acbfc9;
+}
 .btn_blue-2 {
   background: #97c5de;
   border: solid 1px #74aece;
+}
+.btn_blue-2[disabled] {
+  border: solid 1px #90a6b2;
+  background: #acbfc9;
 }
 .btn_green-1 {
   background: #afbd44;
   border: solid 1px #c0cf4e;
 }
+.btn_green-1[disabled] {
+  border: solid 1px #a6ad70;
+  background: #92976a;
+}
 .btn_green-2 {
   background: #afbd44;
   border: solid 1px #9bab26;
+}
+.btn_green-2[disabled] {
+  border: solid 1px #838c45;
+  background: #92976a;
 }
 .btn_violet-1 {
   background: #b47b94;
   border: solid 1px #cf9db3;
 }
+.btn_violet-1[disabled] {
+  border: solid 1px #b9b3b6;
+  background: #989898;
+}
 .btn_violet-2 {
   background: #b47b94;
   border: solid 1px #a25b7a;
+}
+.btn_violet-2[disabled] {
+  border: solid 1px #7f7f7f;
+  background: #989898;
 }
 .btn_menu {
   padding: 20px;
@@ -3108,7 +3166,7 @@ p {
 }
 .btn_upper .btn__text {
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 700;
 }
 .coupons-info {
   float: left;
@@ -3563,7 +3621,7 @@ p {
   background: green;
 }
 .coupon_type-1 {
-  background-image: url(../img/coupon-small.png);
+  background-image: url(../img/coupons/1.png);
   background-repeat: no-repeat;
   width: 20px;
   height: 18px;
@@ -3571,8 +3629,60 @@ p {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .coupon_type-1 {
     /* on retina, use image that's scaled by 2 */
-    background-image: url(../img/coupon-small@2x.png);
+    background-image: url(../img/coupons/1@2x.png);
     background-size: 20px 18px;
+  }
+}
+.coupon_type-2 {
+  background-image: url(../img/coupons/2.png);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 12px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .coupon_type-2 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/coupons/2@2x.png);
+    background-size: 16px 12px;
+  }
+}
+.coupon_type-3 {
+  background-image: url(../img/coupons/3.png);
+  background-repeat: no-repeat;
+  width: 13px;
+  height: 18px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .coupon_type-3 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/coupons/3@2x.png);
+    background-size: 13px 18px;
+  }
+}
+.coupon_type-4 {
+  background-image: url(../img/coupons/4.png);
+  background-repeat: no-repeat;
+  width: 13px;
+  height: 18px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .coupon_type-4 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/coupons/4@2x.png);
+    background-size: 13px 18px;
+  }
+}
+.coupon_type-5 {
+  background-image: url(../img/coupons/5.png);
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 10px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .coupon_type-5 {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/coupons/5@2x.png);
+    background-size: 17px 10px;
   }
 }
 @-webkit-keyframes ngdialog-fadeout {
@@ -3887,6 +3997,26 @@ body.ngdialog-open {
 .ngdialog.ngdialog-theme-default.ngdialog_tooltip .ngdialog-overlay {
   background: rgba(0, 0, 0, 0.8);
 }
+.ngdialog.ngdialog-theme-default.ngdialog_discount .ngdialog-content {
+  padding: 0;
+  background: none;
+  width: 550px;
+}
+.ngdialog.ngdialog-theme-default.ngdialog_discount .ngdialog-close:before {
+  content: '';
+  background-image: url(../img/close.png);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 16px;
+  margin: 21px 26px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .ngdialog.ngdialog-theme-default.ngdialog_discount .ngdialog-close:before {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/close@2x.png);
+    background-size: 15px 16px;
+  }
+}
 .modal {
   background: url('../img/popup_for_coupon.svg') no-repeat;
   width: 550px;
@@ -3912,6 +4042,7 @@ body.ngdialog-open {
   line-height: 20px;
   letter-spacing: 0.2px;
   min-height: 50px;
+  color: #444444;
 }
 .modal__form {
   padding: 20px;
@@ -3956,6 +4087,14 @@ body.ngdialog-open {
 }
 .modal_coupon-fifth .modal__footer-text {
   padding-top: 30px;
+}
+.modal_discount {
+  background: #fff;
+  border-radius: 5px;
+  height: auto;
+}
+.modal_discount .modal__description {
+  min-height: inherit;
 }
 .social__description {
   font-size: 14px;
@@ -4678,7 +4817,7 @@ body.ngdialog-open {
 }
 .mobile-contacts {
   text-align: center;
-  padding-top: 31.25%;
+  padding-top: 18.75%;
   margin-bottom: 1.5625%;
 }
 .mobile-contacts__title {
