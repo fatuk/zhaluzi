@@ -152,13 +152,13 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 					modals = {};
 
 				modals['desk-horizontal'] = 1;
-				modals['desk-vertical'] = 2;
+				modals['desk-wood'] = 2;
 				modals['desk-rollet'] = 3;
-				modals['desk-wood'] = 4;
+				modals['desk-vertical'] = 4;
 				modals['desk-zebra'] = 5;
 
-				$scope.mobileMenuState = !$scope.mobileMenuState;
-				$scope.menuState = !$scope.menuState;
+				$scope.mobileMenuState = false;
+				$scope.menuState = false;
 
 				setTimeout(function () {
 					$body.animate({
@@ -204,32 +204,32 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 
 			$scope.openTooltipModal = function (id) {
 				$scope.tooltipId = id;
-				$timeout(function () {
+				/*$timeout(function () {
 					$('html').addClass('block-scroll');
-				}, 300);
+				}, 300);*/
 				ngDialog.open({
 					template: 'views/modals/tooltip.html',
 					scope: $scope,
 					preCloseCallback: function () {
-						$timeout(function () {
-							$('html').removeClass('block-scroll');
-						}, 300);
+						/*				$timeout(function () {
+					$('html').removeClass('block-scroll');
+				}, 300);*/
 					},
 					className: 'ngdialog ngdialog_tooltip ngdialog-theme-default'
 				});
 			};
 
 			$scope.openGetDiscountModal = function () {
-				$timeout(function () {
+				/*$timeout(function () {
 					$('html').addClass('block-scroll');
-				}, 300);
+				}, 300);*/
 				ngDialog.open({
 					template: 'views/modals/get-discount.html',
 					scope: $scope,
 					preCloseCallback: function () {
-						$timeout(function () {
-							$('html').removeClass('block-scroll');
-						}, 300);
+						/*				$timeout(function () {
+					$('html').removeClass('block-scroll');
+				}, 300);*/
 					},
 					className: 'ngdialog ngdialog_discount ngdialog-theme-default'
 				});

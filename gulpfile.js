@@ -43,6 +43,7 @@ gulp.task('copyAssets', function () {
 		'assets/**/*.*',
 		'!assets/**/*.less',
 		'app/**/*.html',
+		'!assets/data/*.*',
 		'!app/index.html'
 	])
 		.pipe(gulp.dest('../design-okna.brainmaze.net'))
