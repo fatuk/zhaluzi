@@ -67,15 +67,23 @@
 			<p class="social__description">
 				Сохраните эту страницу у себя в социальной сети, чтобы не потерять:
 			</p>
-			<ul class="social__list">
+			<ul
+				ng-init="couponWord=['купон', 'купона', 'купонов']"
+				class="social__list">
 				<li class="social__item">
-					<a href="#" class="social__link"><i class="icon icon-vk"></i></a>
+					<a href="http://vk.com/share.php?url={{siteAddress}}&title=Жалюзи в Москве&description=Я нашел {{collected.counter}} {{collected.counter==1 ? 'купон' : ''}}{{collected.counter>1 && collected.counter<=4 ? 'купона' : ''}}{{collected.counter==5 ? 'купонов' : ''}} на скидку {{collected.counter*2}}%! А сколько найдешь ты? Больше купонов - больше скидка!&image={{siteAddress}}%2Fimg%2Fsocial%2Fsocial-big.jpg&noparse=true" target="_blank" onclick="return Share.me(this);" class="social__link">
+						<i class="icon icon-vk"></i>
+					</a>
 				</li>
 				<li class="social__item">
-					<a href="#" class="social__link"><i class="icon icon-facebook"></i></a>
+					<a href="http://www.facebook.com/sharer/sharer.php?s0&p[title]=Жалюзи в Москве&p[summary]=Я нашел {{collected.counter}} {{collected.counter==1 ? 'купон' : ''}}{{collected.counter>1 && collected.counter<=4 ? 'купона' : ''}}{{collected.counter==5 ? 'купонов' : ''}} на скидку {{collected.counter*2}}=%! А сколько найдешь ты? Больше купонов - больше скидка!&p[url]={{siteAddress}}&p[images][0]={{siteAddress}}img/social/social-big.jpg" target="_blank" onclick="return Share.me(this);" class="social__link">
+						<i class="icon icon-facebook"></i>
+					</a>
 				</li>
 				<li class="social__item">
-					<a href="#" class="social__link"><i class="icon icon-twitter"></i></a>
+					<a href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=Я нашел {{collected.counter}} {{collected.counter==1 ? 'купон' : ''}}{{collected.counter>1 && collected.counter<=4 ? 'купона' : ''}}{{collected.counter==5 ? 'купонов' : ''}} на скидку {{collected.counter*2}}%! А сколько найдешь ты? Больше купонов - больше скидка!&st._surl={{siteAddress}}?v" target="_blank" onclick="return Share.me(this);" class="social__link">
+						<i class="icon icon-ok"></i>
+					</a>
 				</li>
 			</ul>
 		</div>
