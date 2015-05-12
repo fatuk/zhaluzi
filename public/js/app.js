@@ -129,7 +129,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.sendComment = function () {
 				var data = {
 					email: $scope.userData.email,
-					header: 'Комментарий пользователя. Промо-сайт Дизайн окна',
+					header: $scope.userData.name + ' оставил комментарий. Промо-сайт Дизайн окна',
 					text: $scope.userData.comment
 				};
 				notificationService.sendUserData(data)

@@ -3010,7 +3010,7 @@ p {
   left: 0;
   width: 100%;
   background: #fff;
-  z-index: 10;
+  z-index: 9;
 }
 .site-footer.is-mobile {
   top: 3730px;
@@ -4002,6 +4002,12 @@ body.ngdialog-open {
   padding: 0;
   background: none;
   width: 550px;
+  left: 50%;
+  top: 50%;
+  margin: 0;
+  margin-top: -100px;
+  margin-left: -275px;
+  position: fixed;
 }
 .ngdialog.ngdialog-theme-default.ngdialog_discount .ngdialog-close:before {
   content: '';
@@ -4129,6 +4135,25 @@ body.ngdialog-open {
     /* on retina, use image that's scaled by 2 */
     background-image: url(../img/dog@2x.png);
     background-size: 154px 113px;
+  }
+}
+.pidgeon {
+  background-image: url(../img/golub.png);
+  background-repeat: no-repeat;
+  width: 77px;
+  height: 92px;
+  position: absolute;
+  top: 2900px;
+  left: 0;
+  z-index: 100;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .pidgeon {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/golub@2x.png);
+    background-size: 77px 92px;
   }
 }
 .plane {
@@ -4822,21 +4847,17 @@ body.ngdialog-open {
   padding-top: 18.75%;
   margin-bottom: 1.5625%;
 }
-.mobile-contacts__title {
+.mobile-contacts .site-footer__title {
   margin: 0;
   font-family: 'Lobster', cursive;
   font-weight: 400;
   font-size: 1.5625em;
   margin-bottom: 10.9375%;
 }
-.mobile-contacts__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.mobile-contacts__link {
+.mobile-contacts .site-footer__link {
   color: #7E7E7E;
   display: inline-block;
+  width: 100%;
   padding: 3.125% 10.9375%;
   font-size: 0.875em;
 }
