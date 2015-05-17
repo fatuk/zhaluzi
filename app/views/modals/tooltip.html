@@ -51,9 +51,18 @@
 							type="hidden"
 							ng-model="userData.zhaluziType"
 							name="zhaluziType">
-							<button class="btn btn_blue-1 btn_upper">
-								<span class="btn__text">Жду звонка!</span>
-							</button>
+						<button
+							class="btn btn_green-1 btn_upper"
+							progress-button
+							value="progress['callMeZhaluzi']"
+							complete="{{progressMessage['callMeZhaluzi']}}"
+							ng-click="sendCallMeZhaluzi()"
+							in-progress="Отправляю...">
+							Жду&nbsp;звонка!
+						</button>
+						<!-- <button class="btn btn_blue-1 btn_upper">
+							<span class="btn__text">Жду звонка!</span>
+						</button> -->
 					</div>
 				</form>
 				<!-- Form description -->

@@ -7,6 +7,7 @@ var app = angular.module('myApp', [
 	'ngRoute',
 	'homeCtrl',
 	'couponDirective',
+	'progressButton',
 	'ng.deviceDetector',
 	'sun.scrollable'
 ])

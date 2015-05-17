@@ -2925,7 +2925,8 @@ p {
 .site-header__container {
   position: relative;
 }
-.site-header__container .btn {
+.site-header__container .btn,
+.site-header__container .progress-button {
   margin-top: -2.5px;
 }
 .site-header__container:before {
@@ -3153,7 +3154,52 @@ p {
   width: 324.44444444px;
   height: 106.66666667px;
 }
-.btn {
+.progress-button {
+  display: inline-block;
+  font-size: 24px;
+  color: #fff !important;
+  text-decoration: none !important;
+  padding: 14px 60px;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+.progress-button-text {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 30px;
+  position: relative;
+  z-index: 2;
+}
+/* The colorful bar that grows depending on the progress */
+.progress-button-bar {
+  background-color: #e667c0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 0 0 2px 2px;
+  -webkit-transition: width 0.5s, height 0.5s;
+  transition: width 0.5s, height 0.5s;
+}
+/* The bar can be either horizontal, or vertical */
+.progress-button-bar.progress-button-horizontal {
+  height: 100%;
+  border-radius: 2px;
+}
+.progress-button-bar.progress-button-vertical {
+  height: 0;
+  top: 0;
+  width: 100%;
+  border-radius: 2px;
+}
+.btn,
+.progress-button {
   border: none;
   border-radius: 4px;
   background: none;
@@ -3164,61 +3210,99 @@ p {
   width: 170px;
   height: 32px;
 }
-.btn__text {
+.btn__text,
+.progress-button__text {
   line-height: 30px;
   font-weight: 700;
   font-size: 13px;
   color: #fff;
 }
-.btn_blue-1 {
+.btn_blue-1,
+.progress-button_blue-1 {
   background: #97c5de;
   border: solid 1px #a9d8f2;
 }
-.btn_blue-1[disabled] {
+.btn_blue-1[disabled],
+.progress-button_blue-1[disabled] {
   border: solid 1px #b8d4e3;
   background: #acbfc9;
 }
-.btn_blue-2 {
+.btn_blue-1 .progress-button-bar,
+.progress-button_blue-1 .progress-button-bar {
+  background-color: #a9d8f2;
+}
+.btn_blue-2,
+.progress-button_blue-2 {
   background: #97c5de;
   border: solid 1px #74aece;
 }
-.btn_blue-2[disabled] {
+.btn_blue-2[disabled],
+.progress-button_blue-2[disabled] {
   border: solid 1px #90a6b2;
   background: #acbfc9;
 }
-.btn_green-1 {
+.btn_blue-2 .progress-button-bar,
+.progress-button_blue-2 .progress-button-bar {
+  background-color: #74aece;
+}
+.btn_green-1,
+.progress-button_green-1 {
   background: #afbd44;
   border: solid 1px #c0cf4e;
 }
-.btn_green-1[disabled] {
+.btn_green-1[disabled],
+.progress-button_green-1[disabled] {
   border: solid 1px #a6ad70;
   background: #92976a;
 }
-.btn_green-2 {
+.btn_green-1 .progress-button-bar,
+.progress-button_green-1 .progress-button-bar {
+  background-color: #c0cf4e;
+}
+.btn_green-2,
+.progress-button_green-2 {
   background: #afbd44;
   border: solid 1px #9bab26;
 }
-.btn_green-2[disabled] {
+.btn_green-2[disabled],
+.progress-button_green-2[disabled] {
   border: solid 1px #838c45;
   background: #92976a;
 }
-.btn_violet-1 {
+.btn_green-2 .progress-button-bar,
+.progress-button_green-2 .progress-button-bar {
+  background-color: #9bab26;
+}
+.btn_violet-1,
+.progress-button_violet-1 {
   background: #b47b94;
   border: solid 1px #cf9db3;
 }
-.btn_violet-1[disabled] {
+.btn_violet-1[disabled],
+.progress-button_violet-1[disabled] {
   border: solid 1px #b9b3b6;
   background: #989898;
 }
-.btn_violet-2 {
+.btn_violet-1 .progress-button-bar,
+.progress-button_violet-1 .progress-button-bar {
+  background-color: #cf9db3;
+}
+.btn_violet-2,
+.progress-button_violet-2 {
   background: #b47b94;
   border: solid 1px #a25b7a;
 }
-.btn_violet-2[disabled] {
+.btn_violet-2[disabled],
+.progress-button_violet-2[disabled] {
   border: solid 1px #7f7f7f;
   background: #989898;
 }
-.btn_menu {
+.btn_violet-2 .progress-button-bar,
+.progress-button_violet-2 .progress-button-bar {
+  background-color: #a25b7a;
+}
+.btn_menu,
+.progress-button_menu {
   padding: 20px;
   float: right;
   color: #2b2b2b;
@@ -3226,10 +3310,12 @@ p {
   width: auto;
   height: 60px;
 }
-.btn_upper {
+.btn_upper,
+.progress-button_upper {
   text-transform: uppercase;
 }
-.btn_upper .btn__text {
+.btn_upper .btn__text,
+.progress-button_upper .btn__text {
   font-size: 11px;
   font-weight: 700;
 }
@@ -3248,7 +3334,8 @@ p {
   height: 66px;
   background: #cccccc;
 }
-.coupons-info .btn {
+.coupons-info .btn,
+.coupons-info .progress-button {
   float: left;
   margin-top: 5px;
   margin-left: 20px;
@@ -3392,7 +3479,8 @@ p {
   width: 170px;
   margin-right: 10px;
 }
-.dropdown__form .btn {
+.dropdown__form .btn,
+.dropdown__form .progress-button {
   float: left;
   width: auto;
   padding-left: 10px;
@@ -3470,6 +3558,10 @@ p {
   float: left;
   padding: 10px;
 }
+.dropdown_call-me .btn,
+.dropdown_call-me .progress-button {
+  width: 92px;
+}
 .tooltip {
   position: absolute;
   z-index: 999;
@@ -3546,11 +3638,13 @@ p {
   display: inline-block;
   margin-top: 20px;
 }
-.tooltip__buttons .btn {
+.tooltip__buttons .btn,
+.tooltip__buttons .progress-button {
   width: 170px;
   margin-bottom: 10px;
 }
-.tooltip__buttons .btn:last-child {
+.tooltip__buttons .btn:last-child,
+.tooltip__buttons .progress-button:last-child {
   margin-bottom: 0;
 }
 .tooltip__buttons .btn_green {
@@ -3629,6 +3723,11 @@ p {
   border: solid 1px #b6b6b6;
   height: 32px;
   padding: 5px 12px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+.input[readonly] {
+  background: #F2F2F2;
 }
 .input_red {
   border-color: #9d483b;
@@ -4065,7 +4164,8 @@ body.ngdialog-open {
   float: left;
   margin-right: 20px;
 }
-.modal__form .btn {
+.modal__form .btn,
+.modal__form .progress-button {
   float: right;
 }
 .modal__continue {
@@ -4269,7 +4369,8 @@ body.ngdialog-open {
   margin-right: 20px;
   float: left;
 }
-.tooltip-modal__call-me-form-inner .btn {
+.tooltip-modal__call-me-form-inner .btn,
+.tooltip-modal__call-me-form-inner .progress-button {
   float: right;
 }
 .tooltip-modal__call-me-description {
@@ -4328,10 +4429,12 @@ body.ngdialog-open {
   margin-bottom: 30px;
   border-color: #a9d8f2;
 }
-.contacts-form .btn {
+.contacts-form .btn,
+.contacts-form .progress-button {
   width: 100%;
 }
-.contacts-form .btn__text {
+.contacts-form .btn__text,
+.contacts-form .progress-button__text {
   font-size: 13px;
 }
 .vendor {
@@ -4783,7 +4886,8 @@ body.ngdialog-open {
 .mobile-dropdown__controls {
   position: relative;
 }
-.mobile-dropdown .btn {
+.mobile-dropdown .btn,
+.mobile-dropdown .progress-button {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -4919,13 +5023,16 @@ body.ngdialog-open {
   .mobile {
     display: block;
   }
-  .btn {
+  .btn,
+  .progress-button {
     width: 100%;
   }
-  .btn__text {
+  .btn__text,
+  .progress-button__text {
     font-weight: 700;
   }
-  .btn_upper .btn__text {
+  .btn_upper .btn__text,
+  .progress-button_upper .btn__text {
     font-weight: 700;
     font-size: 0.8125em;
   }
@@ -4981,7 +5088,8 @@ body.ngdialog-open {
   .coupons-info:after {
     height: 63px;
   }
-  .coupons-info .btn {
+  .coupons-info .btn,
+  .coupons-info .progress-button {
     width: 170px;
   }
   .call-me:before {

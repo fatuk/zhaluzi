@@ -91,8 +91,8 @@ gulp.task('image-min', function () {
 gulp.task('pluginsConcat', function () {
 	gulp.src(bowerFiles)
 		.pipe(concat('plugins.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('../design-okna.brainmaze.net/js'))
+	// .pipe(uglify())
+	.pipe(gulp.dest('../design-okna.brainmaze.net/js'))
 		.pipe(gulp.dest('public/js'));
 });
 

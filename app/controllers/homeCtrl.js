@@ -1,5 +1,6 @@
 angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 	.controller('HomeCtrl', [
+		'$interval',
 		'$scope',
 		'ngDialog',
 		'couponsService',
@@ -9,7 +10,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 		'detectUtils',
 		'notificationService',
 		'promoCodeService',
-		function ($scope, ngDialog, couponsService, $log, $timeout, $localStorage, detectUtils, notificationService, promoCodeService) {
+		function ($interval, $scope, ngDialog, couponsService, $log, $timeout, $localStorage, detectUtils, notificationService, promoCodeService) {
 			'use strict';
 
 			$scope.collected = $localStorage.$default({
@@ -26,6 +27,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.tooltipModals = [];
 			$scope.userData = {};
 			$scope.userData.phone = '+7';
+			$scope.progress = [];
+			$scope.progressMessage = [];
 
 			$scope.init = function () {
 				$scope.setCouponsContainerWidth();
@@ -36,6 +39,20 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 					$scope.skrollr();
 				}
 				$scope.map();
+			};
+
+			$scope.simulateProgress = function (buttonName, seconds, message, callback) {
+				$scope.progress[buttonName] = 0;
+				$scope.progressMessage[buttonName] = message;
+				var interval = $interval(function () {
+					$scope.progress[buttonName] += 0.2
+
+					if ($scope.progress[buttonName] >= 1.0) {
+						$interval.cancel(interval)
+
+						if (typeof callback === 'function') callback();
+					}
+				}, (seconds / 5) * 1000);
 			};
 
 			$scope.sendPromo = function () {
@@ -59,13 +76,19 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 					header: 'Перезвоните мне. Промо-сайт Дизайн окна',
 					text: 'Пользователь оставил свой номер телефона и попросил перезвонить.'
 				};
+
 				notificationService.sendUserData(data)
 					.then(function (res) {
 						// Success
-						console.log(res);
+						$scope.simulateProgress('callMe', 1, 'Готово', function () {
+
+						});
 					}, function (err) {
 						// Error
 						console.log(err);
+						$scope.simulateProgress('callMe', 1, 'Ошибка', function () {
+
+						});
 					});
 			};
 
@@ -75,12 +98,18 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 					header: 'Хочу заказать ' + $scope.userData.zhaluziType + '. Промо-сайт Дизайн окна',
 					text: 'Я хочу заказать ' + $scope.userData.zhaluziType + ' и задать по ним вопросы.'
 				};
+
 				notificationService.sendUserData(data)
 					.then(function (res) {
 						// Success
-						console.log(res);
+						$scope.simulateProgress('callMeZhaluzi', 1, 'Готово', function () {
+
+						});
 					}, function (err) {
 						// Error
+						$scope.simulateProgress('callMeZhaluzi', 1, 'Ошибка', function () {
+
+						});
 						console.log(err);
 					});
 			};
@@ -93,9 +122,14 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				promoCodeService.sendPromoCode(data)
 					.then(function (res) {
 						// Success
-						console.log(res);
+						$scope.simulateProgress('promo', 1, 'Готово', function () {
+
+						});
 					}, function (err) {
 						// Error
+						$scope.simulateProgress('promo', 1, 'Ошибка', function () {
+
+						});
 						console.log(err);
 					});
 			};
@@ -106,13 +140,20 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 					header: $scope.userData.name + ' оставил комментарий. Промо-сайт Дизайн окна',
 					text: $scope.userData.comment
 				};
+
+
 				notificationService.sendUserData(data)
 					.then(function (res) {
 						// Success
-						console.log(res);
+						$scope.simulateProgress('comment', 1, 'Готово', function () {
+							$scope.userData.comment = '';
+						});
 					}, function (err) {
 						// Error
 						console.log(err);
+						$scope.simulateProgress('comment', 1, 'Ошибка', function () {
+
+						});
 					});
 			};
 

@@ -7,6 +7,10 @@
 	border: solid 1px @input-border-color;
 	height: 32px;
 	padding: @base/2 @base*1.2;
+	transition: background .3s;
+	&[readonly] {
+		background: #F2F2F2;
+	}
 	&_red {
 		border-color: #9d483b;
 	}
