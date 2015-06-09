@@ -8,22 +8,39 @@
 		</p>
 		<!-- Form -->
 		<div class="modal__form">
-			<form name="promoCodeForm" ng-submit="sendPromo()">
-				<input
-					type="email"
-					name="email"
-					ng-model="userData.email"
-					class="input"
-					required
-					placeholder="Введи свой e-mail">
+			<form
+				name="promoCodeForm"
+				ng-submit="sendPromo(promoCodeForm.$invalid)">
+				<div
+					class="field"
+					ng-class="{'error': promoCodeForm.$invalid&&isPromoCode}">
+					<input
+						type="email"
+						name="email"
+						ng-blur="isPromoCode=true"
+						ng-model="userData.email"
+						class="input"
+						required
+						placeholder="Введи свой e-mail">
+					<span
+						ng-if="promoCodeForm.email.$error.required&&isPromoCode"
+						class="field__message field__message_black visible">
+                        Введите email
+                    </span>
+                    <span
+                    	ng-if="promoCodeForm.email.$error.email&&isPromoCode"
+                    	class="field__message field__message_black visible">
+                        Введите правильный email
+                    </span>
+				</div>
 				<button
 					class="btn btn_green-1 btn_upper"
 					progress-button
-					value="progress['promo']"
-					complete="{{progressMessage['promo']}}"
-					ng-click="sendPromo()"
+					value="progress['promoCode']"
+					complete="{{progressMessage['promoCode']}}"
+					ng-click="isPromoCode=true; sendPromo(promoCodeForm.$invalid)"
 					in-progress="Отправляю...">
-					Отправить&nbsp;купон!
+					Отправить купон!
 				</button>
 				<!-- <button class="btn btn_green-2 btn_upper">
 					<span class="btn__text">Отправить купон</span>

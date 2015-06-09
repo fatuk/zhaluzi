@@ -2,6 +2,7 @@
 	float: left;
 	padding: @base @base*1.8;
 	padding-right: @base*1.7;
+	padding-bottom: 43px;
 	position: relative;
 	&:after {
 		content: '';
@@ -10,7 +11,8 @@
 		top: 0;
 		width: 1px;
 		height: 66px;
-		background: @header-border-color;
+		// background: @header-border-color;
+		background: linear-gradient(to bottom, rgba(204,204,204,1) 0%,rgba(204,204,204,1) 1%,rgba(204,204,204,0.79) 92%,rgba(204,204,204,0) 100%);
 	}
 	.btn {
 		float: left;

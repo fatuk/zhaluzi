@@ -10,8 +10,35 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 		'detectUtils',
 		'notificationService',
 		'promoCodeService',
-		function ($interval, $scope, ngDialog, couponsService, $log, $timeout, $localStorage, detectUtils, notificationService, promoCodeService) {
+		'$rootScope',
+		'$window',
+		'$routeParams',
+		function ($interval, $scope, ngDialog, couponsService, $log, $timeout, $localStorage, detectUtils, notificationService, promoCodeService, $rootScope, $window, $routeParams) {
 			'use strict';
+
+			// Hashes for sections
+			$scope.$on('$routeChangeSuccess', function () {
+				switch ($routeParams.section) {
+				case 'horizontal':
+					$scope.scrollTo('desk-horizontal');
+					break;
+				case 'vertical':
+					$scope.scrollTo('desk-vertical');
+					break;
+				case 'rollet':
+					$scope.scrollTo('desk-rollet');
+					break;
+				case 'zebra':
+					$scope.scrollTo('desk-zebra');
+					break;
+				case 'wood':
+					$scope.scrollTo('desk-wood');
+					break;
+				case 'contacts':
+					$scope.scrollTo('desk-contacts');
+					break;
+				}
+			});
 
 			$scope.collected = $localStorage.$default({
 				counter: 0
@@ -29,6 +56,10 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.userData.phone = '+7';
 			$scope.progress = [];
 			$scope.progressMessage = [];
+			$scope.isCallMe = false;
+			$scope.isCallMeZhaluzi = false;
+			$scope.isPromoCode = false;
+			$scope.isComment = false;
 
 			$scope.init = function () {
 				$scope.setCouponsContainerWidth();
@@ -40,121 +71,174 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				}
 				$scope.map();
 			};
+			$rootScope.$on('ngDialog.opened', function (e, $dialog) {
+				$scope.lockScroll();
+			});
+			$scope.lockScroll = function () {
+				$('.ngdialog-overlay').on('DOMMouseScroll mousewheel', function (ev) {
+					var $this = $(this),
+						scrollTop = this.scrollTop,
+						scrollHeight = this.scrollHeight,
+						height = $this.height(),
+						delta = (ev.type == 'DOMMouseScroll' ?
+							ev.originalEvent.detail * -40 :
+							ev.originalEvent.wheelDelta),
+						up = delta > 0;
+
+					var prevent = function () {
+						ev.stopPropagation();
+						ev.preventDefault();
+						ev.returnValue = false;
+						return false;
+					};
+
+					if (!up && -delta > scrollHeight - height - scrollTop) {
+						// Scrolling down, but this will take us past the bottom.
+						$this.scrollTop(scrollHeight);
+						return prevent();
+					} else if (up && delta > scrollTop) {
+						// Scrolling up, but this will take us past the top.
+						$this.scrollTop(0);
+						return prevent();
+					}
+				});
+			};
+
+			// Close desctop menu when scroll
+			angular.element($window).bind('scroll', function (e) {
+				if ($scope.menuState) {
+					$scope.menuState = false;
+				}
+			});
 
 			$scope.simulateProgress = function (buttonName, seconds, message, callback) {
 				$scope.progress[buttonName] = 0;
-				$scope.progressMessage[buttonName] = message;
 				var interval = $interval(function () {
-					$scope.progress[buttonName] += 0.2
+					$scope.progress[buttonName] += 0.2;
 
 					if ($scope.progress[buttonName] >= 1.0) {
-						$interval.cancel(interval)
+						$interval.cancel(interval);
 
-						if (typeof callback === 'function') callback();
+						$scope.progressMessage[buttonName] = message;
+
+						$timeout(function () {
+							$scope.progress[buttonName] = 0;
+							$scope.progressMessage[buttonName] = 'Send';
+						}, 2000);
+
+						if (typeof callback === 'function') {
+							callback();
+						}
 					}
 				}, (seconds / 5) * 1000);
 			};
 
-			$scope.sendPromo = function () {
-				var data = {
-					email: $scope.userData.email,
-					promocodeId: $scope.collected.counter
-				};
-				promoCodeService.sendPromoCode(data)
-					.then(function (res) {
-						// Success
-						console.log(res);
-					}, function (err) {
-						// Error
-						console.log(err);
-					});
+			$scope.sendPromo = function (isWrong) {
+				if (!isWrong) {
+					var data = {
+						email: $scope.userData.email,
+						promocodeId: $scope.collected.counter
+					};
+					promoCodeService.sendPromoCode(data)
+						.then(function (res) {
+							// Success
+							$scope.simulateProgress('promoCode', 1, 'Готово', function () {
+								setTimeout(function () {
+									$scope.progressMessage['promoCode'] = 'Отправить купон!';
+								}, 1500);
+							});
+						}, function (err) {
+							// Error
+							$scope.simulateProgress('promoCode', 1, 'Ошибка', function () {
+								setTimeout(function () {
+									$scope.progressMessage['promoCode'] = 'Отправить купон!';
+								}, 1500);
+							});
+							console.log(err);
+						});
+				}
 			};
 
-			$scope.sendCallMe = function () {
-				var data = {
-					phone: $scope.userData.phone,
-					header: 'Перезвоните мне. Промо-сайт Дизайн окна',
-					text: 'Пользователь оставил свой номер телефона и попросил перезвонить.'
-				};
+			$scope.sendCallMe = function (isWrong) {
+				if (!isWrong) {
+					var data = {
+						phone: $scope.userData.phone,
+						header: 'Перезвоните мне. Промо-сайт Дизайн окна',
+						text: 'Пользователь оставил свой номер телефона и попросил перезвонить.'
+					};
 
-				notificationService.sendUserData(data)
-					.then(function (res) {
-						// Success
-						$scope.simulateProgress('callMe', 1, 'Готово', function () {
-
+					notificationService.sendUserData(data)
+						.then(function (res) {
+							// Success
+							$scope.simulateProgress('callMe', 1, 'Готово', function () {
+								setTimeout(function () {
+									$scope.progressMessage['callMe'] = 'Жду звонка!';
+								}, 1500);
+							});
+						}, function (err) {
+							// Error
+							console.log(err);
+							$scope.simulateProgress('callMe', 1, 'Ошибка', function () {
+								setTimeout(function () {
+									$scope.progressMessage['callMe'] = 'Жду звонка!';
+								}, 1500);
+							});
 						});
-					}, function (err) {
-						// Error
-						console.log(err);
-						$scope.simulateProgress('callMe', 1, 'Ошибка', function () {
-
-						});
-					});
+				}
 			};
 
-			$scope.sendCallMeZhaluzi = function () {
-				var data = {
-					phone: $scope.userData.phone,
-					header: 'Хочу заказать ' + $scope.userData.zhaluziType + '. Промо-сайт Дизайн окна',
-					text: 'Я хочу заказать ' + $scope.userData.zhaluziType + ' и задать по ним вопросы.'
-				};
-
-				notificationService.sendUserData(data)
-					.then(function (res) {
-						// Success
-						$scope.simulateProgress('callMeZhaluzi', 1, 'Готово', function () {
-
+			$scope.sendCallMeZhaluzi = function (isWrong) {
+				if (!isWrong) {
+					var data = {
+						phone: $scope.userData.phone,
+						header: 'Хочу заказать ' + $scope.userData.zhaluziType + '. Промо-сайт Дизайн окна',
+						text: 'Я хочу заказать ' + $scope.userData.zhaluziType + ' и задать по ним вопросы.'
+					};
+					notificationService.sendUserData(data)
+						.then(function (res) {
+							// Success
+							$scope.simulateProgress('callMeZhaluzi', 1, 'Готово', function () {
+								setTimeout(function () {
+									$scope.progressMessage['callMeZhaluzi'] = 'Жду звонка!';
+								}, 1500);
+							});
+						}, function (err) {
+							// Error
+							$scope.simulateProgress('callMeZhaluzi', 1, 'Ошибка', function () {
+								setTimeout(function () {
+									$scope.progressMessage['callMeZhaluzi'] = 'Жду звонка!';
+								}, 1500);
+							});
+							console.log(err);
 						});
-					}, function (err) {
-						// Error
-						$scope.simulateProgress('callMeZhaluzi', 1, 'Ошибка', function () {
-
-						});
-						console.log(err);
-					});
+				}
 			};
 
-			$scope.sendPromo = function () {
-				var data = {
-					email: $scope.userData.email,
-					promocodeId: $scope.collected.counter
-				};
-				promoCodeService.sendPromoCode(data)
-					.then(function (res) {
-						// Success
-						$scope.simulateProgress('promo', 1, 'Готово', function () {
-
+			$scope.sendComment = function (isWrong) {
+				if (!isWrong) {
+					var data = {
+						email: $scope.userData.email,
+						header: $scope.userData.name + ' оставил комментарий. Промо-сайт Дизайн окна',
+						text: $scope.userData.comment
+					};
+					notificationService.sendUserData(data)
+						.then(function (res) {
+							// Success
+							$scope.simulateProgress('comment', 1, 'Готово', function () {
+								setTimeout(function () {
+									$scope.progressMessage['comment'] = 'Отправить';
+								}, 1500);
+							});
+						}, function (err) {
+							// Error
+							console.log(err);
+							$scope.simulateProgress('comment', 1, 'Ошибка', function () {
+								setTimeout(function () {
+									$scope.progressMessage['comment'] = 'Отправить';
+								}, 1500);
+							});
 						});
-					}, function (err) {
-						// Error
-						$scope.simulateProgress('promo', 1, 'Ошибка', function () {
-
-						});
-						console.log(err);
-					});
-			};
-
-			$scope.sendComment = function () {
-				var data = {
-					email: $scope.userData.email,
-					header: $scope.userData.name + ' оставил комментарий. Промо-сайт Дизайн окна',
-					text: $scope.userData.comment
-				};
-
-
-				notificationService.sendUserData(data)
-					.then(function (res) {
-						// Success
-						$scope.simulateProgress('comment', 1, 'Готово', function () {
-							$scope.userData.comment = '';
-						});
-					}, function (err) {
-						// Error
-						console.log(err);
-						$scope.simulateProgress('comment', 1, 'Ошибка', function () {
-
-						});
-					});
+				}
 			};
 
 			$scope.isMobile = function () {
@@ -440,7 +524,12 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 
 				$scope.currentCouponEl.find('.js-coupon').addClass('collected');
 
-				$scope.openCollectModal();
+				$scope.currentCouponEl.addClass('cbutton--click');
+
+				setTimeout(function () {
+					$scope.openCollectModal();
+				}, 500);
+
 
 				$scope.floors.floorsArray.push($scope.currentCouponId);
 			};

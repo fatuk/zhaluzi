@@ -196,12 +196,6 @@ Twitter: https://twitter.com/micr0bitz
 body {
   -webkit-backface-visibility: hidden;
 }
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
 @-webkit-keyframes bounce {
   0%,
   20%,
@@ -2184,6 +2178,12 @@ a {
   display: table;
   clear: both;
 }
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 @-webkit-keyframes scroll {
   0% {
     -webkit-transform: translateY(0);
@@ -2215,6 +2215,60 @@ a {
 .scroll-down {
   -webkit-animation: scroll 1s infinite;
   animation: scroll 1s infinite;
+}
+/* Jagoda */
+.cbutton--effect-jagoda::before,
+.cbutton--effect-jagoda::after {
+  -webkit-animation-name: anim-effect-jagoda-2, anim-effect-jagoda-1;
+  animation-name: anim-effect-jagoda-2, anim-effect-jagoda-1;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes anim-effect-jagoda-1 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  40%,
+  60% {
+    opacity: 1;
+  }
+}
+@keyframes anim-effect-jagoda-1 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  40%,
+  60% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes anim-effect-jagoda-2 {
+  0% {
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1.4, 1.4, 1);
+    transform: scale3d(1.4, 1.4, 1);
+  }
+}
+@keyframes anim-effect-jagoda-2 {
+  0% {
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1.4, 1.4, 1);
+    transform: scale3d(1.4, 1.4, 1);
+  }
 }
 /*
  * This file is NOT needed in order to use skrollr.
@@ -2936,7 +2990,8 @@ p {
   top: 0;
   width: 1px;
   height: 63px;
-  background: #cccccc;
+  background: -webkit-linear-gradient(top, #cccccc 0%, #cccccc 1%, rgba(204, 204, 204, 0.79) 92%, rgba(204, 204, 204, 0) 100%);
+  background: linear-gradient(to bottom, #cccccc 0%, #cccccc 1%, rgba(204, 204, 204, 0.79) 92%, rgba(204, 204, 204, 0) 100%);
 }
 .site-header__container:after {
   content: '';
@@ -2945,7 +3000,8 @@ p {
   top: 0;
   width: 1px;
   height: 63px;
-  background: #cccccc;
+  background: -webkit-linear-gradient(top, #cccccc 0%, #cccccc 1%, rgba(204, 204, 204, 0.79) 92%, rgba(204, 204, 204, 0) 100%);
+  background: linear-gradient(to bottom, #cccccc 0%, #cccccc 1%, rgba(204, 204, 204, 0.79) 92%, rgba(204, 204, 204, 0) 100%);
 }
 .logo {
   display: inline-block;
@@ -3172,6 +3228,11 @@ p {
   font-weight: 700;
   line-height: 30px;
   position: relative;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   z-index: 2;
 }
 /* The colorful bar that grows depending on the progress */
@@ -3216,6 +3277,10 @@ p {
   font-weight: 700;
   font-size: 13px;
   color: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn_blue-1,
 .progress-button_blue-1 {
@@ -3323,6 +3388,7 @@ p {
   float: left;
   padding: 10px 18px;
   padding-right: 17px;
+  padding-bottom: 43px;
   position: relative;
 }
 .coupons-info:after {
@@ -3332,7 +3398,8 @@ p {
   top: 0;
   width: 1px;
   height: 66px;
-  background: #cccccc;
+  background: -webkit-linear-gradient(top, #cccccc 0%, #cccccc 1%, rgba(204, 204, 204, 0.79) 92%, rgba(204, 204, 204, 0) 100%);
+  background: linear-gradient(to bottom, #cccccc 0%, #cccccc 1%, rgba(204, 204, 204, 0.79) 92%, rgba(204, 204, 204, 0) 100%);
 }
 .coupons-info .btn,
 .coupons-info .progress-button {
@@ -3362,7 +3429,7 @@ p {
   float: right;
   position: relative;
   padding-left: 23px;
-  padding-bottom: 19px;
+  padding-bottom: 43px;
 }
 .call-me:before {
   content: '';
@@ -3371,7 +3438,8 @@ p {
   top: 0;
   width: 1px;
   height: 66px;
-  background: #cccccc;
+  background: -webkit-linear-gradient(top, #cccccc 0%, #cccccc 1%, rgba(204, 204, 204, 0.79) 92%, rgba(204, 204, 204, 0) 100%);
+  background: linear-gradient(to bottom, #cccccc 0%, #cccccc 1%, rgba(204, 204, 204, 0.79) 92%, rgba(204, 204, 204, 0) 100%);
 }
 .call-me:after {
   content: '';
@@ -3380,7 +3448,8 @@ p {
   top: 0;
   width: 1px;
   height: 63px;
-  background: #cccccc;
+  background: -webkit-linear-gradient(top, #cccccc 0%, #cccccc 1%, rgba(204, 204, 204, 0.79) 92%, rgba(204, 204, 204, 0) 100%);
+  background: linear-gradient(to bottom, #cccccc 0%, #cccccc 1%, rgba(204, 204, 204, 0.79) 92%, rgba(204, 204, 204, 0) 100%);
 }
 .call-me .icon-phone {
   float: left;
@@ -3414,8 +3483,6 @@ p {
   transform: translateY(-250px);
   -webkit-transition: -webkit-transform .5s;
   transition: transform .5s;
-  -webkit-transition-delay: .3s;
-  transition-delay: .3s;
   z-index: 10;
 }
 .dropdown.expanded {
@@ -3601,10 +3668,34 @@ p {
   margin: -35px 0 0 -35px;
   padding: 20px;
   position: absolute;
-  -webkit-animation: pulse 0.6s infinite alternate;
-  animation: pulse 0.6s infinite alternate;
-  -webkit-transition: border .5s;
-  transition: border .5s;
+}
+.tooltip__item:after {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.tooltip__item:before,
+.tooltip__item:after {
+  box-shadow: 0 0 0 2px rgba(253, 235, 56, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  -webkit-animation-name: anim-effect-jagoda-2, anim-effect-jagoda-1;
+  animation-name: anim-effect-jagoda-2, anim-effect-jagoda-1;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .tooltip__content {
   -webkit-font-smoothing: antialiased;
@@ -3759,6 +3850,40 @@ p {
   color: #919191;
   line-height: 20px;
   font-size: 13px;
+}
+input:required,
+textarea:required {
+  box-shadow: none;
+}
+input:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+.field {
+  position: relative;
+  float: left;
+}
+.field__message {
+  display: none;
+  position: absolute;
+  left: 10px;
+  bottom: -12px;
+  font-size: 10px;
+  color: #fff;
+  line-height: 1;
+}
+.field__message.visible {
+  display: block;
+}
+.field__message_black {
+  color: #2b2b2b;
+}
+.field.error .field__message {
+  display: block;
+}
+.field.error .input,
+.field.error .textarea {
+  background: #fbe3e0;
 }
 .textarea {
   padding: 5px 10px;
@@ -4162,7 +4287,6 @@ body.ngdialog-open {
 }
 .modal__form .input {
   float: left;
-  margin-right: 20px;
 }
 .modal__form .btn,
 .modal__form .progress-button {
@@ -4235,6 +4359,25 @@ body.ngdialog-open {
     /* on retina, use image that's scaled by 2 */
     background-image: url(../img/dog@2x.png);
     background-size: 154px 113px;
+  }
+}
+.balloon {
+  background-image: url(../img/sharik.png);
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 132px;
+  position: absolute;
+  top: 3200px;
+  left: 27%;
+  z-index: 100;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .balloon {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url(../img/sharik@2x.png);
+    background-size: 42px 132px;
   }
 }
 .pidgeon {
@@ -4366,7 +4509,6 @@ body.ngdialog-open {
   clear: both;
 }
 .tooltip-modal__call-me-form-inner .input {
-  margin-right: 20px;
   float: left;
 }
 .tooltip-modal__call-me-form-inner .btn,
@@ -4417,8 +4559,16 @@ body.ngdialog-open {
 .contacts-form__container_right {
   float: right;
 }
-.contacts-form .textarea {
+.contacts-form .field {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.contacts-form .field_textarea {
   width: 45%;
+  margin-bottom: 0;
+}
+.contacts-form .textarea {
+  width: 100%;
   height: 156px;
   float: left;
   margin-right: 20px;
@@ -4426,7 +4576,6 @@ body.ngdialog-open {
 }
 .contacts-form .input {
   width: 100%;
-  margin-bottom: 30px;
   border-color: #a9d8f2;
 }
 .contacts-form .btn,
@@ -4554,6 +4703,111 @@ body.ngdialog-open {
   font-size: 14px;
   margin: 0;
   margin-bottom: 30px;
+}
+.cbutton {
+  -webkit-transition: color 0.7s;
+  transition: color 0.7s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.cbutton.cbutton--click,
+.cbutton:focus {
+  outline: none;
+  color: #3c8ddc;
+}
+.cbutton__icon {
+  display: block;
+}
+.cbutton__text {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.cbutton::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35px 0 0 -35px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+}
+/* Ivana */
+.cbutton--effect-ivana::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35px 0 0 -35px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+}
+.cbutton--effect-ivana::before,
+.cbutton--effect-ivana::after {
+  box-shadow: 0 0 0 2px #ffffff;
+}
+.cbutton--effect-ivana.cbutton--click::before {
+  -webkit-animation: anim-effect-ivana-1 0.5s forwards;
+  animation: anim-effect-ivana-1 0.5s forwards;
+}
+.cbutton--effect-ivana.cbutton--click::after {
+  -webkit-animation: anim-effect-ivana-2 0.5s forwards;
+  animation: anim-effect-ivana-2 0.5s forwards;
+}
+@-webkit-keyframes anim-effect-ivana-1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes anim-effect-ivana-1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@-webkit-keyframes anim-effect-ivana-2 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
+  }
+}
+@keyframes anim-effect-ivana-2 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  50%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
+  }
 }
 .accordion {
   text-align: center;
@@ -4782,7 +5036,7 @@ body.ngdialog-open {
 .mobile-call-me__form {
   padding: 0 10.9375%;
 }
-.mobile-call-me .input {
+.mobile-call-me .field {
   margin-bottom: 8.59375%;
 }
 .mobile-discount-info {
@@ -4991,13 +5245,10 @@ body.ngdialog-open {
 .mobile-contacts-form {
   padding: 0 12.5%;
 }
-.mobile-contacts-form .textarea {
+.mobile-contacts-form .field {
   margin-bottom: 8.59375%;
 }
-.mobile-contacts-form .input {
-  margin-bottom: 8.59375%;
-}
-.mobile-order-form .input {
+.mobile-order-form .field {
   margin-bottom: 8.59375%;
 }
 .mobile-order-form__text {
@@ -5035,6 +5286,9 @@ body.ngdialog-open {
   .progress-button_upper .btn__text {
     font-weight: 700;
     font-size: 0.8125em;
+  }
+  .field {
+    width: 100%;
   }
   .input {
     width: 100%;

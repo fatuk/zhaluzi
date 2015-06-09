@@ -13,3 +13,60 @@
 .scroll-down {
 	animation: scroll 1s infinite;
 }
+
+
+/* Jagoda */
+// .cbutton--effect-jagoda::before {
+// 	position: absolute;
+// 	top: 50%;
+// 	left: 50%;
+// 	margin: -25px 0 0 -25px;
+// 	width: 50px;
+// 	height: 50px;
+// 	border-radius: 50%;
+// 	content: '';
+// 	opacity: 0;
+// 	pointer-events: none;
+// }
+
+// .cbutton--effect-jagoda::after {
+// 	margin: -25px 0 0 -25px;
+// 	width: 50px;
+// 	height: 50px;
+// }
+
+// .cbutton--effect-jagoda::before,
+// .cbutton--effect-jagoda::after {
+// 	box-shadow: 0 0 0 2px rgba(111,148,182,0.5);
+// }
+
+.cbutton--effect-jagoda::before,
+.cbutton--effect-jagoda::after {
+	animation-name:anim-effect-jagoda-2, anim-effect-jagoda-1;
+	animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+// .cbutton--effect-jagoda.cbutton--click::after {
+// 	animation-delay: 0.6s;
+// }
+
+@keyframes anim-effect-jagoda-1 {
+	0%, 100% {
+		opacity: 0;
+	}
+	40%, 60% {
+		opacity: 1;
+	}
+}
+
+@keyframes anim-effect-jagoda-2 {
+	0% {
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	100% {
+		transform: scale3d(1.4, 1.4, 1);
+	}
+}

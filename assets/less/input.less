@@ -41,3 +41,11 @@
 	line-height: 20px;
 	font-size: 13px;
 }
+input, textarea {
+	&:required {
+		box-shadow: none;
+	}
+	&:invalid {
+		box-shadow: none;
+	}
+}
