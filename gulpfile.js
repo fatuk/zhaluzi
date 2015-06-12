@@ -55,20 +55,20 @@ gulp.task('copyAssets', function () {
  ******************************/
 gulp.task('ftp', function () {
 	return gulp.src([
-		'public/**/*.js',
-		'public/**/*.html',
-		'public/**/*.css'
-	])
+			'public/**/*.js',
+			'public/**/*.html',
+			'public/**/*.css'
+		])
 		.pipe(ftp({
 			host: 'brainmaze.net',
 			user: ftpCredentials.login,
 			pass: ftpCredentials.pass,
 			remotePath: '/static'
 		}))
-	// you need to have some kind of stream after gulp-ftp to make sure it's flushed
-	// this can be a gulp plugin, gulp.dest, or any kind of stream
-	// here we use a passthrough stream
-	.pipe(gutil.noop());
+		// you need to have some kind of stream after gulp-ftp to make sure it's flushed
+		// this can be a gulp plugin, gulp.dest, or any kind of stream
+		// here we use a passthrough stream
+		.pipe(gutil.noop());
 });
 
 /******************************
@@ -91,8 +91,10 @@ gulp.task('image-min', function () {
 gulp.task('pluginsConcat', function () {
 	gulp.src(bowerFiles)
 		.pipe(concat('plugins.min.js'))
-	// .pipe(uglify())
-	.pipe(gulp.dest('../design-okna.brainmaze.net/js'))
+		.pipe(uglify({
+			mangle: false
+		}))
+		.pipe(gulp.dest('../design-okna.brainmaze.net/js'))
 		.pipe(gulp.dest('public/js'));
 });
 
@@ -103,8 +105,8 @@ gulp.task('jsConcat', function () {
 	gulp.src(['app/**/*.js'])
 		.pipe(sourcemaps.init())
 		.pipe(concat('app.js'))
-	// .pipe(uglify())
-	.pipe(sourcemaps.write('../js'))
+		.pipe(uglify())
+		.pipe(sourcemaps.write('../js'))
 		.pipe(gulp.dest('../design-okna.brainmaze.net/js'))
 		.pipe(gulp.dest('public/js'));
 });
@@ -157,17 +159,18 @@ gulp.task('less', function () {
  * Less min
  ******************************/
 gulp.task('less-min', function () {
-	gulp.src('app/less/app.less')
+	gulp.src('assets/less/app.less')
 		.pipe(less())
 		.pipe(autoprefixer({
-			browsers: ['last 5 versions'],
+			browsers: ['last 5 versions', 'ff >= 24'],
 			cascade: false
 		}))
 		.pipe(minifyCSS({
 			keepBreaks: false,
-			keepSpecialComments: true,
+			keepSpecialComments: false,
 			benchmark: false,
-			debug: true
+			debug: false
 		}))
-		.pipe(gulp.dest(buildPath + '/css'));
+		.pipe(gulp.dest('../design-okna.brainmaze.net/css'))
+		.pipe(gulp.dest('public/css'));
 });
