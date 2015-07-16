@@ -68,6 +68,9 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				$scope.getTooltipModals();
 				if (!$scope.isMobile()) {
 					$scope.skrollr();
+					if ($scope.collected.counter == 0) {
+						$scope.openHelloModal();
+					}
 				}
 				$scope.map();
 			};
@@ -303,32 +306,34 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 
 			$scope.openTooltipModal = function (id) {
 				$scope.tooltipId = id;
-				/*$timeout(function () {
-					$('html').addClass('block-scroll');
-				}, 300);*/
 				ngDialog.open({
 					template: 'views/modals/tooltip.html',
 					scope: $scope,
 					preCloseCallback: function () {
-						/*				$timeout(function () {
-					$('html').removeClass('block-scroll');
-				}, 300);*/
+
 					},
 					className: 'ngdialog ngdialog_tooltip ngdialog-theme-default'
 				});
 			};
 
+			$scope.openHelloModal = function () {
+				ngDialog.open({
+					template: 'views/modals/hello.html',
+					showClose: false,
+					scope: $scope,
+					preCloseCallback: function () {
+
+					},
+					className: 'ngdialog ngdialog_discount ngdialog-theme-default'
+				});
+			};
+
 			$scope.openGetDiscountModal = function () {
-				/*$timeout(function () {
-					$('html').addClass('block-scroll');
-				}, 300);*/
 				ngDialog.open({
 					template: 'views/modals/get-discount.html',
 					scope: $scope,
 					preCloseCallback: function () {
-						/*				$timeout(function () {
-					$('html').removeClass('block-scroll');
-				}, 300);*/
+
 					},
 					className: 'ngdialog ngdialog_discount ngdialog-theme-default'
 				});

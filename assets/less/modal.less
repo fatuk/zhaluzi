@@ -12,6 +12,9 @@
 			margin-left: @base*3;
 		}
 	}
+	&__logo {
+		width: 80px;
+	}
 	&__title {
 		.lobster();
 		font-size: 22px;
@@ -80,6 +83,46 @@
 		height: auto;
 		.modal__description {
 			min-height: inherit;
+		}
+	}
+	&_hello {
+		background: #fff;
+		border-radius: 5px;
+		width: 570px;
+		height: auto;
+		margin-top: -150px;
+		.modal__logo {
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			.icon {
+				margin: 0;
+			}
+		}
+		.modal__gif {
+			padding-top: 20px;
+			padding-bottom: 4px;
+		}
+		.modal__title {
+			.roboto();
+			font-weight: @bold;
+			font-size: 16px;
+			margin-bottom: 0;
+			margin-top: 10px;
+			line-height: 1;
+		}
+		.modal__container {
+			position: relative;
+			padding: 20px 30px;
+			padding-top: 14px;
+		}
+		.modal__description {
+			min-height: inherit;
+			margin-top: 0;
+			line-height: 21px;
+		}
+		.btn {
+			margin: 10px 0;
 		}
 	}
 }
