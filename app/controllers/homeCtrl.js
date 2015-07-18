@@ -68,7 +68,9 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				$scope.getTooltipModals();
 				if (!$scope.isMobile()) {
 					$scope.skrollr();
-					if ($scope.collected.counter == 0) {
+				}
+				if (detectUtils.isDesktop() || detectUtils.isTablet()) {
+					if ($scope.collected.counter === 0) {
 						$scope.openHelloModal();
 					}
 				}
@@ -324,7 +326,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 					preCloseCallback: function () {
 
 					},
-					className: 'ngdialog ngdialog_discount ngdialog-theme-default'
+					className: 'ngdialog ngdialog_hello ngdialog-theme-default'
 				});
 			};
 

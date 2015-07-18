@@ -146,3 +146,27 @@
 		}
 	}
 }
+// Hello
+.ngdialog.ngdialog-theme-default.ngdialog_hello {
+	.ngdialog-content {
+		padding: 0;
+		background: none;
+		width: @base*55;
+		left: 50%;
+		top: 50%;
+		margin: 0;
+		margin-top: -(@base*20/2);
+		margin-left: -(@base*55/2);
+		position: fixed;
+	}
+	.ngdialog-close {
+		&:before {
+			content: '';
+			.image-2x('../img/close.png');
+			margin: 21px 26px;
+		}
+	}
+	.ngdialog-overlay {
+		background: rgba(0,0,0,.3);
+	}
+}
