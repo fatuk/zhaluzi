@@ -13,7 +13,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 		'$rootScope',
 		'$window',
 		'$routeParams',
-		function ($interval, $scope, ngDialog, couponsService, $log, $timeout, $localStorage, detectUtils, notificationService, promoCodeService, $rootScope, $window, $routeParams) {
+		'deviceDetector',
+		function ($interval, $scope, ngDialog, couponsService, $log, $timeout, $localStorage, detectUtils, notificationService, promoCodeService, $rootScope, $window, $routeParams, deviceDetector) {
 			'use strict';
 
 			// Hashes for sections
@@ -69,7 +70,8 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 				if (!$scope.isMobile()) {
 					$scope.skrollr();
 				}
-				if (detectUtils.isDesktop() || detectUtils.isTablet()) {
+
+				if (deviceDetector.isDesktop() || deviceDetector.isTablet()) {
 					if ($scope.collected.counter === 0) {
 						$scope.openHelloModal();
 					}
