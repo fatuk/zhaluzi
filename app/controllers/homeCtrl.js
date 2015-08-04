@@ -76,6 +76,9 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 						$scope.openHelloModal();
 					}
 				}
+
+				console.log('Desktop', deviceDetector.isDesktop());
+				console.log('Tablet', deviceDetector.isTablet());
 				$scope.map();
 			};
 			$rootScope.$on('ngDialog.opened', function (e, $dialog) {

@@ -19,6 +19,10 @@ var gulp = require('gulp'),
 console.info('********** Bower Files **********');
 console.info(bowerFiles);
 
+var paths = {
+	deploy: '../design-okna.brainmaze.net'
+};
+
 
 // TODO: Add sprites http://habrahabr.ru/post/227945/
 
@@ -29,7 +33,7 @@ gulp.task('default', [
 	'copyAssets',
 	'pluginsConcat',
 	'jsConcat',
-	'less',
+	'less-min',
 	'browser-sync',
 	'watch'
 ]);
@@ -40,13 +44,13 @@ gulp.task('default', [
 gulp.task('copyAssets', function () {
 	'use strict';
 	gulp.src([
-		'assets/**/*.*',
-		'!assets/**/*.less',
-		'app/**/*.html',
-		'!assets/data/*.*',
-		'!app/index.html'
-	])
-		.pipe(gulp.dest('../design-okna.brainmaze.net'))
+			'assets/**/*.*',
+			'!assets/**/*.less',
+			'app/**/*.html',
+			'!assets/data/*.*',
+			'!app/index.html'
+		])
+		// .pipe(gulp.dest(paths.deploy + ''))
 		.pipe(gulp.dest('public'));
 });
 
@@ -94,7 +98,7 @@ gulp.task('pluginsConcat', function () {
 		.pipe(uglify({
 			mangle: false
 		}))
-		.pipe(gulp.dest('../design-okna.brainmaze.net/js'))
+		// .pipe(gulp.dest(paths.deploy + '/js'))
 		.pipe(gulp.dest('public/js'));
 });
 
@@ -107,7 +111,7 @@ gulp.task('jsConcat', function () {
 		.pipe(concat('app.js'))
 		.pipe(uglify())
 		.pipe(sourcemaps.write('../js'))
-		.pipe(gulp.dest('../design-okna.brainmaze.net/js'))
+		.pipe(gulp.dest(paths.deploy + '/js'))
 		.pipe(gulp.dest('public/js'));
 });
 
@@ -151,7 +155,7 @@ gulp.task('less', function () {
 			cascade: false
 		}))
 		.pipe(sourcemaps.write('../css'))
-		.pipe(gulp.dest('../design-okna.brainmaze.net/css'))
+		.pipe(gulp.dest(paths.deploy + '/css'))
 		.pipe(gulp.dest('public/css'));
 });
 
@@ -171,6 +175,6 @@ gulp.task('less-min', function () {
 			benchmark: false,
 			debug: false
 		}))
-		.pipe(gulp.dest('../design-okna.brainmaze.net/css'))
+		// .pipe(gulp.dest(paths.deploy + '/css'))
 		.pipe(gulp.dest('public/css'));
 });
