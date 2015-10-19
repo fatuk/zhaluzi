@@ -2961,7 +2961,7 @@ p {
   background: #FFA500;
   z-index: 10;
   position: fixed;
-  top: 60px;
+  top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -2987,7 +2987,7 @@ p {
   transform: translateY(0);
 }
 .site-header__container-wrapper {
-  background: #ffffff;
+  background: #fff;
 }
 .site-header__container {
   position: relative;
@@ -3027,7 +3027,7 @@ p {
   height: 120px;
 }
 .main-menu {
-  background: #f4e57a;
+  background: #F4E57A;
   box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.1);
   height: 150px;
 }
@@ -3070,7 +3070,7 @@ p {
   font-size: 13px;
   width: 100%;
   display: inline-block;
-  color: #42423f;
+  color: #42423F;
 }
 .site-footer {
   position: absolute;
@@ -3144,7 +3144,7 @@ p {
   margin-right: 10px;
 }
 .site-footer_blue {
-  background: #5aafd1;
+  background: #5AAFD1;
   color: #fff;
   text-align: center;
   position: static;
@@ -3354,7 +3354,7 @@ p {
 .btn_violet-1,
 .progress-button_violet-1 {
   background: #b47b94;
-  border: solid 1px #cf9db3;
+  border: solid 1px #CF9DB3;
 }
 .btn_violet-1[disabled],
 .progress-button_violet-1[disabled] {
@@ -3363,7 +3363,7 @@ p {
 }
 .btn_violet-1 .progress-button-bar,
 .progress-button_violet-1 .progress-button-bar {
-  background-color: #cf9db3;
+  background-color: #CF9DB3;
 }
 .btn_violet-2,
 .progress-button_violet-2 {
@@ -3475,7 +3475,7 @@ p {
   float: left;
   font-weight: 700;
   font-size: 17px;
-  color: #222222;
+  color: #222;
   vertical-align: middle;
   margin-top: 20px;
   margin-right: 20px;
@@ -3485,7 +3485,7 @@ p {
   padding: 2.5px 10px;
   border-radius: 3px;
   font-size: 12px;
-  background: #f3e575;
+  background: #F3E575;
   margin-top: 20px;
   margin-right: 25px;
 }
@@ -3605,6 +3605,7 @@ p {
   text-align: center;
   height: 170px;
   left: 0;
+  top: 60px;
 }
 .dropdown_coupon-info .dropdown__text {
   font-size: 13px;
@@ -3628,6 +3629,7 @@ p {
   text-align: center;
   height: 170px;
   right: 45px;
+  top: 60px;
 }
 .dropdown_call-me .icon-operator {
   float: left;
@@ -3652,10 +3654,10 @@ p {
   cursor: pointer;
 }
 .tooltip:hover .tooltip__item {
-  border-color: #ffffff;
+  border-color: #fff;
 }
 .tooltip:hover .tooltip__item:before {
-  color: #ffffff;
+  color: #fff;
 }
 .tooltip_gorizontal {
   left: 61.5%;
@@ -3724,7 +3726,7 @@ p {
   height: 209px;
   border-radius: 10px;
   bottom: 50%;
-  color: #3a393a;
+  color: #3A393A;
   cursor: default;
   font-size: 15px;
   margin-bottom: -1em;
@@ -3781,7 +3783,7 @@ p {
 }
 .tooltip-east .tooltip__content {
   right: 4em;
-  -webkit-transform-origin: -webkit-calc(102%) 50%;
+  -webkit-transform-origin: calc(102%) 50%;
   -ms-transform-origin: calc(102%) 50%;
   transform-origin: calc(102%) 50%;
   -webkit-transform: translate3d(0, 50%, 0) rotate3d(1, 1, 1, -30deg);
@@ -3828,9 +3830,9 @@ p {
   transform: scale3d(-1, 1, 1);
 }
 .input {
-  color: #2c2b29;
+  color: #2C2B29;
   border-radius: 5px;
-  border: solid 1px #b6b6b6;
+  border: solid 1px #B6B6B6;
   height: 32px;
   padding: 5px 12px;
   -webkit-transition: background .3s;
@@ -3906,7 +3908,7 @@ textarea:invalid {
 }
 .textarea {
   padding: 5px 10px;
-  border: solid 1px #b6b6b6;
+  border: solid 1px #B6B6B6;
   border-radius: 5px;
   resize: none;
 }
@@ -4324,7 +4326,7 @@ body.ngdialog-open {
   line-height: 20px;
   letter-spacing: 0.2px;
   min-height: 50px;
-  color: #444444;
+  color: #444;
 }
 .modal__form {
   padding: 20px;
@@ -4430,7 +4432,7 @@ body.ngdialog-open {
 .social__description {
   font-size: 14px;
   padding: 25px 0;
-  color: #444444;
+  color: #444;
 }
 .social__list {
   list-style: none;
@@ -4543,7 +4545,7 @@ body.ngdialog-open {
 }
 .tooltip-modal__subtitle {
   margin: 0;
-  color: #444444;
+  color: #444;
   font-weight: 400;
   font-size: 13px;
   margin-bottom: 30px;
@@ -4577,7 +4579,7 @@ body.ngdialog-open {
   font-size: 14px;
   padding: 0 50px;
   line-height: 20px;
-  color: #444444;
+  color: #444;
 }
 .tooltip-modal__call-me {
   background: url('../img/bg_callback.png') no-repeat;
@@ -4625,7 +4627,7 @@ body.ngdialog-open {
   padding-bottom: 20px;
 }
 .contacts-form {
-  background: #5aafd1;
+  background: #5AAFD1;
   padding-top: 50px;
   padding-bottom: 45px;
 }
@@ -4633,7 +4635,7 @@ body.ngdialog-open {
   padding: 0 20px;
 }
 .contacts-form__title {
-  color: #ffffff;
+  color: #fff;
   margin: 0;
   font-family: 'Lobster', cursive;
   font-size: 22px;
@@ -4641,7 +4643,7 @@ body.ngdialog-open {
   font-weight: 400;
 }
 .contacts-form__text {
-  color: #ffffff;
+  color: #fff;
   margin: 0;
   font-size: 14px;
   line-height: 20px;
@@ -4849,7 +4851,7 @@ body.ngdialog-open {
 }
 .cbutton--effect-ivana::before,
 .cbutton--effect-ivana::after {
-  box-shadow: 0 0 0 2px #ffffff;
+  box-shadow: 0 0 0 2px #fff;
 }
 .cbutton--effect-ivana.cbutton--click::before {
   -webkit-animation: anim-effect-ivana-1 0.5s forwards;
@@ -4955,7 +4957,7 @@ body.ngdialog-open {
   padding-top: 0;
 }
 .accordion_blue {
-  background: #5aafd1;
+  background: #5AAFD1;
 }
 .accordion_order {
   background: url('../img/mobile/bg_buy.jpg') no-repeat;
@@ -5048,7 +5050,7 @@ body.ngdialog-open {
 .mobile-section__subtitle {
   margin: 0;
   font-weight: 400;
-  color: #444444;
+  color: #444;
   font-size: 0.875em;
   padding: 0.78125% 7.8125%;
 }
@@ -5056,7 +5058,7 @@ body.ngdialog-open {
   padding: 0 7.8125%;
   padding-bottom: 10.9375%;
   font-size: 0.875em;
-  color: #444444;
+  color: #444;
   margin: 0;
   z-index: 10;
 }
@@ -5167,7 +5169,7 @@ body.ngdialog-open {
   font-size: 0.875em;
 }
 .mobile-menu {
-  background: #f4e57a;
+  background: #F4E57A;
   position: fixed;
   top: 0;
   right: 0;
@@ -5250,7 +5252,7 @@ body.ngdialog-open {
   transform: translateY(50%);
 }
 .mobile-footer-menu {
-  background: #5aafd1;
+  background: #5AAFD1;
   color: #fff;
   text-align: center;
   position: relative;
@@ -5264,7 +5266,7 @@ body.ngdialog-open {
   top: -30px;
   width: 120%;
   height: 50px;
-  background: #5aafd1;
+  background: #5AAFD1;
   -webkit-transform: rotate(-2deg);
   -ms-transform: rotate(-2deg);
   transform: rotate(-2deg);
@@ -5276,7 +5278,7 @@ body.ngdialog-open {
   bottom: -30px;
   width: 120%;
   height: 50px;
-  background: #5aafd1;
+  background: #5AAFD1;
   -webkit-transform: rotate(-2deg);
   -ms-transform: rotate(-2deg);
   transform: rotate(-2deg);
