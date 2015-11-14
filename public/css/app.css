@@ -2324,6 +2324,11 @@ body {
     background-size: 35px 45px;
   }
 }
+.icon-insta {
+  background: url('../img/insta.svg');
+  width: 40px;
+  height: 40px;
+}
 .icon-house-1 {
   background-image: url(../img/house-parts/1.jpg);
   background-repeat: no-repeat;
