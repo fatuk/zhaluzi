@@ -128,7 +128,7 @@ gulp.task('less', function () {
 		.pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(autoprefixer({
-			browsers: ['last 5 versions', 'ff >= 24'],
+			browsers: ['last 5 versions', 'ff >= 24', 'ie >= 9'],
 			cascade: false
 		}))
 		.pipe(sourcemaps.write('../css'))
