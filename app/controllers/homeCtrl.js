@@ -61,6 +61,7 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			$scope.isCallMeZhaluzi = false;
 			$scope.isPromoCode = false;
 			$scope.isComment = false;
+			$scope.prevId = false;
 
 			$scope.init = function () {
 				$scope.setCouponsContainerWidth();
@@ -529,21 +530,21 @@ angular.module('homeCtrl', ['ngDialog', 'ngStorage', 'angular-inview'])
 			};
 
 			$scope.collect = function (id, e) {
-				$scope.currentCouponEl = $(e.currentTarget);
-				$scope.currentCouponId = id;
+				if ($scope.prevId !== id) {
+					$scope.prevId = id;
+					$scope.currentCouponEl = $(e.currentTarget);
+					$scope.currentCouponId = id;
 
-				$scope.collected.counter++;
+					$scope.collected.counter++;
+					$scope.currentCouponEl.find('.js-coupon').addClass('collected');
+					$scope.currentCouponEl.addClass('cbutton--click');
 
-				$scope.currentCouponEl.find('.js-coupon').addClass('collected');
+					setTimeout(function () {
+						$scope.openCollectModal();
+					}, 500);
 
-				$scope.currentCouponEl.addClass('cbutton--click');
-
-				setTimeout(function () {
-					$scope.openCollectModal();
-				}, 500);
-
-
-				$scope.floors.floorsArray.push($scope.currentCouponId);
+					$scope.floors.floorsArray.push($scope.currentCouponId);
+				}
 			};
 
 			$scope.clearCollected = function () {
